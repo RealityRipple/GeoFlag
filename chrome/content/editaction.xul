@@ -56,7 +56,7 @@
     <label value="&action.placeholderslabel;"/>
     <spacer minwidth="20" flex="1"/>
     <hbox class="icon text-link" onclick="if(event.button === 0) geoflag_Edit.showFullHelpPopup();">
-     <image src="chrome://geoflag/content/icons/help.png"/>
+     <image src="chrome://geoflag/skin/icons/help.png"/>
      <label value="&showall;"/>
     </hbox>
    </hbox>
@@ -115,7 +115,7 @@
  <hbox>
   <spacer width="10"/>
   <hbox id="getmoreBox" class="icon text-link" onclick="if(event.button === 0) geoflag_Edit.gotoGetMorePage();">
-   <image src="chrome://geoflag/content/icons/goto.png"/>
+   <image src="chrome://geoflag/skin/icons/goto.png"/>
    <label value="&action.seeforumslink;"/>
   </hbox>
   <spacer flex="1"/>
