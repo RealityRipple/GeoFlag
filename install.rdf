@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+    <Description about="urn:mozilla:install-manifest">
+
+        <em:id>{1018e4d6-728f-4b20-ad56-37578a4de76b}</em:id>
+        <em:name>Flagfox</em:name>
+        <em:version>5.2.11</em:version>
+        <em:description>Displays a flag depicting the location of the current server</em:description>
+
+        <em:creator>David Garrett</em:creator>
+        <!-- see Flagfox about dialog for a list of contributors and translators (metadata here only shows in generated about dialogs) -->
+        <em:aboutURL>chrome://flagfox/content/about.xul</em:aboutURL>
+
+        <em:iconURL>chrome://flagfox/content/flagfoxlogo.png</em:iconURL>
+        <em:icon64URL>chrome://flagfox/content/flagfoxlogo.png</em:icon64URL> <!-- needed for Addon Manager detailed view -->
+
+        <em:optionsURL>chrome://flagfox/content/options.xul</em:optionsURL>
+
+        <em:homepageURL>https://flagfox.wordpress.com/</em:homepageURL>
+
+        <em:type>2</em:type> <!-- type 2 addons are extensions; this is only added here to shut up the AMO validator -->
+        <em:bootstrap>true</em:bootstrap> <!-- restartless extension support required -->
+        <em:unpack>false</em:unpack> <!-- install as a single archive without extracting XPI into the profile -->
+        <em:multiprocessCompatible>true</em:multiprocessCompatible> <!-- compatible with electrolysis (e10s) -->
+        <em:hasEmbeddedWebExtension>true</em:hasEmbeddedWebExtension> <!-- has embedded WebExtension to migrate prefs -->
+
+        <!-- The current hard minimum version support is currently Firefox 19. Oldest ESR after that is Firefox 24. -->
+        <!-- NO addon of this current type is compatible with Firefox 57+; full WebExtensions only -->
+        <em:targetApplication>
+            <Description>
+                <!-- Firefox -->
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>24.0</em:minVersion> <!-- Firefox 24 ESR (2013-9-17) -->
+                <em:maxVersion>56.*</em:maxVersion> <!-- Firefox 57+ is WebExtension only -->
+            </Description>
+        </em:targetApplication>
+        <em:targetApplication>
+            <Description>
+                <!-- SeaMonkey -->
+                <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+                <em:minVersion>2.21</em:minVersion>
+                <em:maxVersion>2.53.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+
+    </Description>
+
+</RDF>

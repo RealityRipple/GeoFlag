@@ -1,0 +1,51 @@
+Flagfox
+Copyright 2007-2017, David Garrett
+Additional contributors are listed in about.xul
+All rights reserved
+
+Redistribution and use of source code, with or without modification,
+is permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Neither the name of Flagfox nor the names of its contributors may
+   be used to endorse or promote products derived from this software
+   without specific prior written permission.
+3. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+4. Altered source versions must be plainly marked as such and must not be
+   misrepresented as being original software.
+5. If any files or portions of files are borrowed, they must contain a
+   source comment stating the originating software name and version as
+   well as the date of any changes.
+6. Derived works using source code that serve the same general purpose as
+   the original software may not be distributed using any official Mozilla
+   services such as addons.mozilla.org or through any other official
+   service for any web browser without prior permission. Works using
+   portions of source code for other purposes may be distributed without
+   this restriction.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.
+
+This license does not grant any permissions with regard to components of
+this software other than source code including, but not limited to,
+images, localizations, and database content.
+
+The Flagfox logo may not be reused without permission.
+
+If you use any portions of Flagfox in other works a quick
+email or message on our forums would be appreciated:
+daveg.extensionfeedback@gmail.com
+https://flagfox.net/forum

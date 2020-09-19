@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://flagfox/content/style.css" type="text/css"?>
+
+<?xml-stylesheet href="data:text/css;charset=utf-8,
+                          .text-link { color: blue !important; }
+                          .text-link:hover { color: red !important; cursor: pointer !important; }
+                          .indented { -moz-padding-start: 10px; }
+                          .head { font-weight: bold; padding-top: 3px; }
+                          .icon > image { margin: 1px 5px; }
+                          label { padding: 0px; margin: 0px; }
+                      " type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://flagfox/locale/flagfox.dtd">
+
+<window class="dialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        orient="vertical"
+        autostretch="always"
+        onload="load();"
+        onclick="cancelScrolling();"
+        style="padding: 4px;"
+        title="&about.title;">
+
+    <keyset>
+        <key keycode="VK_ESCAPE" oncommand="window.close();"/>
+        <key keycode="VK_RETURN" oncommand="cancelScrolling();"/>
+    </keyset>
+
+    <!-- Translator credits are loaded from locales.js -->
+    <script type="application/javascript" src="chrome://flagfox/content/locales.js"/>
+    <script type="application/javascript">
+    <![CDATA[
+        "use strict";  // Use ES5 strict mode for this script block
+
+        Components.utils.import("chrome://flagfox/content/flagfox.jsm");
+
+        const linkURLs =
+        {
+            "main" : "https://addons.mozilla.org/addon/flagfox",
+            "blog" : "https://flagfox.wordpress.com",
+            "forum" : "http://flagfox.net/forum",
+            "famfamfam" : "http://www.famfamfam.com",
+            "babelzilla" : "https://www.babelzilla.org",
+            "babelzillathread" : "https://www.babelzilla.org/forum/index.php?showtopic=3554",
+            "maxmind" : "https://maxmind.com"
+        };
+
+        var scrollInterval, localesListed = {};
+
+        function load()
+        {
+            // Set the version numbers
+            try { document.getElementById("versionNumber").setAttribute("value", Flagfox.version); } catch (e) {}
+            try { document.getElementById("databaseAge").setAttribute("value", "("+Flagfox.IPDBversion+")"); } catch (e) {}
+
+            // Populate the translator credits box
+            const flagIconsPath = "chrome://flagfox/content/icons/flags/";
+            var translatorsList = window.document.createElement("vbox");
+            translatorsList.setAttribute("style", "padding: 1px 5px;");
+            for (let translatorCredit of translator_credits)
+            {
+                var code = translatorCredit[0];
+                var name = translatorCredit[1];
+                var flag = language_flags[code];
+
+                var newLine = window.document.createElement("hbox");
+                var newFlagIcon = window.document.createElement("image");
+                newFlagIcon.setAttribute("src", flagIconsPath + flag + ".png");
+                newFlagIcon.setAttribute("tooltiptext", Flagfox.countrynames.GetStringFromName(flag.toUpperCase()));
+                newFlagIcon.setAttribute("style", "padding: 0px; border: solid lightgrey 1px; margin: 1px 5px 0px 5px;");
+                if (localesListed[code])
+                    newFlagIcon.style.visibility = "hidden";  // One icon per locale, but add in the element invisibly to let the names align properly
+                newLine.appendChild(newFlagIcon);
+
+                newLine.appendChild(createTextElement(name));
+
+                if (!localesListed[code])  // One language name header per locale
+                {
+                    var spacer = window.document.createElement("spacer");
+                    spacer.setAttribute("flex","1");
+                    spacer.setAttribute("minwidth","10");
+                    newLine.appendChild(spacer);
+                    newLine.appendChild(createTextElement(native_language_names[code]+" ["+code+"]"));
+                }
+
+                translatorsList.appendChild(newLine);
+                localesListed[code] = true;
+            }
+            var translatorCreditsBox = document.getElementById("translatorCreditsBox");
+            translatorCreditsBox.appendChild(translatorsList);  // Add all at once to only redraw the window the one time for this
+
+            var scrollBoxObject = translatorCreditsBox.boxObject;
+            try { scrollBoxObject = scrollBoxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject); } catch (e) {}  // For versions prior to Firefox 36
+
+            // Set credits box to auto-scroll (1px/10ms == 100px/s)
+            const startDelay = 1000;
+            const scrollTick = 10;
+            const scrollStep = 1;
+            var lastPos = { value:0 };
+            setTimeout(function() {
+                scrollInterval = setInterval(function() {
+                    scrollBoxObject.scrollBy(0,scrollStep);
+                    var newPos = {};
+                    scrollBoxObject.getPosition({},newPos);
+                    if (newPos.value == lastPos.value+scrollStep)
+                        lastPos = newPos;   // Still scrolling
+                    else
+                        cancelScrolling();  // Stop when done or user moves scroll bar manually
+                }, scrollTick);
+            }, startDelay);
+        }
+
+        function createTextElement(text)
+        {
+            var label = window.document.createElement("label");
+            label.setAttribute("value",text);
+            return label;
+        }
+
+        function openLink(name)
+        {
+            var url = linkURLs[name];
+            window.close();
+            Flagfox.addTabInCurrentBrowser(url);
+        }
+
+        function cancelScrolling()
+        {
+            clearInterval(scrollInterval);
+        }
+    ]]>
+    </script>
+
+    <vbox class="roundedbox" style="background-color: white;
+                                    color: black;
+                                    padding: 10px;">
+
+        <hbox class="roundedbox" style="background-color: navy;
+                                        color: white;
+                                        font-weight: bold;"
+              onclick="openLink('main');">
+            <spacer flex="1"/>
+            <label value="Flagfox" style="font-size: xx-large; cursor: pointer;"/>
+            <spacer flex="1"/>
+            <hbox>
+                <label value="&about.version;"/>
+                <label value=" "/> <!-- Full version number is fetched from extension RDF to prevent missmatching -->
+                <label value="5.2" id="versionNumber"/>
+                <label value=" "/>
+                <label id="databaseAge"/>
+            </hbox>
+            <spacer flex="1"/>
+        </hbox>
+
+        <spacer height="5"/>
+
+        <hbox pack="center" style="direction: ltr;">
+            <spacer width="8"/>
+            <hbox class="icon text-link" onclick="openLink('main');">
+                <image src="chrome://flagfox/content/icons/goto.png"/>
+                <label value="Download" class="head"/>
+            </hbox>
+            <spacer width="16"/>
+            <hbox class="icon text-link" onclick="openLink('blog');">
+                <image src="chrome://flagfox/content/icons/default.png"/>
+                <label value="Blog" class="head"/>
+            </hbox>
+            <spacer width="16"/>
+            <hbox class="icon text-link" onclick="openLink('forum');">
+                <image src="chrome://flagfox/content/icons/help.png"/>
+                <label value="Support Forum" class="head"/>
+            </hbox>
+            <spacer width="8"/>
+        </hbox>
+
+        <spacer height="5"/>
+
+        <hbox>
+            <vbox>
+                <label value="&about.creator;" class="head"/>
+                <label value="David Garrett" class="indented"/>
+                <label value="&about.admin;" class="head"/>
+                <label value="Richard van der Leeden" class="indented"/>
+                <label value="&about.original;" class="head"/>
+                <label value="Joseph Birr-Pixton" class="indented"/>
+                <spacer height="5"/>
+            </vbox>
+
+            <spring flex="1" minwidth="5"/>
+            <image src="chrome://flagfox/content/flagfoxlogo.png" width="128" height="128" tooltip="logobyline"/>
+            <tooltip id="logobyline">
+                <label value="&about.logo;" class="head"/>
+                <label value="Jennifer Garrett" class="indented"/>
+            </tooltip>
+            <spring flex="1" minwidth="5"/>
+        </hbox>
+
+        <label value="&about.flagicons;" class="head"/>
+        <label value="&about.wikimediabasedln1;" class="indented"/>
+        <label value="&about.wikimediabasedln2;" class="indented"/>
+        <label value="&about.othericons;" class="head"/>
+        <hbox class="indented">
+            <label value="Mark James"/>
+            <label value=" "/>
+            <hbox style="direction: ltr;"> <!-- need to force LTR for the parenthesis, but not for the flipping of the parenthetical to the other side -->
+                <label value="("/>
+                <label value="famfamfam.com" class="text-link" onclick="openLink('famfamfam');"/>
+                <label value=")"/>
+            </hbox>
+        </hbox>
+
+        <spacer height="5"/>
+
+        <label value="&about.translators;" class="head"/>
+        <scrollbox id="translatorCreditsBox" orient="vertical" height="200" style="direction: ltr; overflow-y:auto;">
+            <hbox>
+                <hbox class="icon text-link" style="-moz-padding-start: 3px;" onclick="openLink('babelzilla');">
+                    <image src="chrome://flagfox/content/icons/special/anonymous.png" style="padding: 1px 6px;"/> <!-- globe icon -->
+                    <label value="BabelZilla.org"/>
+                </hbox>
+                <label value="  -  "/>
+                <label value="("/>
+                <label value="contribute" class="text-link" onclick="openLink('babelzillathread');"/>
+                <label value=")"/>
+            </hbox>
+            <!-- populated with translator credits via JavaScript on load -->
+        </scrollbox>
+
+        <spacer height="5"/>
+
+        <label value="&about.geolocation;" class="head"/>
+        <label value="&about.maxmindln1;" class="indented"/>
+        <hbox class="indented">
+            <label value="&about.maxmindln2;"/>
+            <label value="  "/>
+            <label value="Maxmind.com" class="text-link" onclick="openLink('maxmind');"/>
+        </hbox>
+
+    </vbox>
+
+    <hbox>
+        <spacer flex="1"/>
+        <button label="&close;" oncommand="window.close();" default="true"/>
+    </hbox>
+
+</window>

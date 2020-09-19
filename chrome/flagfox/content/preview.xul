@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://flagfox/content/style.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://flagfox/locale/flagfox.dtd">
+
+<window class="dialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        orient="vertical"
+        autostretch="always"
+        onload="load();"
+        title="&prefs.previewicons;">
+
+    <keyset>
+        <key keycode="VK_ESCAPE" oncommand="window.close();"/>
+    </keyset>
+
+    <script type="application/javascript" src="chrome://flagfox/content/flagsort.js"/> <!-- pre-generated flag icons metadata file -->
+    <script type="application/javascript">
+    <![CDATA[
+        "use strict";  // Use ES5 strict mode for this script block
+
+        const nsIPE = Components.interfaces.nsIPropertyElement;
+
+        Components.utils.import("chrome://flagfox/content/flagfox.jsm");
+        Components.utils.import("chrome://flagfox/content/textutil.jsm");
+        textutil.importExtraStringMethodsIntoScope(this);  // For chunkString()
+
+        const locale = Flagfox.locale.UI;
+
+        var countriesArray = [];
+        var countriesIndex = null;  // Only build if needed
+
+        function load() {
+            try {
+                var enumerator = Flagfox.countrynames.getSimpleEnumeration(), entry;
+                while (enumerator.hasMoreElements() && (entry = enumerator.getNext().QueryInterface(nsIPE)))
+                    if (!no_unique_flag.has(entry.key))  // Skip special entries and territories without their own flags (from flagsort.js)
+                        countriesArray.push({ code : entry.key,
+                                              name : entry.value,
+                                              flagsrc : "chrome://flagfox/content/icons/flags/" + entry.key.toLowerCase() + ".png" });
+                sortByCode();  // Sort by codes doesn't vary with locale or change with flag updates
+            }
+            catch (e) { Flagfox.error("Failed to load preview",e); }
+        }
+
+        function getCountriesIndex() {  // Gets/Creates index of country entries by code:  countriesIndex[code] = {code,name,flagsrc}
+            if (!countriesIndex) {
+                countriesIndex = new Map();
+                for (let entry of countriesArray)
+                    countriesIndex.set(entry.code, entry);  // Just points to data sitting in countriesArray
+            }
+            return countriesIndex;
+        }
+
+        function updatePreview(sortedArray) {
+            var newPreview = document.createElement("box");
+            newPreview.setAttribute("id", "previewsetbox");
+            for (let entry of sortedArray) {
+                let image = document.createElement("image");
+                image.setAttribute("id", "flag:" + entry.code);
+                image.setAttribute("class", "previewicon");
+                image.setAttribute("src", entry.flagsrc);
+                image.setAttribute("tooltiptext", entry.name + " (" + entry.code + ")");  // FIXME: Add back AR, but with a less-imprecise measurement
+                image.onclick = lookupCountry;
+                newPreview.appendChild(image);
+            }
+            var previewBox = document.getElementById("preview");
+            var currentPreview = document.getElementById("previewsetbox");
+            previewBox.removeChild(currentPreview);
+            previewBox.appendChild(newPreview);
+        }
+
+        function doRuntimeSort(p) {  // Processing the alphabetization is more than fast enough to not need a precache
+            updatePreview( countriesArray.sort(function(a,b) { return a[p].localeCompare(b[p]); }) );  // Array.sort() reorders in-place
+        }
+        function loadPrecachedSort(list) {  // Convert pre-sorted list from flagsort.js to an array of country codes
+            updatePreview( list.chunkString(2).map(function(c) { return getCountriesIndex().get(c); }) );  // Array.map() creates a new array
+        }
+
+        // Sorting by code and name is done at runtime. Sorts by ratio and color are loaded from a previously generated file.
+        // mozIColorAnalyzer was used in older versions, but that isn't available to a WebExtension.
+        // Loading a precached sort is also faster and better color sorting options exist.
+        function sortByCode()  { doRuntimeSort("code"); }
+        function sortByName()  { doRuntimeSort("name"); }  // Will vary based on current locale used for strings
+        function sortByRatio() { loadPrecachedSort(flags_sorted_by_ratio); }
+        function sortByColor() { loadPrecachedSort(flags_sorted_by_color); }  // Sorted by xyY colorspace coordinate, in reverse order (much better than RGB/HSL/CMY/etc. sort)
+
+        function lookupCountry(event) {
+            const countrycode = event.target.id.split(":")[1];
+            Flagfox.addTabInCurrentBrowser("https://" + encodeURIComponent(locale.split('-')[0])
+                                         + ".wikipedia.org/wiki/Special:Search?search="
+                                         + encodeURIComponent(Flagfox.countrynames.GetStringFromName(countrycode))
+                                         + "&go=Go&variant=" + encodeURIComponent(locale));
+        }
+    ]]>
+    </script>
+
+    <box id="preview" class="roundedbox" style="background-color: white;">
+        <box id="previewsetbox"/>
+    </box>
+
+    <hbox>
+        <hbox>
+            <label value="&prefs.sortflags;" control="sortMenu"/>
+            <menulist id="sortMenu" sizetopopup="always">
+                <menupopup>
+                    <menuitem id="sortByCode"  label="&prefs.sortbycode;"  oncommand="sortByCode()" selected="true"/>
+                    <menuitem id="sortByName"  label="&prefs.sortbyname;"  oncommand="sortByName()"/>
+                    <menuitem id="sortByRatio" label="&prefs.sortbyratio;" oncommand="sortByRatio()"/>
+                    <menuitem id="sortByColor" label="&prefs.sortbycolor;" oncommand="sortByColor()"/>
+                </menupopup>
+            </menulist>
+        </hbox>
+        <spacer flex="1"/>
+        <button label="&close;" oncommand="window.close();" default="true"/>
+    </hbox>
+
+</window>
