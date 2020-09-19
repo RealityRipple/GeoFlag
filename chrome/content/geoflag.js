@@ -369,7 +369,7 @@ function newGeoFlagInstance(wnd)
     return;
    }
    dLoc.ip = returnedIP;
-   dLoc.country = await geoflag_IPDB.lookupIP(returnedIP);
+   dLoc.country = await geoflag_IPDB.lookupIP(returnedIP).catch((e) => {console.log('Failed to lookup', returnedIP, ':', e);});
    switch (dLoc.country)
    {
     case 'LOADING IPDB':

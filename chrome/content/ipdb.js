@@ -6,6 +6,8 @@ var geoflag_IPDB =
  dataPath: ['geoflag'],
  _dbURL4: null,
  _dbURL6: null,
+ _fPerm: 0644,
+ _dPerm: 0755,
  _dbInfo4: {type: 'IPv4', filename: 'geo_ipv4.db', bytesPerIP: 4, bytesPerLine: 10, meta: null, sig: {r: null, s: null}},
  _dbInfo6: {type: 'IPv6', filename: 'geo_ipv6.db', bytesPerIP: 16, bytesPerLine: 34, meta: null, sig: {r: null, s: null}},
  _from6to4: [
@@ -182,13 +184,13 @@ var geoflag_IPDB =
   {
    fTo.appendRelativePath(geoflag_IPDB.dataPath[d]);
    if (!fTo.exists())
-    fTo.create(1, 0664);
+    fTo.create(1, geoflag_IPDB._dPerm);
   }
   fTo.appendRelativePath(geoflag_IPDB._dbInfo4.filename);
   if (fTo.exists())
    fTo.remove(false);
   let fOut = Components.classes['@mozilla.org/network/file-output-stream;1'].createInstance(Components.interfaces.nsIFileOutputStream);
-  fOut.init(fTo, 0x02 | 0x08 | 0x20, 0644, 0);
+  fOut.init(fTo, 0x02 | 0x08 | 0x20, geoflag_IPDB._fPerm, 0);
   let bOut = Components.classes['@mozilla.org/binaryoutputstream;1'].createInstance(Components.interfaces.nsIBinaryOutputStream);
   bOut.setOutputStream(fOut);
   bOut.writeByteArray(uData, uData.length);
@@ -209,16 +211,26 @@ var geoflag_IPDB =
   {
    geoflag_IPData.db4 = null;
    geoflag_IPData.range4 = null;
-   return false;
+   return null;
   }
   let fIn = Components.classes['@mozilla.org/network/file-input-stream;1'].createInstance(Components.interfaces.nsIFileInputStream);
-  fIn.init(fFrom, 0x02 | 0x04, 0x01, 0);
+  fIn.init(fFrom, 0x01, geoflag_IPDB._fPerm, 0);
   let fLen = fIn.available();
   let bIn = Components.classes['@mozilla.org/binaryinputstream;1'].createInstance(Components.interfaces.nsIBinaryInputStream);
   bIn.setInputStream(fIn);
-  let bData = bIn.readByteArray(fLen);
+  let bData;
+  try
+  {
+   bData = bIn.readByteArray(fLen);
+  }
+  catch(e)
+  {
+   console.log('Unable to read', fIn.path, ':', e);
+  }
   bIn.close();
   fIn.close();
+  if (bData === undefined)
+   return null;
   let uData = new Uint8Array(bData);
   geoflag_IPData.db4 = uData;
   await geoflag_IPDB._range4();
@@ -285,8 +297,6 @@ var geoflag_IPDB =
    return 'IPDB LOAD ERROR';
   if (geoflag_IPData.range4 === null)
    return 'IPDB LOAD ERROR';
-  if (!geoflag_IPData.range4.hasOwnProperty(ip[0]))
-   return null;
   if (ip[0] === 127)
    return '-L';
   if (ip[0] === 192 && ip[1] === 168 && ip[2] === 0 && ip[3] === 1)
@@ -300,6 +310,8 @@ var geoflag_IPDB =
   }
   if (ip[0] === 192 && ip[1] === 168)
    return '-C';
+  if (!geoflag_IPData.range4.hasOwnProperty(ip[0]))
+   return null;
   let range = geoflag_IPData.range4[ip[0]];
   for (let i = range.start; i <= range.end; i+= geoflag_IPDB._dbInfo4.bytesPerLine)
   {
@@ -460,13 +472,13 @@ var geoflag_IPDB =
   {
    fTo.appendRelativePath(geoflag_IPDB.dataPath[d]);
    if (!fTo.exists())
-    fTo.create(1, 0664);
+    fTo.create(1, geoflag_IPDB._dPerm);
   }
   fTo.appendRelativePath(geoflag_IPDB._dbInfo6.filename);
   if (fTo.exists())
    fTo.remove(false);
   let fOut = Components.classes['@mozilla.org/network/file-output-stream;1'].createInstance(Components.interfaces.nsIFileOutputStream);
-  fOut.init(fTo, 0x02 | 0x08 | 0x20, 0644, 0);
+  fOut.init(fTo, 0x02 | 0x08 | 0x20, geoflag_IPDB._fPerm, 0);
   let bOut = Components.classes['@mozilla.org/binaryoutputstream;1'].createInstance(Components.interfaces.nsIBinaryOutputStream);
   bOut.setOutputStream(fOut);
   bOut.writeByteArray(uData, uData.length);
@@ -487,16 +499,26 @@ var geoflag_IPDB =
   {
    geoflag_IPData.db6 = null;
    geoflag_IPData.range6 = null;
-   return false;
+   return null;
   }
   let fIn = Components.classes['@mozilla.org/network/file-input-stream;1'].createInstance(Components.interfaces.nsIFileInputStream);
-  fIn.init(fFrom, 0x02 | 0x04, 0x01, 0);
+  fIn.init(fFrom, 0x01, geoflag_IPDB._fPerm, 0);
   let fLen = fIn.available();
   let bIn = Components.classes['@mozilla.org/binaryinputstream;1'].createInstance(Components.interfaces.nsIBinaryInputStream);
   bIn.setInputStream(fIn);
-  let bData = bIn.readByteArray(fLen);
+  let bData;
+  try
+  {
+   bData = bIn.readByteArray(fLen);
+  }
+  catch(e)
+  {
+   console.log('Unable to read', fIn.path, ':', e);
+  }
   bIn.close();
   fIn.close();
+  if (bData === undefined)
+   return null;
   let uData = new Uint8Array(bData);
   geoflag_IPData.db6 = uData;
   await geoflag_IPDB._range6();
@@ -669,6 +691,8 @@ var geoflag_IPDB =
   {
    if (geoflag_IPData.db4 === null)
     await geoflag_IPDB._read4();
+   if (geoflag_IPData.db4 === null)
+    return null
    let rawIP = geoflag_IPDB._parse4(ipString);
    if (rawIP === false)
     return null;
@@ -680,6 +704,8 @@ var geoflag_IPDB =
   {
    if (geoflag_IPData.db4 === null)
     await geoflag_IPDB._read4();
+   if (geoflag_IPData.db4 === null)
+    return null
    let rawIP = geoflag_IPDB._parse4(ipString.substr(ipString.lastIndexOf(':')+1));
    if (rawIP === false)
     return null;
@@ -694,6 +720,8 @@ var geoflag_IPDB =
     continue;
    if (geoflag_IPData.db4 === null)
     await geoflag_IPDB._read4();
+   if (geoflag_IPData.db4 === null)
+    return null
    let rawIP = rule.extract4(ex6);
    if(rawIP === false)
     return null;
@@ -701,6 +729,8 @@ var geoflag_IPDB =
   }
   if (geoflag_IPData.db6 === null)
    await geoflag_IPDB._read6();
+   if (geoflag_IPData.db6 === null)
+    return null
   let rawIP = geoflag_IPDB._parse6(ex6);
   if (rawIP === false)
    return null;
