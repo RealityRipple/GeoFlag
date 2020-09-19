@@ -196,10 +196,10 @@ function newGeoFlagInstance(wnd)
    console.log("GeoFlag Error: attempted to load into a window without an address bar and 'urlbar-icons' box");
    return;
   }
+  let spaceHeight = urlBarIconsBox.clientHeight;
   let newIcon = wnd.document.createElement('box');
   newIcon.setAttribute('id', 'geoflag-button');
-  newIcon.setAttribute('style', 'height: 100%;');
-  newIcon.setAttribute('style', 'overflow-y: hidden;');
+  newIcon.setAttribute('style', 'height: 100%; max-height: ' + spaceHeight + 'px; overflow: hidden;');
   newIcon.setAttribute('align', 'center');
   newIcon.setAttribute('pack', 'center');
   let newIcon_image = wnd.document.createElement('label');
@@ -250,24 +250,26 @@ function newGeoFlagInstance(wnd)
  }
  function setIconSize()
  {
-  let maxwidth = geoflag.Prefs.getIntPref('flagsize');
-  if (!maxwidth || maxwidth < 16 || maxwidth > 45)
-   maxwidth = geoflag.Prefs.clearUserPref('flagsize');
-  icon.style.fontSize = maxwidth + 'px';
-  let incr = maxwidth - 16;
-  let offset = 0;
-  if (incr < 7)
-   offset = -3;
-  else if (incr < 14)
-   offset = -4;
-  else if (incr < 18)
-   offset = -5;
-  else if (incr < 25)
-   offset = -6;
-  else
-   offset = -7;
-  let spaceHeight = icon.parentElement.clientHeight;
-  let center = Math.floor(spaceHeight / 2) - Math.floor(maxwidth / 2);
+  let spaceHeight = wnd.document.getElementById('urlbar-icons').clientHeight;
+  let flagsize = geoflag.Prefs.getIntPref('flagsize');
+  if (!flagsize)
+  {
+   flagsize = geoflag.Prefs.clearUserPref('flagsize');
+   flagsize = geoflag.Prefs.getIntPref('flagsize');
+  }
+  if (flagsize < 16)
+  {
+   flagsize = 16;
+   geoflag.Prefs.setIntPref('flagsize', flagsize);
+  }
+  if (flagsize > spaceHeight + 2)
+  {
+   flagsize = spaceHeight + 2;
+   geoflag.Prefs.setIntPref('flagsize', flagsize);
+  }
+  icon.style.fontSize = flagsize + 'px';
+  let offset = (Math.ceil(flagsize / 6) + 1) * -1;
+  let center = Math.floor(spaceHeight / 2) - Math.floor(flagsize / 2);
   offset += center;
   icon.style.transform = 'translateY(' + offset + 'px)';
  }
