@@ -369,7 +369,7 @@ var geoflag_Edit = {
    icon.setAttribute('class','icon');
    icon.setAttribute('minwidth','16');
    icon.setAttribute('minheight','16');
-   icon.setAttribute('src','chrome://geoflag/content/skin/copy.png');
+   icon.setAttribute('src','chrome://geoflag/skin/icons/copy.png');
    let gBundle = Components.classes['@mozilla.org/intl/stringbundle;1'].getService(Components.interfaces.nsIStringBundleService);
    let locale = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
    icon.setAttribute('tooltiptext',locale.GetStringFromName('pasteintotemplate'));
