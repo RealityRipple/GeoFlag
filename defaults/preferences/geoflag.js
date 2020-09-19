@@ -1,5 +1,5 @@
 pref("extensions.{76843B06-C8C5-5088-90C5-679EA2F00123}.description", "chrome://geoflag/locale/geoflag.properties");
-pref('extensions.geoflag.flagsize', 20);
+pref('extensions.geoflag.flagsize', 18);
 pref('extensions.geoflag.warn.update', 'once');
 pref('extensions.geoflag.warn.tld', 'enabled');
 pref('extensions.geoflag.warn.proxy', 'enabled');
