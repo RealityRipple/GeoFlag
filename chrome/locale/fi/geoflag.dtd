@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag-asetukset">
+<!ENTITY prefs.previewflagslabel "Esikatsele maiden lippujen kuvakkeita">
+<!ENTITY prefs.showfaviconslabel "Näytä sivuston kuvake toiminnoissa">
+<!ENTITY prefs.openinlabel "Sivujen avaus:">
+<!ENTITY prefs.tabBGlabel "taustalla, uudella välilehdellä">
+<!ENTITY prefs.tabFGlabel "uudella välilehdellä">
+<!ENTITY prefs.winBGlabel "taustalla, uudessa ikkunassa">
+<!ENTITY prefs.winFGlabel "uudessa ikkunassa">
+<!ENTITY prefs.currentTablabel "nykyisellä välilehdellä">
+<!ENTITY prefs.customizeactionslabel "Muokkaa toimintoja">
+<!ENTITY prefs.addnewactionlabel "Lisää uusi toiminto">
+<!ENTITY prefs.cloneactionlabel "Monista valittu toiminto">
+<!ENTITY prefs.pasteactionlabel "Liitä toiminnot leikepöydältä">
+<!ENTITY prefs.actionsforumlabel "Hanki lisää toimintoja tai jaa omasi">
+<!ENTITY prefs.moveselectedlabel "Siirrä valittu:">
+<!ENTITY prefs.resetmessageslabel "Nollaa viestit">
+<!ENTITY prefs.previewicons "Lippujen esikatselu">
+<!ENTITY prefs.sortflags "Lajittele liput seuraavan kriteerin mukaan:">
+<!ENTITY prefs.sortbycode "Maan/alueen koodi">
+<!ENTITY prefs.sortbyname "Maan/alueen nimi">
+<!ENTITY prefs.sortbyratio "Lipun mittasuhteet">
+<!ENTITY prefs.sortbycolor "Kuvaava väri">
+<!ENTITY action.namelabel "Nimi:">
+<!ENTITY action.clicklabel "Kuvakkeen napautus:">
+<!ENTITY action.hotkeylabel "Pikanäppäin:">
+<!ENTITY action.templatelabel "Pohja:">
+<!ENTITY action.middleclicktooltip "Hiiren keskimmäisen napin sijaan voit käyttää ctrl + napsautus -yhdistelmää.">
+<!ENTITY action.hotkeyhelp "Syötä näppäinyhdistelmä">
+<!ENTITY action.templatehelp "Liitä osoite ja korvaa avainsanat korvausavaimilla">
+<!ENTITY action.placeholderslabel "Korvausavaimet">
+<!ENTITY action.pagetitle "Sivun otsikkoteksti:">
+<!ENTITY action.fullpageurl "Sivun täydellinen osoite (URL):">
+<!ENTITY action.domainname "Palvelimen verkkonimi:">
+<!ENTITY action.ipaddress "Palvelimen IP-osoite:">
+<!ENTITY action.country "Maapalvelin on:">
+<!ENTITY action.exampleoutput "Tulostemalli:">
+<!ENTITY action.seeforumslink "Vieraile foorumilla saadaksesi apua ja lisää toimintoja">
+<!ENTITY showall "Näytä kaikki...">
+<!ENTITY save "Tallenna">
+<!ENTITY cancel "Peru">
+<!ENTITY about.title "Tietoja GeoFlagista">
+<!ENTITY about.version "Versio">
+<!ENTITY about.creator "Tekijä:">
+<!ENTITY about.admin "Geotool- &amp; palvelinylläpitäjä:">
+<!ENTITY about.original "Alkuperäisen lisäosan tekijä:">
+<!ENTITY about.logo "Logo:">
+<!ENTITY about.flagicons "Lippukuvakkeet:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag käyttää mukautettua lippukuvakepakettia, joka">
+<!ENTITY about.wikimediabasedln2 "perustuu Wikimedia Commonsin julkiseen materiaaliin.">
+<!ENTITY about.othericons "Lisäkuvakkeiden lähde:">
+<!ENTITY about.translators "Kääntäjät:">
+<!ENTITY about.geolocation "IP-osoitteen maantieteellisen paikantamisen tietokanta:">
+<!ENTITY about.maxmindln1 "Tämä tuote sisältää MaxMindin luoman GeoLite-tietokannan,">
+<!ENTITY about.maxmindln2 "joka on saatavilla osoitteesta">
+<!ENTITY close "Sulje">

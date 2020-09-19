@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "Настройки GeoFlag">
+<!ENTITY prefs.previewflagslabel "Предварительный просмотр иконок флагов">
+<!ENTITY prefs.showfaviconslabel "Показывать иконки событий">
+<!ENTITY prefs.openinlabel "Действия открывают страницы в:">
+<!ENTITY prefs.tabBGlabel "Новой вкладке на заднем плане">
+<!ENTITY prefs.tabFGlabel "Новой вкладке на переднем плане">
+<!ENTITY prefs.winBGlabel "Новом окне на заднем плане">
+<!ENTITY prefs.winFGlabel "Новом окне на переднем плане">
+<!ENTITY prefs.currentTablabel "Текущей вкладке">
+<!ENTITY prefs.customizeactionslabel "Изменить действия">
+<!ENTITY prefs.addnewactionlabel "Добавить новое действие">
+<!ENTITY prefs.cloneactionlabel "Создать копию выделенного действия">
+<!ENTITY prefs.pasteactionlabel "Вставить действие(я) из буфера">
+<!ENTITY prefs.actionsforumlabel "Загрузить больше действий или поделиться своими собственными">
+<!ENTITY prefs.moveselectedlabel "Переместить выделенное:">
+<!ENTITY prefs.resetmessageslabel "Сбросить сообщения">
+<!ENTITY prefs.previewicons "Предпросмотр иконок">
+<!ENTITY prefs.sortflags "Сортировать флаги по:">
+<!ENTITY prefs.sortbycode "Код Страны/Региона">
+<!ENTITY prefs.sortbyname "Название Страны/Региона">
+<!ENTITY prefs.sortbyratio "Соотношение сторон">
+<!ENTITY prefs.sortbycolor "Репрезентативный Цвет">
+<!ENTITY action.namelabel "Название:">
+<!ENTITY action.clicklabel "Щелчок на иконке:">
+<!ENTITY action.hotkeylabel "Горячая клавиша:">
+<!ENTITY action.templatelabel "Шаблон:">
+<!ENTITY action.middleclicktooltip "Вы также можете использовать ctrl+щелчок вместо щелчка средней кнопкой">
+<!ENTITY action.hotkeyhelp "Переведите фокус и нажмите комбинацию клавиш">
+<!ENTITY action.templatehelp "Вставьте адрес сайта и замените ключевые слова необходимыми метками">
+<!ENTITY action.placeholderslabel "Заполнители для шаблонов данных">
+<!ENTITY action.pagetitle "Текст заголовка страницы:">
+<!ENTITY action.fullpageurl "Полный адрес страницы (URL):">
+<!ENTITY action.domainname "Имя домена:">
+<!ENTITY action.ipaddress "IP адрес сервера:">
+<!ENTITY action.country "Сервер страны находится:">
+<!ENTITY action.exampleoutput "Примерный вывод:">
+<!ENTITY action.seeforumslink "Перейти на форумы за справкой и действиями">
+<!ENTITY showall "Показать всё…">
+<!ENTITY save "Сохранить">
+<!ENTITY cancel "Отмена">
+<!ENTITY about.title "О GeoFlag">
+<!ENTITY about.version "Версия">
+<!ENTITY about.creator "Автор:">
+<!ENTITY about.admin "Администратор сервера Geotool:">
+<!ENTITY about.original "Основано на расширении, написанном:">
+<!ENTITY about.logo "Логотип нарисовал:">
+<!ENTITY about.flagicons "Иконки флагов:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag использует индивидуальный набор иконок флагов основываясь на">
+<!ENTITY about.wikimediabasedln2 "труды общественного достояния, предоставляемые Wikimedia Commons.">
+<!ENTITY about.othericons "Дополнительные иконки по:">
+<!ENTITY about.translators "Переводчики:">
+<!ENTITY about.geolocation "База данных IP адресов геолокации:">
+<!ENTITY about.maxmindln1 "В этом продукте используется база данных GeoLite, созданная MaxMind,">
+<!ENTITY about.maxmindln2 "которую можно скачать на сайте:">
+<!ENTITY close "Закрыть">

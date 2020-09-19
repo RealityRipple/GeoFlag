@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag indstillinger">
+<!ENTITY prefs.previewflagslabel "Forhåndsvis landes flagikoner">
+<!ENTITY prefs.showfaviconslabel "Vis favikoner for handlinger">
+<!ENTITY prefs.openinlabel "Handling åbner side i:">
+<!ENTITY prefs.tabBGlabel "Nyt faneblad i baggrunden">
+<!ENTITY prefs.tabFGlabel "Nyt faneblad i forgrunden">
+<!ENTITY prefs.winBGlabel "Nyt vindue i baggrunden">
+<!ENTITY prefs.winFGlabel "Nyt vindue i forgrunden">
+<!ENTITY prefs.currentTablabel "Nuværende faneblad">
+<!ENTITY prefs.customizeactionslabel "Tilpas tilgængelige handlinger">
+<!ENTITY prefs.addnewactionlabel "Tilføj ny handling">
+<!ENTITY prefs.cloneactionlabel "Klon valgte handling">
+<!ENTITY prefs.pasteactionlabel "Indsæt handlinger fra udklipsholder">
+<!ENTITY prefs.actionsforumlabel "Hent flere handlinger eller del dine egne">
+<!ENTITY prefs.moveselectedlabel "Flyt valgte:">
+<!ENTITY prefs.resetmessageslabel "Nulstil meddelelser">
+<!ENTITY prefs.previewicons "Forhåndsvis ikoner">
+<!ENTITY prefs.sortflags "Sorter flag efter:">
+<!ENTITY prefs.sortbycode "Land/Områdekode">
+<!ENTITY prefs.sortbyname "Land/Områdenavn">
+<!ENTITY prefs.sortbyratio "Størrelsesforhold">
+<!ENTITY prefs.sortbycolor "Repræsentativ farve">
+<!ENTITY action.namelabel "Navn:">
+<!ENTITY action.clicklabel "Klik på ikon:">
+<!ENTITY action.hotkeylabel "Genvejstast:">
+<!ENTITY action.templatelabel "Skabelon:">
+<!ENTITY action.middleclicktooltip "Du kan evt. bruge Ctrl+klik i stedet for midterklik">
+<!ENTITY action.hotkeyhelp "Indtast genvej">
+<!ENTITY action.templatehelp "Indsæt opslagets URL og erstat nøgleord med ønskede pladsholdere">
+<!ENTITY action.placeholderslabel "Pladsholdere til skabelondata">
+<!ENTITY action.pagetitle "Sidens titel:">
+<!ENTITY action.fullpageurl "Sidens fulde adresse (URL):">
+<!ENTITY action.domainname "Domæne (host)-navn:">
+<!ENTITY action.ipaddress "Server IP-adresse:">
+<!ENTITY action.country "Landeserver befinder sig i:">
+<!ENTITY action.exampleoutput "Eksempel på output:">
+<!ENTITY action.seeforumslink "Se forum for hjælp og flere handlinger">
+<!ENTITY showall "Vis alle…">
+<!ENTITY save "Gem">
+<!ENTITY cancel "Annuller">
+<!ENTITY about.title "Om GeoFlag">
+<!ENTITY about.version "Version">
+<!ENTITY about.creator "Lavet af:">
+<!ENTITY about.admin "Geotool &amp; server admin:">
+<!ENTITY about.original "Baseret på en oprindelig tilføjelse af:">
+<!ENTITY about.logo "Logo af:">
+<!ENTITY about.flagicons "Flagikoner:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag bruger et specialudviklet sæt flagikoner baseret på">
+<!ENTITY about.wikimediabasedln2 "de offentligt tilgængelige værker fra Wikimedia Commons.">
+<!ENTITY about.othericons "Yderligere ikoner af:">
+<!ENTITY about.translators "Oversættere:">
+<!ENTITY about.geolocation "IP-adresse positionsdatabase:">
+<!ENTITY about.maxmindln1 "Dette produkt inkluderer GeoLite data skabt af MaxMind,">
+<!ENTITY about.maxmindln2 "tilgængelig fra:">
+<!ENTITY close "Luk">

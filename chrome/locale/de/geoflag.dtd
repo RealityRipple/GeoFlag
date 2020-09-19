@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag - Einstellungen">
+<!ENTITY prefs.previewflagslabel "Vorschau der Flaggen-Sets">
+<!ENTITY prefs.showfaviconslabel "Symbol der Aktionen anzeigen">
+<!ENTITY prefs.openinlabel "Aktion soll neue Seite öffnen...">
+<!ENTITY prefs.tabBGlabel "in neuem Tab im Hintergrund">
+<!ENTITY prefs.tabFGlabel "in neuem Tab im Vordergrund">
+<!ENTITY prefs.winBGlabel "in neuem Fenster im Hintergrund">
+<!ENTITY prefs.winFGlabel "in neuem Fenster im Vordergrund">
+<!ENTITY prefs.currentTablabel "im aktuellen Tab">
+<!ENTITY prefs.customizeactionslabel "Verfügbare benutzerdefinierte Aktionen">
+<!ENTITY prefs.addnewactionlabel "Neue Aktion hinzufügen">
+<!ENTITY prefs.cloneactionlabel "Markierte Aktion duplizieren">
+<!ENTITY prefs.pasteactionlabel "Aktion(en) aus der Zwischenablage einfügen">
+<!ENTITY prefs.actionsforumlabel "Weitere Aktionen erhalten oder Ihre eigenen mit anderen teilen">
+<!ENTITY prefs.moveselectedlabel "Ausgewähltes Element verschieben:">
+<!ENTITY prefs.resetmessageslabel "Hinweistext erneut anzeigen">
+<!ENTITY prefs.previewicons "Vorschau der Flaggen-Sets">
+<!ENTITY prefs.sortflags "Flaggen soertieren nach:">
+<!ENTITY prefs.sortbycode "Landes-/Territorialcode">
+<!ENTITY prefs.sortbyname "Landes-/Territorialname">
+<!ENTITY prefs.sortbyratio "Seitenverhältnis">
+<!ENTITY prefs.sortbycolor "Repräsentative Farbe">
+<!ENTITY action.namelabel "Name:">
+<!ENTITY action.clicklabel "Symbol-Mausklick:">
+<!ENTITY action.hotkeylabel "Tastaturkürzel:">
+<!ENTITY action.templatelabel "Vorlage:">
+<!ENTITY action.middleclicktooltip "Wahlweise kann auch anstelle des Mittelklicks das Tastaturkürzel Strg + Klick verwendet werden">
+<!ENTITY action.hotkeyhelp "Tastaturkürzel festlegen">
+<!ENTITY action.templatehelp "URL für Suche einfügen und die Schlüsselwörter durch die gewünschten Platzhalter ersetzen">
+<!ENTITY action.placeholderslabel "Platzhalter für den Einsatz in Vorlagen">
+<!ENTITY action.pagetitle "Seitentitel:">
+<!ENTITY action.fullpageurl "Vollständige Adresse (URL) der Seite:">
+<!ENTITY action.domainname "Domainname (Host):">
+<!ENTITY action.ipaddress "Server-IP-Adresse:">
+<!ENTITY action.country "Land, in dem sich der Server befindet:">
+<!ENTITY action.exampleoutput "Beispielausgabe:">
+<!ENTITY action.seeforumslink "Das Forum für Hilfe und weitere Aktionen aufrufen">
+<!ENTITY showall "Alle anzeigen…">
+<!ENTITY save "Speichern">
+<!ENTITY cancel "Abbrechen">
+<!ENTITY about.title "Über GeoFlag">
+<!ENTITY about.version "Version">
+<!ENTITY about.creator "Erstellt von:">
+<!ENTITY about.admin "Geotool- &amp; Server-Administrator:">
+<!ENTITY about.original "Basiert auf der Original-Erweiterung von:">
+<!ENTITY about.logo "Logo erstellt von:">
+<!ENTITY about.flagicons "Flaggensymbole">
+<!ENTITY about.wikimediabasedln1 "GeoFlag verwendet einen speziell angefertigten Satz von Flaggen-Symbolen, die auf der">
+<!ENTITY about.wikimediabasedln2 "Grundlage der gemeinfreien Werke von Wikimedia Commons zur Verfügung gestellt wurden.">
+<!ENTITY about.othericons "Weitere Symbole von:">
+<!ENTITY about.translators "Übersetzer:">
+<!ENTITY about.geolocation "IP-Adressen-Ortsbestimmungs-Datenbank:">
+<!ENTITY about.maxmindln1 "Dieses Produkt basiert auf von MaxMind zusammengestellten GeoLite-Daten,">
+<!ENTITY about.maxmindln2 "zu finden unter:">
+<!ENTITY close "Schließen">

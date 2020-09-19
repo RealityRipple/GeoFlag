@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag Seçenekleri">
+<!ENTITY prefs.previewflagslabel "Ülke bayrak simgeleri önizleme">
+<!ENTITY prefs.showfaviconslabel "Favori simgeleri göster">
+<!ENTITY prefs.openinlabel "sayfa açılırken:">
+<!ENTITY prefs.tabBGlabel "Arka planda yeni sekme">
+<!ENTITY prefs.tabFGlabel "Ön planda yeni sekme">
+<!ENTITY prefs.winBGlabel "Arka planda yeni pencere">
+<!ENTITY prefs.winFGlabel "Ön planda yeni pencere">
+<!ENTITY prefs.currentTablabel "Geçerli sekme">
+<!ENTITY prefs.customizeactionslabel "Eylemleri Kişiselleştir">
+<!ENTITY prefs.addnewactionlabel "Yeni Eylem ekle">
+<!ENTITY prefs.cloneactionlabel "Seçilen işlemi kopyala">
+<!ENTITY prefs.pasteactionlabel "işlem(leri) panoya kopyala">
+<!ENTITY prefs.actionsforumlabel "Daha fazla eylem alın veya sizinkini paylaşın">
+<!ENTITY prefs.moveselectedlabel "Seçileni taşı:">
+<!ENTITY prefs.resetmessageslabel "Mesajları Sıfırla">
+<!ENTITY prefs.previewicons "Simge Görünümeri">
+<!ENTITY prefs.sortflags "Bayrakları sırala:">
+<!ENTITY prefs.sortbycode "Ülke/Bölge Kodu">
+<!ENTITY prefs.sortbyname "Ülke/Bölge Adı">
+<!ENTITY prefs.sortbyratio "Boy Oranı">
+<!ENTITY prefs.sortbycolor "Temsilci Rengi">
+<!ENTITY action.namelabel "İsim:">
+<!ENTITY action.clicklabel "Simge Tıklaması:">
+<!ENTITY action.hotkeylabel "Kısayol:">
+<!ENTITY action.templatelabel "Şablon:">
+<!ENTITY action.middleclicktooltip "Orta buton tıklaması yerine Ctrl+Tıklama kullanabilirsiniz">
+<!ENTITY action.hotkeyhelp "Tıklayın e bir Tuşa basın">
+<!ENTITY action.templatehelp "Bir URL yapıştırın ve istediğiniz anahtar kelimeleri değiştirin">
+<!ENTITY action.placeholderslabel "Veri tutucu şablonları">
+<!ENTITY action.pagetitle "Sayfa başlığı metni:">
+<!ENTITY action.fullpageurl "Tam sayfa adresi (URL):">
+<!ENTITY action.domainname "Alan adı (domain):">
+<!ENTITY action.ipaddress "sunucu IP Adresi:">
+<!ENTITY action.country "Sunucu ülkesi:">
+<!ENTITY action.exampleoutput "Örnek Çıktı:">
+<!ENTITY action.seeforumslink "Yardım ve daha fazlası için forumlara bakın">
+<!ENTITY showall "Tümünü göster ...">
+<!ENTITY save "Kaydet">
+<!ENTITY cancel "Vazgeç">
+<!ENTITY about.title "GeoFlag Hakkında">
+<!ENTITY about.version "Sürüm">
+<!ENTITY about.creator "Yazar:">
+<!ENTITY about.admin "Geotool &amp; Sunucu Yöneticisi:">
+<!ENTITY about.original "Eklenti üzerine kurulu:">
+<!ENTITY about.logo "Logo:">
+<!ENTITY about.flagicons "Bayrak Simgeleri:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag bayrak simgeleri için özel bir set kullanır">
+<!ENTITY about.wikimediabasedln2 "Açık Alan adları Wikimedia Commons tarafından sağlanır.">
+<!ENTITY about.othericons "Ek simgeler:">
+<!ENTITY about.translators "Çevirenler:">
+<!ENTITY about.geolocation "IP addres coğrafi konum veritabanı:">
+<!ENTITY about.maxmindln1 "Bu ürün Geolite verilerinide kapsar, MaxMind tarafından oluşturulmuştur.">
+<!ENTITY about.maxmindln2 "şuradan hazırlanmıştır:">
+<!ENTITY close "Kapat">

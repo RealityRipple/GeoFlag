@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "Tùy chọn GeoFlag">
+<!ENTITY prefs.previewflagslabel "Xem trước các hình quốc kỳ">
+<!ENTITY prefs.showfaviconslabel "Hiện favicon cho các thao tác">
+<!ENTITY prefs.openinlabel "Các thao tác sẽ mở trang trong:">
+<!ENTITY prefs.tabBGlabel "Thẻ mới trong hậu cảnh">
+<!ENTITY prefs.tabFGlabel "Thẻ mới trong tiền cảnh">
+<!ENTITY prefs.winBGlabel "Cửa sổ mới trong hậu cảnh">
+<!ENTITY prefs.winFGlabel "Cửa sổ mới trong tiền cảnh">
+<!ENTITY prefs.currentTablabel "Thẻ hiện tại">
+<!ENTITY prefs.customizeactionslabel "Tùy biến Thao tác">
+<!ENTITY prefs.addnewactionlabel "Thêm thao tác mới">
+<!ENTITY prefs.cloneactionlabel "Sao chép hành động được chọn">
+<!ENTITY prefs.pasteactionlabel "Dán hành động từ bộ nhớ tạm">
+<!ENTITY prefs.actionsforumlabel "Lấy thêm các hành động hoặc chia sẻ hành động của bạn">
+<!ENTITY prefs.moveselectedlabel "Di chuyển mục đã chọn:">
+<!ENTITY prefs.resetmessageslabel "Tạo lại các Thông báo">
+<!ENTITY prefs.previewicons "Xem trước Biểu tượng">
+<!ENTITY prefs.sortflags "Sắp xếp lá cờ theo:">
+<!ENTITY prefs.sortbycode "Mã Quốc gia/Lãnh thổ">
+<!ENTITY prefs.sortbyname "Tên Quốc gia/Lãnh thổ">
+<!ENTITY prefs.sortbyratio "Tỷ lệ Hình ảnh">
+<!ENTITY prefs.sortbycolor "Màu Tiêu biểu">
+<!ENTITY action.namelabel "Tên:">
+<!ENTITY action.clicklabel "Nhấn lên Biểu tượng:">
+<!ENTITY action.hotkeylabel "Phím tắt:">
+<!ENTITY action.templatelabel "Khuôn mẫu:">
+<!ENTITY action.middleclicktooltip "Bạn có thể dùng Ctrl+Nhấn chuột thay vì Nhấn chuột giữa">
+<!ENTITY action.hotkeyhelp "Tập trung và kết hợp ấn phím">
+<!ENTITY action.templatehelp "Dán URL của tra cứu và thay thế từ khóa bằng placeholder mong muốn">
+<!ENTITY action.placeholderslabel "Mẫu dữ liệu chỗ trống">
+<!ENTITY action.pagetitle "Tiêu đề trang:">
+<!ENTITY action.fullpageurl "Địa chỉ trang đầy đủ (URL):">
+<!ENTITY action.domainname "Tên miền:">
+<!ENTITY action.ipaddress "Địa chỉ IP:">
+<!ENTITY action.country "Quốc gia đặt máy chủ:">
+<!ENTITY action.exampleoutput "Đầu ra của ví dụ:">
+<!ENTITY action.seeforumslink "Tới diễn đàn nhờ trợ giúp và những thứ khác">
+<!ENTITY showall "Hiển thị tất cả...">
+<!ENTITY save "Lưu">
+<!ENTITY cancel "Hủy bỏ">
+<!ENTITY about.title "Giới thiệu GeoFlag">
+<!ENTITY about.version "Phiên bản">
+<!ENTITY about.creator "Tạo bởi">
+<!ENTITY about.admin "Geotool &amp; quản trị máy chủ:">
+<!ENTITY about.original "Dựa trên tiện ích gốc của:">
+<!ENTITY about.logo "Biểu trưng bởi:">
+<!ENTITY about.flagicons "Hình ảnh lá cờ:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag sử dụng bộ hình ảnh lá cờ được vẽ riêng phỏng theo">
+<!ENTITY about.wikimediabasedln2 "các tác phẩm thuộc phạm vi công cộng do Wikimedia Commons cung cấp.">
+<!ENTITY about.othericons "Các hình ảnh thêm được vẽ bởi:">
+<!ENTITY about.translators "Người dịch:">
+<!ENTITY about.geolocation "Cơ sở dữ liệu định vị địa chỉ IP:">
+<!ENTITY about.maxmindln1 "Sản phẩm này bao gồm dữ liệu GeoLite">
+<!ENTITY about.maxmindln2 "tạo bởi MaxMind, hiện hữu từ:">
+<!ENTITY close "Đóng">

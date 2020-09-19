@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag 选项">
+<!ENTITY prefs.previewflagslabel "预览国家旗帜图标">
+<!ENTITY prefs.showfaviconslabel "显示动作图标">
+<!ENTITY prefs.openinlabel "执行动作时打开页面的方式：">
+<!ENTITY prefs.tabBGlabel "新建后台标签页">
+<!ENTITY prefs.tabFGlabel "新建前台标签页">
+<!ENTITY prefs.winBGlabel "新建后台窗口">
+<!ENTITY prefs.winFGlabel "新建前台窗口">
+<!ENTITY prefs.currentTablabel "当前标签页">
+<!ENTITY prefs.customizeactionslabel "自定义可用动作">
+<!ENTITY prefs.addnewactionlabel "添加新动作">
+<!ENTITY prefs.cloneactionlabel "克隆选中的动作">
+<!ENTITY prefs.pasteactionlabel "从剪贴板粘贴动作">
+<!ENTITY prefs.actionsforumlabel "获取更多动作或者分享您的动作">
+<!ENTITY prefs.moveselectedlabel "移动所选：">
+<!ENTITY prefs.resetmessageslabel "重置消息">
+<!ENTITY prefs.previewicons "预览图标">
+<!ENTITY prefs.sortflags "旗帜排序:">
+<!ENTITY prefs.sortbycode "国家/领土代码">
+<!ENTITY prefs.sortbyname "国家/领土名">
+<!ENTITY prefs.sortbyratio "高宽比">
+<!ENTITY prefs.sortbycolor "代表颜色">
+<!ENTITY action.namelabel "名称：">
+<!ENTITY action.clicklabel "图标点击：">
+<!ENTITY action.hotkeylabel "快捷键：">
+<!ENTITY action.templatelabel "模板：">
+<!ENTITY action.middleclicktooltip "您可以选择使用 ctrl+点击 替代中键点击">
+<!ENTITY action.hotkeyhelp "按下按键记录快捷键">
+<!ENTITY action.templatehelp "填入用于查找的 URL，并用占位符替换关键字位置">
+<!ENTITY action.placeholderslabel "模板占位符">
+<!ENTITY action.pagetitle "页面标题文字：">
+<!ENTITY action.fullpageurl "页面完整地址 (URL)：">
+<!ENTITY action.domainname "域名 (主机名):">
+<!ENTITY action.ipaddress "服务器 IP 地址:">
+<!ENTITY action.country "服务器所在的国家：">
+<!ENTITY action.exampleoutput "样例输出:">
+<!ENTITY action.seeforumslink "查看论坛获取帮助和更多动作">
+<!ENTITY showall "显示全部…">
+<!ENTITY save "保存">
+<!ENTITY cancel "取消">
+<!ENTITY about.title "关于 GeoFlag">
+<!ENTITY about.version "版本">
+<!ENTITY about.creator "作者：">
+<!ENTITY about.admin "Geotool &amp; 服务器管理员：">
+<!ENTITY about.original "基于原始的附加组件作者:">
+<!ENTITY about.logo "Logo 作者：">
+<!ENTITY about.flagicons "旗帜图标:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag 所用的旗帜定制图标集基于">
+<!ENTITY about.wikimediabasedln2 "公用域名由Wikimeda Commons提供">
+<!ENTITY about.othericons "其他图标提供者:">
+<!ENTITY about.translators "翻译者：">
+<!ENTITY about.geolocation "IP地址地理位置数据库:">
+<!ENTITY about.maxmindln1 "此产品包含了 MaxMind 创建的 GeoLite 数据。">
+<!ENTITY about.maxmindln2 "存在于：">
+<!ENTITY close "关闭">

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://geoflag/skin/style.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://geoflag/locale/geoflag.dtd">
+<window class="dialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        orient="vertical"
+        autostretch="always"
+        onload="geoflag_Options.init();"
+        onunload="geoflag_Options.emptyTrashAndSave();"
+        title="&prefs.title;">
+ <keyset>
+  <key keycode="VK_ESCAPE" oncommand="window.close();"/>
+  <key keycode="VK_INSERT" oncommand="geoflag_Options.openEditAction('new');"/>
+  <key keycode="VK_DELETE" oncommand="geoflag_Options.onDeleteKeyPress();"/>
+  <key keycode="VK_BACK" oncommand="geoflag_Options.onDeleteKeyPress();"/>
+  <key keycode="VK_RETURN" oncommand="geoflag_Options.onEnterKeyPress();"/>
+  <key keycode="VK_F1" oncommand="geoflag_Options.gotoGetMorePage();"/>
+  <key keycode="VK_F5" oncommand="geoflag_Options.generateActionsEditList();"/>
+  <key keycode="VK_UP" oncommand="geoflag_Options.onNavigationKeyPress('up');"/>
+  <key keycode="VK_DOWN" oncommand="geoflag_Options.onNavigationKeyPress('down');"/>
+  <key keycode="VK_PAGE_UP" oncommand="geoflag_Options.onNavigationKeyPress('pageup');"/>
+  <key keycode="VK_PAGE_DOWN" oncommand="geoflag_Options.onNavigationKeyPress('pagedown');"/>
+  <key keycode="VK_HOME" oncommand="geoflag_Options.onNavigationKeyPress('home');"/>
+  <key keycode="VK_END" oncommand="geoflag_Options.onNavigationKeyPress('end');"/>
+  <key modifiers="accel" key="N" oncommand="geoflag_Options.openEditAction('new');"/>
+  <key modifiers="accel" key="C" oncommand="geoflag_Options.openCloneSelectedAction();"/>
+  <key modifiers="accel" key="V" oncommand="geoflag_Options.attemptPaste();"/>
+ </keyset>
+ <stringbundleset>
+  <stringbundle id="platformKeys" src="chrome://global-platform/locale/platformKeys.properties"/>
+ </stringbundleset>
+ <script src="chrome://geoflag/content/texttools.js" />
+ <script src="chrome://geoflag/content/geoflag.js" />
+ <script src="chrome://geoflag/content/actions.js" />
+ <script src="chrome://geoflag/content/tools.js" />
+ <script src="chrome://geoflag/content/options.js" />
+ <groupbox id="generalOptions">
+  <separator class="thin"/>
+  <hbox>
+   <checkbox label="&prefs.showfaviconslabel;" id="showFaviconsCheckbox" oncommand="geoflag_Options.setShowFavicons(); geoflag_Options.generateActionsEditList();"/>   
+   <spacer flex="1"/>
+   <hbox id="customDBLink" class="icon text-link" onclick="if(event.button === 0) geoflag_Options.openIPDB();">
+    <image src="chrome://geoflag/skin/icons/special/about.png"/>
+    <label value="IP Database"/>
+   </hbox>
+  </hbox>
+  <separator class="thin"/>
+  <hbox>
+   <label value="&prefs.openinlabel;" control="openLinksInMenu"/>
+   <menulist sizetopopup="always" id="openLinksInMenu" oncommand="geoflag_Options.setOpenLinksIn();">
+    <menupopup>
+     <menuitem id="tabFG" label="&prefs.tabFGlabel;"/>
+     <menuitem id="tabBG" label="&prefs.tabBGlabel;"/>
+     <menuitem id="winFG" label="&prefs.winFGlabel;"/>
+     <menuitem id="winBG" label="&prefs.winBGlabel;"/>
+     <menuitem id="currentTab" label="&prefs.currentTablabel;"/>
+    </menupopup>
+   </menulist>
+  </hbox>
+ </groupbox>
+ <separator class="thin"/>
+ <groupbox flex="1">
+  <caption label="&prefs.customizeactionslabel;"/>
+  <box style="border: dotted transparent;" flex="1">
+   <richlistbox id="actionsRichlistbox"
+                flex="1"
+                style="margin: 1px;"
+                minheight="100"
+                height="325"
+                minwidth="350"
+                width="400"
+                onselect="geoflag_Options.forceSelectedVisible(); geoflag_Options.setArrowStates();"/>
+  </box>
+  <hbox style="padding: 2px 10px;">
+   <button type="menu-button"
+           label="&prefs.addnewactionlabel;"
+           image="chrome://geoflag/skin/icons/add.png"
+           oncommand="geoflag_Options.openEditAction('new');">
+    <menupopup onpopupshowing="geoflag_Options.initAddPopup();" oncommand="event.stopPropagation();">
+     <menuitem label="&prefs.cloneactionlabel;"
+               class="menuitem-iconic"
+               image="chrome://geoflag/skin/icons/clone.png"
+               id="clone" 
+               oncommand="geoflag_Options.openCloneSelectedAction();"/>
+     <menuitem label="&prefs.pasteactionlabel;"
+               class="menuitem-iconic" 
+               image="chrome://geoflag/skin/icons/copy.png"
+               id="paste" 
+               oncommand="geoflag_Options.pasteFromBuffer();"/>
+     <menuseparator/>
+     <menuitem label="&prefs.actionsforumlabel;"
+               class="menuitem-iconic" 
+               image="chrome://geoflag/skin/icons/goto.png"
+               oncommand="geoflag_Options.gotoGetMorePage();"/>
+    </menupopup>
+   </button>
+   <spacer minwidth="20" flex="1"/>
+   <label value="&prefs.moveselectedlabel;"/>
+   <label value="&#x25bc;" class="emojicon" id="down" onclick="if(event.button === 0) geoflag_Options.moveSelectedAction(+1);"/>
+   <label value="&#x25b2;" class="emojicon" id="up" onclick="if(event.button === 0) geoflag_Options.moveSelectedAction(-1);"/>
+  </hbox>
+ </groupbox>
+ <hbox>
+  <spacer width="10"/>
+  <hbox id="resetMessagesLink" class="icon text-link" hidden="true" onclick="if(event.button === 0) geoflag_Options.resetMessagesPrefs();">
+   <image src="chrome://geoflag/skin/icons/messages.png"/>
+   <label value="&prefs.resetmessageslabel;"/>
+  </hbox>
+  <spacer flex="5"/>
+  <button label="&close;" oncommand="window.close();" default="true"/>
+ </hbox>
+</window>

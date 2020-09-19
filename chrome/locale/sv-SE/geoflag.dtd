@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "Inställningar för Firefox">
+<!ENTITY prefs.previewflagslabel "Förhandsgranska ikoner för landsflaggor">
+<!ENTITY prefs.showfaviconslabel "Visa sajtikoner för åtgärder">
+<!ENTITY prefs.openinlabel "Åtgärd öppnar sidor i:">
+<!ENTITY prefs.tabBGlabel "Ny flik i bakgrunden">
+<!ENTITY prefs.tabFGlabel "Ny flik i förgrunden">
+<!ENTITY prefs.winBGlabel "Nytt fönster i bakgrunden">
+<!ENTITY prefs.winFGlabel "Nytt fönster i förgrunden">
+<!ENTITY prefs.currentTablabel "Aktuell flik">
+<!ENTITY prefs.customizeactionslabel "Anpassa tillgängliga åtgärder">
+<!ENTITY prefs.addnewactionlabel "Lägg till en ny åtgärd">
+<!ENTITY prefs.cloneactionlabel "Klona markerad åtgärd">
+<!ENTITY prefs.pasteactionlabel "Klistra in åtgärd(er) från Urklipp">
+<!ENTITY prefs.actionsforumlabel "Hämta fler åtgärder eller dela ut dina egna">
+<!ENTITY prefs.moveselectedlabel "Flytta markerad(e):">
+<!ENTITY prefs.resetmessageslabel "Återställ meddelanden">
+<!ENTITY prefs.previewicons "Förhandsvisa ikoner">
+<!ENTITY prefs.sortflags "Sortera flaggor efter:">
+<!ENTITY prefs.sortbycode "Kod för land/territorium">
+<!ENTITY prefs.sortbyname "Namn på land/territorium">
+<!ENTITY prefs.sortbyratio "Bredd–höjd-förhållande">
+<!ENTITY prefs.sortbycolor "Färg">
+<!ENTITY action.namelabel "Namn:">
+<!ENTITY action.clicklabel "Klick på ikon">
+<!ENTITY action.hotkeylabel "Snabbtangent:">
+<!ENTITY action.templatelabel "Mall:">
+<!ENTITY action.middleclicktooltip "Du kan också använda Ctrl+klick istället för mittenklick">
+<!ENTITY action.hotkeyhelp "Klicka, tryck tangentkomb.">
+<!ENTITY action.templatehelp "Klistra in sök-URL:en och ersätt nyckelord med önskade platshållare">
+<!ENTITY action.placeholderslabel "Platshållare för malldata">
+<!ENTITY action.pagetitle "Sidrubriktext:">
+<!ENTITY action.fullpageurl "Fullständig sidadress (URL):">
+<!ENTITY action.domainname "Domännamn (server):">
+<!ENTITY action.ipaddress "Server-IP-adress:">
+<!ENTITY action.country "Det land servern finns i:">
+<!ENTITY action.exampleoutput "Exempelutdata:">
+<!ENTITY action.seeforumslink "Gå till forumet för hjälp och fler åtgärder">
+<!ENTITY showall "Visa alla…">
+<!ENTITY save "Spara">
+<!ENTITY cancel "Avbryt">
+<!ENTITY about.title "Om GeoFlag">
+<!ENTITY about.version "Version">
+<!ENTITY about.creator "Skapat av:">
+<!ENTITY about.admin "Geotool- &amp; serveradministratör:">
+<!ENTITY about.original "Baserad på originaltillägg av:">
+<!ENTITY about.logo "Logotyp av:">
+<!ENTITY about.flagicons "Flaggikoner:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag använder en skräddarsydd uppsättning av flaggikoner, baserad på">
+<!ENTITY about.wikimediabasedln2 "de upphovsrättsfria verk som tillhandahålls av Wikimedia Commons.">
+<!ENTITY about.othericons "Ytterligare ikoner av:">
+<!ENTITY about.translators "Översättare:">
+<!ENTITY about.geolocation "Geolokaliseringsdatabas för IP-adresser:">
+<!ENTITY about.maxmindln1 "Denna produkt innehåller GeoLite-data skapad av MaxMind.">
+<!ENTITY about.maxmindln2 "Den finns tillgänglig på:">
+<!ENTITY close "Stäng">

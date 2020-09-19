@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag Опции">
+<!ENTITY prefs.previewflagslabel "Преглед на флаговете на държавите като икони">
+<!ENTITY prefs.showfaviconslabel "Покажи иконите за любимите действия">
+<!ENTITY prefs.openinlabel "При действие отвори страницата в:">
+<!ENTITY prefs.tabBGlabel "Нов под прозорец във заден режим">
+<!ENTITY prefs.tabFGlabel "Нов под прозорец на преден план">
+<!ENTITY prefs.winBGlabel "Нов прозорец в заден режим">
+<!ENTITY prefs.winFGlabel "Нов прозорец на преден план">
+<!ENTITY prefs.currentTablabel "В сегашният прозорец">
+<!ENTITY prefs.customizeactionslabel "Избери добавките който ти харесват">
+<!ENTITY prefs.addnewactionlabel "Добави нова добавка">
+<!ENTITY prefs.cloneactionlabel "Клонирай избраните добавки">
+<!ENTITY prefs.pasteactionlabel "Поставяне от клипборда">
+<!ENTITY prefs.actionsforumlabel "Получете повече действия или сподели своите собствени">
+<!ENTITY prefs.moveselectedlabel "Премести избрани:">
+<!ENTITY prefs.resetmessageslabel "Показване на съобщенията по подразбиране">
+<!ENTITY prefs.previewicons "Преглед на икони">
+<!ENTITY prefs.sortflags "Сортиране на флаговете по:">
+<!ENTITY prefs.sortbycode "Държава/код на територията">
+<!ENTITY prefs.sortbyname "Държава/име на територията">
+<!ENTITY prefs.sortbyratio "Съотношение на страните">
+<!ENTITY prefs.sortbycolor "Представителен цвят">
+<!ENTITY action.namelabel "Име:">
+<!ENTITY action.clicklabel "Икона Щракнете:">
+<!ENTITY action.hotkeylabel "Клавиш:">
+<!ENTITY action.templatelabel "Шаблон:">
+<!ENTITY action.middleclicktooltip "По желание можете да използвате CTRL + клик, вместо да щракнете върху средата">
+<!ENTITY action.hotkeyhelp "Фокусирайте и натиснете клавишните комбинации">
+<!ENTITY action.templatehelp "Постави URL на търсене и заменете ключовите думи с желаните контейнери">
+<!ENTITY action.placeholderslabel "Шаблони с данни за контейнери">
+<!ENTITY action.pagetitle "Текст на заглавна страницата:">
+<!ENTITY action.fullpageurl "Пълен адрес на страницата (URL):">
+<!ENTITY action.domainname "Име на Домейн (хост):">
+<!ENTITY action.ipaddress "ИП Адрес на сървър:">
+<!ENTITY action.country "Държавата на сървъра е:">
+<!ENTITY action.exampleoutput "Примерен извод:">
+<!ENTITY action.seeforumslink "Вижте във форумите за помощ и повече действия">
+<!ENTITY showall "Покажи всичко...">
+<!ENTITY save "Запази">
+<!ENTITY cancel "Отказ">
+<!ENTITY about.title "За GeoFlag">
+<!ENTITY about.version "Версия">
+<!ENTITY about.creator "Създаден от:">
+<!ENTITY about.admin "Geotool &amp; сървър админ:">
+<!ENTITY about.original "На базата на оригиналната добавка от:">
+<!ENTITY about.logo "Лого от:">
+<!ENTITY about.flagicons "Флаг икони:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag ползва собствени икони базирани на">
+<!ENTITY about.wikimediabasedln2 "публичните домейни работят благодарение на Wikimedia Commons.">
+<!ENTITY about.othericons "Допълнителни икони от:">
+<!ENTITY about.translators "Преводачи:">
+<!ENTITY about.geolocation "IP Адреси Геологическа датабаза:">
+<!ENTITY about.maxmindln1 "Този продукт включва информацията на GeoLite създадена от MaxMind,">
+<!ENTITY about.maxmindln2 "достъпна на:">
+<!ENTITY close "Затваряне">

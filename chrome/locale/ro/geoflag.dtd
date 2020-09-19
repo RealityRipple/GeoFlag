@@ -1,0 +1,68 @@
+<!-- ## options dialog ## -->
+<!ENTITY prefs.title "Opțiuni GeoFlag">
+<!ENTITY prefs.previewflagslabel "Vizualizează pictogramele drapelelor">
+<!ENTITY prefs.showfaviconslabel "Se afișează pictogramele acțiunilor">
+<!ENTITY prefs.openinlabel "Se deschid paginile în:">
+<!ENTITY prefs.tabBGlabel "Filă nouă în fundal">
+<!ENTITY prefs.tabFGlabel "Filă nouă în prim-plan">
+<!ENTITY prefs.winBGlabel "Fereastră nouă în fundal">
+<!ENTITY prefs.winFGlabel "Fereastră nouă în prim-plan">
+<!ENTITY prefs.currentTablabel "Fila curentă">
+<!ENTITY prefs.customizeactionslabel "Acțiuni disponibile">
+<!ENTITY prefs.addnewactionlabel "Adaugă o acțiune nouă">
+<!ENTITY prefs.cloneactionlabel "Clonează acțiunea selectată">
+<!ENTITY prefs.pasteactionlabel "Lipește acțiunea din memoria tampon">
+<!ENTITY prefs.actionsforumlabel "Obține mai multe acțiuni sau distribuie acțiunile proprii">
+<!ENTITY prefs.moveselectedlabel "Mută acțiunea selectată:">
+<!ENTITY prefs.resetmessageslabel "Reafișează mesajele de avertizare">
+<!-- ## preview icons dialog ## -->
+<!ENTITY prefs.previewicons "Vizualizare pictograme ale drapelelor">
+<!ENTITY prefs.sortflags "Se sortează drapelele după:">
+<!ENTITY prefs.sortbycode "Codul țării/teritoriului">
+<!ENTITY prefs.sortbyname "Denumirea țării/teritoriului">
+<!ENTITY prefs.sortbyratio "Raportul dimensiunilor">
+<!ENTITY prefs.sortbycolor "Culorile reprezentative">
+<!-- ## add/edit action dialog ## -->
+<!ENTITY action.namelabel "Denumire:">
+<!ENTITY action.clicklabel "Tip clic:">
+<!ENTITY action.hotkeylabel "Tastă directă:">
+<!ENTITY action.templatelabel "Șablon:">
+<!ENTITY action.middleclicktooltip "Opțional, puteți folosi Ctrl+clic în loc de clic-mijloc">
+<!-- used as empty text for hotkey field; may not exceed length of field; you can shorten it to "Focus, press hotkey" or similar if needed: -->
+<!ENTITY action.hotkeyhelp "Selectați și apăsați o combinație de taste">
+<!-- used as empty text for template field; may not exceed length of field; you can reword it to fit into the given space if needed: -->
+<!ENTITY action.templatehelp "Lipiți adresa de căutare și înlocuiți cuvintele cheie cu substituenții doriți">
+<!-- the placeholder labels should all fit in the same box in the dialog without wasting space; you can reword them slightly if needed: -->
+<!ENTITY action.placeholderslabel "Substituenți">
+<!ENTITY action.pagetitle "Titlu de pagină:">
+<!ENTITY action.fullpageurl "Adresă completă a paginii:">
+<!ENTITY action.domainname "Domeniu (host):">
+<!ENTITY action.ipaddress "Adresă IP server:">
+<!ENTITY action.country "Serverul de țară se află în:">
+<!ENTITY action.exampleoutput "Rezultat exemplu:">
+<!ENTITY action.seeforumslink "Vizitați forumurile pentru asistență și pentru a obține mai multe acțiuni">
+<!-- make sure to keep the ellipsis character (rather than 3 periods, which takes up more space) or replace it with a localized equivalent, if needed: -->
+<!ENTITY showall "Afișează tot...">
+<!ENTITY save "Salvează">
+<!ENTITY cancel "Renunță">
+<!-- ## about dialog ## -->
+<!ENTITY about.title "Despre GeoFlag">
+<!ENTITY about.version "Versiunea">
+<!ENTITY about.creator "Extensie creată de:">
+<!ENTITY about.admin "Administrare Geotool și server:">
+<!ENTITY about.original "Bazată pe o extensie originală de:">
+<!ENTITY about.logo "Logo creat de:">
+<!ENTITY about.flagicons "Pictograme ale drapelelor:">
+<!-- the following two strings constitute a single sentence split across two lines; break the sentence where it fits in the window best: -->
+<!ENTITY about.wikimediabasedln1 "GeoFlag folosește un set propriu de pictograme pentru drapele bazat pe">
+<!ENTITY about.wikimediabasedln2 "lucrările din domeniul public furnizate de Wikimedia Commons.">
+<!ENTITY about.othericons "Pictograme adiționale furnizate de:">
+<!ENTITY about.translators "Traducători:">
+<!ENTITY about.geolocation "Bază de date de geolocalizare a adreselor IP:">
+<!-- the following two strings constitute a single sentence fragment split across two lines; break the sentence where it fits in the window best: -->
+<!ENTITY about.maxmindln1 "Această extensie include date GeoLite create de MaxMind,">
+<!ENTITY about.maxmindln2 "disponibile pe:">
+<!-- used in all dialogs: -->
+<!ENTITY close "Închide">
+<!-- Please don't forget to test your localizations in all 4 dialogs:  options, preview icons, add/edit action, about -->
+<!-- If you are localizing this file manually instead of using the WTS please cut out the notes and blank lines before uploading. -->

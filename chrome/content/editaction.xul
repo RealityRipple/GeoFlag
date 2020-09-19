@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://geoflag/skin/style.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://geoflag/locale/geoflag.dtd">
+<window class="dialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        orient="vertical"
+        onload="geoflag_Edit.init();">
+ <script src="chrome://geoflag/content/texttools.js" />
+ <script src="chrome://geoflag/content/geoflag.js" />
+ <script src="chrome://geoflag/content/actions.js" />
+ <script src="chrome://geoflag/content/tools.js" />
+ <script src="chrome://geoflag/content/editaction.js" />
+ <keyset>
+  <key keycode="VK_ESCAPE" oncommand="window.close();"/>
+  <key keycode="VK_RETURN" oncommand="geoflag_Edit.onEnterKeyPress();"/>
+  <key keycode="VK_UP" oncommand="geoflag_Edit.onArrowKeyPress('up');"/>
+  <key keycode="VK_DOWN" oncommand="geoflag_Edit.onArrowKeyPress('down');"/>
+  <key keycode="VK_F1" oncommand="geoflag_Edit.showFullHelpPopup();"/>
+ </keyset>
+ <hbox>
+  <vbox id="mainBox">
+   <checkbox id="show" checked="true" tabindex="1"/>
+   <hbox>
+    <label value="&action.namelabel;" control="name"/>
+    <textbox flex="1" id="name" maxlength="25" tabindex="2"/>
+   </hbox>
+   <hbox>
+    <label value="&action.clicklabel;" control="iconclick"/>
+    <menulist flex="1" sizetopopup="none" crop="end" id="iconclick" tabindex="3">
+     <menupopup>
+      <menuitem label=""/>
+      <menuitem id="click"/>
+      <menuitem id="doubleclick"/>
+      <menuitem id="tripleclick"/>
+      <menuitem id="middleclick" tooltiptext="&action.middleclicktooltip;"/>
+      <menuitem id="doublemiddleclick" tooltiptext="&action.middleclicktooltip;"/>
+      <menuitem id="triplemiddleclick" tooltiptext="&action.middleclicktooltip;"/>
+     </menupopup>
+    </menulist>
+   </hbox>
+   <hbox>
+    <label value="&action.hotkeylabel;" control="hotkey"/>
+    <textbox flex="1"
+             id="hotkey"
+             context="null"
+             width="100%"
+             oninput="geoflag_Edit.currentHotkey=undefined; this.value='';"
+             onkeypress="geoflag_Edit.enterHotkey(event);"
+             emptytext="&action.hotkeyhelp;"
+             tabindex="4"/>
+   </hbox>
+  </vbox>
+  <vbox id="helpBox" class="roundedbox">
+   <hbox>
+    <label value="&action.placeholderslabel;"/>
+    <spacer minwidth="20" flex="1"/>
+    <hbox class="icon text-link" onclick="if(event.button === 0) geoflag_Edit.showFullHelpPopup();">
+     <image src="chrome://geoflag/content/icons/help.png"/>
+     <label value="&showall;"/>
+    </hbox>
+   </hbox>
+   <grid>
+    <columns>
+     <column flex="1"/>
+     <column style="width: 14ch;"/>
+    </columns>
+    <rows>
+     <row tooltiptext="&action.exampleoutput; RealityRipple Software">
+      <label value="&action.pagetitle;" control="title"/>
+      <textbox readonly="true" class="plain" clickSelectsAll="true" value="{title}" id="title"/>
+     </row>
+     <row tooltiptext="&action.exampleoutput; https://realityripple.com/">
+      <label value="&action.fullpageurl;" control="fullURL"/>
+      <textbox readonly="true" class="plain" clickSelectsAll="true" value="{fullURL}" id="fullURL"/>
+     </row>
+     <row tooltiptext="&action.exampleoutput; realityripple.com">
+      <label value="&action.domainname;" control="domainName"/>
+      <textbox readonly="true" class="plain" clickSelectsAll="true" value="{domainName}" id="domainName"/>
+     </row>
+     <row tooltiptext="&action.exampleoutput; 74.208.236.142">
+      <label value="&action.ipaddress;" control="IPaddress"/>
+      <textbox readonly="true" class="plain" clickSelectsAll="true" value="{IPaddress}" id="IPaddress"/>
+     </row>
+     <row tooltiptext="&action.exampleoutput; " id="countryName-row">
+      <label value="&action.country;" control="countryName"/>
+      <textbox readonly="true" class="plain" clickSelectsAll="true" value="{countryName}" id="countryName"/>
+     </row>
+    </rows>
+   </grid>
+   <panel id="fullHelpPopup" style="padding: 4px;">
+    <hbox id="fullPlaceholdersPallete"/>
+    <hbox>
+     <spacer flex="1"/>
+     <label value="&close;" class="text-link" style="margin: 0 10px;" onclick="if(event.button === 0) geoflag_Edit.closeFullHelpPopup();"/>
+    </hbox>
+   </panel>
+  </vbox>
+ </hbox>
+ <hbox id="templateBox">
+  <label value="&action.templatelabel;" control="template"/>
+  <textbox id="template"
+           newlines="stripsurroundingwhitespace"
+           flex="1"
+           maxlength="1000"
+           style="direction: ltr;"
+           tabindex="5"
+           oninput="geoflag_Edit.updateFavicon(); geoflag_Edit.generateAutocomplete();"
+           aria-autocomplete="list"
+           emptytext="&action.templatehelp;">
+   <image id="favicon" style="-moz-padding-end: 5px;" height="16"/>
+  </textbox>
+  <panel id="templateAutocompletePopup" noautofocus="true"/>
+ </hbox>
+ <hbox>
+  <spacer width="10"/>
+  <hbox id="getmoreBox" class="icon text-link" onclick="if(event.button === 0) geoflag_Edit.gotoGetMorePage();">
+   <image src="chrome://geoflag/content/icons/goto.png"/>
+   <label value="&action.seeforumslink;"/>
+  </hbox>
+  <spacer flex="1"/>
+  <button label="&save;" icon="accept" id="savebutton" oncommand="geoflag_Edit.save(); window.close();" tabindex="6"/>
+  <button label="&cancel;" icon="cancel" oncommand="window.close();" default="true" tabindex="7"/>
+ </hbox>
+</window>

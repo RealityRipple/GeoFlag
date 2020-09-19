@@ -1,0 +1,66 @@
+hbox, row, richlistitem
+{
+ -moz-box-align: center;
+}
+menulist hbox
+{
+ -moz-box-align: inherit;
+}
+.text-link > label
+{
+ cursor: pointer;
+}
+.emojicon
+{
+ padding: 2px 1px;
+ cursor: pointer;
+}
+.emojicon:hover:not([disabled="true"])
+{
+ text-shadow: 1px 1px 2px #808080;
+}
+.emojicon:hover:active:not([disabled="true"])
+{
+ text-shadow: 0 0 0;
+ padding: 3px 0px 1px 2px;
+}
+.emojicon[disabled="true"]
+{
+ opacity: 0.5;
+ cursor: default;
+ text-shadow: 0 0 0 !important;
+}
+#up, #down
+{
+ color: #00D000;
+ font-size: 18px;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+#up[disabled="true"], #down[disabled="true"]
+{
+ color: #808080;
+}
+.roundedbox
+{
+ border: thin solid grey;
+ border-radius: 5px;
+ padding: 5px;
+ margin: 5px;
+}
+button[type="menu-button"]
+{
+ -moz-appearance: dualbutton;
+}
+button[type="menu-button"] > button
+{
+ margin: 0;
+}
+#dbPrefs textbox
+{
+ min-width: 33em;
+}
+#ecdsaKey
+{
+ font-family: monospace;
+}

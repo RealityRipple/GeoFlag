@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "Opzioni GeoFlag">
+<!ENTITY prefs.previewflagslabel "Anteprima bandiere">
+<!ENTITY prefs.showfaviconslabel "Mostra icone favorite per le azioni">
+<!ENTITY prefs.openinlabel "Le azioni aprono le pagine in:">
+<!ENTITY prefs.tabBGlabel "nuovo tab in background">
+<!ENTITY prefs.tabFGlabel "nuovo tab in foreground">
+<!ENTITY prefs.winBGlabel "nuova finestra in background">
+<!ENTITY prefs.winFGlabel "nuova finestra in foreground">
+<!ENTITY prefs.currentTablabel "tab corrente">
+<!ENTITY prefs.customizeactionslabel "Azioni personalizzate disponibili">
+<!ENTITY prefs.addnewactionlabel "Nuova azione">
+<!ENTITY prefs.cloneactionlabel "Duplica l'azione selezionata">
+<!ENTITY prefs.pasteactionlabel "Copia azioni su appunti">
+<!ENTITY prefs.actionsforumlabel "Installa più azioni o condividi le tue">
+<!ENTITY prefs.moveselectedlabel "Muovi selezionato:">
+<!ENTITY prefs.resetmessageslabel "Resetta messaggi">
+<!ENTITY prefs.previewicons "Anteprima icone">
+<!ENTITY prefs.sortflags "Ordina bandiere per:">
+<!ENTITY prefs.sortbycode "Codice nazione/territorio">
+<!ENTITY prefs.sortbyname "Nome nazione/territorio">
+<!ENTITY prefs.sortbyratio "Proporzione aspetto">
+<!ENTITY prefs.sortbycolor "Colore rappresentativo">
+<!ENTITY action.namelabel "Nome:">
+<!ENTITY action.clicklabel "Click sull'icona:">
+<!ENTITY action.hotkeylabel "Tasti di scelta rapida:">
+<!ENTITY action.templatelabel "Template:">
+<!ENTITY action.middleclicktooltip "Puoi usare ctrl+click al posto del tasto centrale">
+<!ENTITY action.hotkeyhelp "Centra e premi il tasto combinazione">
+<!ENTITY action.templatehelp "Copia l'URL e rimpiazza i campi con i segnaposto desiderati">
+<!ENTITY action.placeholderslabel "Placeholder per i template">
+<!ENTITY action.pagetitle "Titolo pagina:">
+<!ENTITY action.fullpageurl "URL completo della pagina:">
+<!ENTITY action.domainname "Nome dominio (host):">
+<!ENTITY action.ipaddress "Indirizzo IP del server:">
+<!ENTITY action.country "Il server è in:">
+<!ENTITY action.exampleoutput "Risultato d'esempio:">
+<!ENTITY action.seeforumslink "Mostra i forum di aiuto e di nuove azioni">
+<!ENTITY showall "Mostra tutto…">
+<!ENTITY save "Salva">
+<!ENTITY cancel "Cancella">
+<!ENTITY about.title "Su GeoFlag">
+<!ENTITY about.version "Versione">
+<!ENTITY about.creator "Creato da:">
+<!ENTITY about.admin "Amministratore di Geotool &amp; server">
+<!ENTITY about.original "Basato sull'addon originale di:">
+<!ENTITY about.logo "Logo di:">
+<!ENTITY about.flagicons "Icone bandiere:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag utilizza un gruppo di bandiere proprio basato">
+<!ENTITY about.wikimediabasedln2 "sui contenuti di pubblico dominio di Wikimedia Commons.">
+<!ENTITY about.othericons "Icone aggiuntive di:">
+<!ENTITY about.translators "Traduttori:">
+<!ENTITY about.geolocation "Database di geolocalizzazione indirizzi IP:">
+<!ENTITY about.maxmindln1 "Questo prodotto include GeoLite data creato da MaxMind,">
+<!ENTITY about.maxmindln2 "disponibile su:">
+<!ENTITY close "Chiudi">

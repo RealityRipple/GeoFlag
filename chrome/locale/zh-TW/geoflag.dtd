@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag 選項">
+<!ENTITY prefs.previewflagslabel "預覽國家旗幟圖示">
+<!ENTITY prefs.showfaviconslabel "顯示動作的圖標">
+<!ENTITY prefs.openinlabel "動作開啟網頁於:">
+<!ENTITY prefs.tabBGlabel "後台新分頁">
+<!ENTITY prefs.tabFGlabel "前台新分頁">
+<!ENTITY prefs.winBGlabel "後台新視窗">
+<!ENTITY prefs.winFGlabel "前台新視窗">
+<!ENTITY prefs.currentTablabel "目前分頁">
+<!ENTITY prefs.customizeactionslabel "自訂可用動作">
+<!ENTITY prefs.addnewactionlabel "加入新動作">
+<!ENTITY prefs.cloneactionlabel "仿製選擇的動作">
+<!ENTITY prefs.pasteactionlabel "從剪貼簿貼上動作">
+<!ENTITY prefs.actionsforumlabel "獲得更多動作或分享您的動作">
+<!ENTITY prefs.moveselectedlabel "移動選取的項目:">
+<!ENTITY prefs.resetmessageslabel "重設訊息">
+<!ENTITY prefs.previewicons "預覽圖示">
+<!ENTITY prefs.sortflags "旗幟排序方法:">
+<!ENTITY prefs.sortbycode "國家/地區代碼">
+<!ENTITY prefs.sortbyname "國家/地區名稱">
+<!ENTITY prefs.sortbyratio "外觀比例">
+<!ENTITY prefs.sortbycolor "代表顏色">
+<!ENTITY action.namelabel "名稱:">
+<!ENTITY action.clicklabel "圖示點擊:">
+<!ENTITY action.hotkeylabel "熱鍵:">
+<!ENTITY action.templatelabel "模板:">
+<!ENTITY action.middleclicktooltip "您可以使用可選的組合鍵 ctrl+單擊 代替中鍵單擊">
+<!ENTITY action.hotkeyhelp "點擊組合鍵">
+<!ENTITY action.templatehelp "複製查閱的 URL 並使用所需的佔位符取代關鍵字">
+<!ENTITY action.placeholderslabel "模板資料佔位符">
+<!ENTITY action.pagetitle "網頁標題文字:">
+<!ENTITY action.fullpageurl "完整網頁位址 (URL):">
+<!ENTITY action.domainname "網域 (主機) 名稱:">
+<!ENTITY action.ipaddress "伺服器 IP 位址:">
+<!ENTITY action.country "國家伺服器在:">
+<!ENTITY action.exampleoutput "示例輸出:">
+<!ENTITY action.seeforumslink "參閱論壇取得幫助和更多的動作">
+<!ENTITY showall "顯示所有...">
+<!ENTITY save "儲存">
+<!ENTITY cancel "取消">
+<!ENTITY about.title "關於 GeoFlag">
+<!ENTITY about.version "版本">
+<!ENTITY about.creator "建立者:">
+<!ENTITY about.admin "Geotool 及伺服器管理員:">
+<!ENTITY about.original "基於原有插件來自:">
+<!ENTITY about.logo "標誌作者:">
+<!ENTITY about.flagicons "旗幟圖示:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag 使用的自訂旗幟集基於維基共享資源提供的">
+<!ENTITY about.wikimediabasedln2 "公眾領域作品。">
+<!ENTITY about.othericons "額外圖示來自:">
+<!ENTITY about.translators "翻譯者:">
+<!ENTITY about.geolocation "IP 位址地理位置定位資料庫:">
+<!ENTITY about.maxmindln1 "此產品包含了 MaxMind 建立的 GeoLite 資料，">
+<!ENTITY about.maxmindln2 "來自:">
+<!ENTITY close "關閉">

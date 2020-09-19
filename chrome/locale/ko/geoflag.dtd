@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag 선택사항">
+<!ENTITY prefs.previewflagslabel "국기 아이콘 미리보기">
+<!ENTITY prefs.showfaviconslabel "동작을 위한 파비콘 표시">
+<!ENTITY prefs.openinlabel "다음으로 페이지 열기:">
+<!ENTITY prefs.tabBGlabel "배경의 새 탭">
+<!ENTITY prefs.tabFGlabel "전경의 새 탭">
+<!ENTITY prefs.winBGlabel "배경의 새 창">
+<!ENTITY prefs.winFGlabel "전경의 새 창">
+<!ENTITY prefs.currentTablabel "현재 탭">
+<!ENTITY prefs.customizeactionslabel "사용가능한 동작 사용자지정">
+<!ENTITY prefs.addnewactionlabel "새 동작 추가">
+<!ENTITY prefs.cloneactionlabel "선택된 동작 복제">
+<!ENTITY prefs.pasteactionlabel "클립보드로 부터 동작 붙여넣기">
+<!ENTITY prefs.actionsforumlabel "더 많은 동작 받기 또는 공유하기">
+<!ENTITY prefs.moveselectedlabel "선택한것 이동:">
+<!ENTITY prefs.resetmessageslabel "메세지 재설정">
+<!ENTITY prefs.previewicons "아이콘 미리보기">
+<!ENTITY prefs.sortflags "다음으로 국기 정렬:">
+<!ENTITY prefs.sortbycode "국가/지역 코드">
+<!ENTITY prefs.sortbyname "국가/지역 명">
+<!ENTITY prefs.sortbyratio "가로 세로 비율">
+<!ENTITY prefs.sortbycolor "대표색">
+<!ENTITY action.namelabel "이름:">
+<!ENTITY action.clicklabel "아이콘 클릭:">
+<!ENTITY action.hotkeylabel "단축키:">
+<!ENTITY action.templatelabel "서식:">
+<!ENTITY action.middleclicktooltip "가운데 클릭을 대신해 ctrl+클릭을 선택해 사용할 수 있습니다">
+<!ENTITY action.hotkeyhelp "선택하고 키 조합을 누르세요">
+<!ENTITY action.templatehelp "원하는 입력틀에 검색할 URL과 교체할 단어를 넣어주세요.">
+<!ENTITY action.placeholderslabel "서식 데이터 입력틀">
+<!ENTITY action.pagetitle "페이지 제목 글:">
+<!ENTITY action.fullpageurl "전체 페이지 주소(URL):">
+<!ENTITY action.domainname "도메인 (호스트) 이름 :">
+<!ENTITY action.ipaddress "서버 IP주소:">
+<!ENTITY action.country "국가 서버: :">
+<!ENTITY action.exampleoutput "출력 예제:">
+<!ENTITY action.seeforumslink "도움말 및 추가적 동작에 대해선 포럼을 참조하십시오">
+<!ENTITY showall "모두 보기…">
+<!ENTITY save "저장">
+<!ENTITY cancel "취소">
+<!ENTITY about.title "GeoFlag에 대해서">
+<!ENTITY about.version "버전">
+<!ENTITY about.creator "작성:">
+<!ENTITY about.admin "Geotool &amp; server 관리:">
+<!ENTITY about.original "기반 원 부가기능:">
+<!ENTITY about.logo "로고:">
+<!ENTITY about.flagicons "국기 아이콘:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag는 Wikimedia Commons에서 제공하는 공개 도메인을">
+<!ENTITY about.wikimediabasedln2 "기반으로 국기 아이콘 모음을 맞춤 제작해 사용하고 있습니다.">
+<!ENTITY about.othericons "다음에서 추가된 아이콘:">
+<!ENTITY about.translators "번역 책임자:">
+<!ENTITY about.geolocation "IP 주소 위치정보 데이터베이스:">
+<!ENTITY about.maxmindln1 "이 제품은 MaxMind에서 제작한 GeoLite자료를 포함하고 있습니다.">
+<!ENTITY about.maxmindln2 "다음에서 입수가능:">
+<!ENTITY close "닫기">

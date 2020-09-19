@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag mogućnosti">
+<!ENTITY prefs.previewflagslabel "Pregled ikone zastave države">
+<!ENTITY prefs.showfaviconslabel "Prikaži favicons za aktivnosti">
+<!ENTITY prefs.openinlabel "Aktivnost otvara stranicu u:">
+<!ENTITY prefs.tabBGlabel "Nova kartica u pozadini">
+<!ENTITY prefs.tabFGlabel "Nova kartica u prednjem planu">
+<!ENTITY prefs.winBGlabel "Novi prozor u pozadini">
+<!ENTITY prefs.winFGlabel "Novi prozor u prednjem planu">
+<!ENTITY prefs.currentTablabel "Trenutna kartica">
+<!ENTITY prefs.customizeactionslabel "Prilagodi dostupne aktivnosti">
+<!ENTITY prefs.addnewactionlabel "Dodaj novu aktivnost">
+<!ENTITY prefs.cloneactionlabel "Kloniraj odabranu aktivnost">
+<!ENTITY prefs.pasteactionlabel "Zalijepi aktivnost(i) iz međuspremnika">
+<!ENTITY prefs.actionsforumlabel "Nabavite više aktivnosti ili podijelite vlastite">
+<!ENTITY prefs.moveselectedlabel "Pomakni odabrano:">
+<!ENTITY prefs.resetmessageslabel "Postavi početne poruke">
+<!ENTITY prefs.previewicons "Pregled ikona">
+<!ENTITY prefs.sortflags "Razvrstaj zastave po:">
+<!ENTITY prefs.sortbycode "Država/Kôd regije">
+<!ENTITY prefs.sortbyname "Država/Naziv regije">
+<!ENTITY prefs.sortbyratio "Omjer prikaza">
+<!ENTITY prefs.sortbycolor "Zastupljena boja">
+<!ENTITY action.namelabel "Naziv:">
+<!ENTITY action.clicklabel "Klik ikona:">
+<!ENTITY action.hotkeylabel "Tipke prečaca:">
+<!ENTITY action.templatelabel "Predložak:">
+<!ENTITY action.middleclicktooltip "Alternativno možete koristiti ctrl+klik umjesto srednjeg klika">
+<!ENTITY action.hotkeyhelp "Fokusiraj &amp; pritisni kombinaciju tipki">
+<!ENTITY action.templatehelp "Zalijepi URL pretrage i zamijeni ključne riječi sa željenim rezerviranim mjestom">
+<!ENTITY action.placeholderslabel "Podaci predloška rezerviranih mjesta">
+<!ENTITY action.pagetitle "Tekst naslova stranice:">
+<!ENTITY action.fullpageurl "Potpuna adresa stranice (URL):">
+<!ENTITY action.domainname "Naziv domene (računalo):">
+<!ENTITY action.ipaddress "IP adresa poslužitelja:">
+<!ENTITY action.country "Poslužitelj zemlje je u:">
+<!ENTITY action.exampleoutput "Primjer izlaza:">
+<!ENTITY action.seeforumslink "Pogledajte forum za pomoć i više aktivnosti">
+<!ENTITY showall "Prikaži sve...">
+<!ENTITY save "Spremi">
+<!ENTITY cancel "Poništi">
+<!ENTITY about.title "O GeoFlag-u">
+<!ENTITY about.version "Inačica">
+<!ENTITY about.creator "Stvorio:">
+<!ENTITY about.admin "Geotool &amp; admin poslužitelja:">
+<!ENTITY about.original "Temeljeno na izvornom dodatku od:">
+<!ENTITY about.logo "Logo:">
+<!ENTITY about.flagicons "Ikona zastave:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag koristi prilagođeni zbir ikona zastava temeljen na">
+<!ENTITY about.wikimediabasedln2 "radu javnih domena podržanu od Wikimedia Commons.">
+<!ENTITY about.othericons "Dodatne ikone od:">
+<!ENTITY about.translators "Prevoditelji:">
+<!ENTITY about.geolocation "IP adresa baze podataka geolokacije:">
+<!ENTITY about.maxmindln1 "Ovaj proizvod uključuje GeoLite podatke koje je izradio MaxMind,">
+<!ENTITY about.maxmindln2 "dostupno iz:">
+<!ENTITY close "Zatvori">

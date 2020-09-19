@@ -1,0 +1,68 @@
+<!-- ## options dialog ## -->
+<!ENTITY prefs.title "GeoFlag オプション">
+<!ENTITY prefs.previewflagslabel "国旗アイコンのプレビュー">
+<!ENTITY prefs.showfaviconslabel "動作に関するファビコンを表示する">
+<!ENTITY prefs.openinlabel "動作でページを開く先:">
+<!ENTITY prefs.tabBGlabel "背面の新しいタブ">
+<!ENTITY prefs.tabFGlabel "前面の新しいタブ">
+<!ENTITY prefs.winBGlabel "背面の新しいウィンドウ">
+<!ENTITY prefs.winFGlabel "前面の新しいウィンドウ">
+<!ENTITY prefs.currentTablabel "現在のタブ">
+<!ENTITY prefs.customizeactionslabel "利用可能な動作のカスタマイズ">
+<!ENTITY prefs.addnewactionlabel "新しい動作を追加">
+<!ENTITY prefs.cloneactionlabel "選択した動作を複製">
+<!ENTITY prefs.pasteactionlabel "クリップボードから動作を貼り付け">
+<!ENTITY prefs.actionsforumlabel "より多くの動作の入手と共有">
+<!ENTITY prefs.moveselectedlabel "選択したものを移動:">
+<!ENTITY prefs.resetmessageslabel "メッセージを初期化">
+<!-- ## preview icons dialog ## -->
+<!ENTITY prefs.previewicons "アイコンをプレビュー">
+<!ENTITY prefs.sortflags "国旗の並べ替え:">
+<!ENTITY prefs.sortbycode "国/地域コード">
+<!ENTITY prefs.sortbyname "国/地域名">
+<!ENTITY prefs.sortbyratio "アスペクト比">
+<!ENTITY prefs.sortbycolor "代表色">
+<!-- ## add/edit action dialog ## -->
+<!ENTITY action.namelabel "名前:">
+<!ENTITY action.clicklabel "アイコンクリック:">
+<!ENTITY action.hotkeylabel "ホットキー:">
+<!ENTITY action.templatelabel "テンプレート:">
+<!ENTITY action.middleclicktooltip "中クリックの代わりにCtrl+クリックを利用することもできます">
+<!-- used as empty text for hotkey field; may not exceed length of field; you can shorten it to "Focus, press hotkey" or similar if needed: -->
+<!ENTITY action.hotkeyhelp "フォーカスを合わせてキーの組み合わせを押してください">
+<!-- used as empty text for template field; may not exceed length of field; you can reword it to fit into the given space if needed: -->
+<!ENTITY action.templatehelp "検索の URL を貼り付けてキーワードを望んだプレースホルダで置き換えてください">
+<!-- the placeholder labels should all fit in the same box in the dialog without wasting space; you can reword them slightly if needed: -->
+<!ENTITY action.placeholderslabel "テンプレートデータのプレースホルダー">
+<!ENTITY action.pagetitle "ページタイトルテキスト:">
+<!ENTITY action.fullpageurl "ページの完全なアドレス (URL):">
+<!ENTITY action.domainname "ドメイン名 (ホスト):">
+<!ENTITY action.ipaddress "サーバー IP アドレス:">
+<!ENTITY action.country "サーバーの所在国:">
+<!ENTITY action.exampleoutput "出力例:">
+<!ENTITY action.seeforumslink "ヘルプとほかの動作に関するフォーラム">
+<!-- make sure to keep the ellipsis character (rather than 3 periods, which takes up more space) or replace it with a localized equivalent, if needed: -->
+<!ENTITY showall "すべて表示…">
+<!ENTITY save "保存">
+<!ENTITY cancel "取り消す">
+<!-- ## about dialog ## -->
+<!ENTITY about.title "GeoFlag について">
+<!ENTITY about.version "バージョン">
+<!ENTITY about.creator "作成者:">
+<!ENTITY about.admin "Geotool とサーバーの管理者:">
+<!ENTITY about.original "基になったオリジナルアドオンの作成者:">
+<!ENTITY about.logo "ロゴ提供者:">
+<!ENTITY about.flagicons "国旗アイコン:">
+<!-- the following two strings constitute a single sentence split across two lines; break the sentence where it fits in the window best: -->
+<!ENTITY about.wikimediabasedln1 "GeoFlag は、ウィキメディア·コモンズが提供する">
+<!ENTITY about.wikimediabasedln2 "パブリックドメインの国旗アイコンをカスタマイズしたものを使用しています。">
+<!ENTITY about.othericons "追加アイコン:">
+<!ENTITY about.translators "翻訳者:">
+<!ENTITY about.geolocation "IPアドレスのジオロケーションデータベース:">
+<!-- the following two strings constitute a single sentence fragment split across two lines; break the sentence where it fits in the window best: -->
+<!ENTITY about.maxmindln1 "この製品は MaxMind により作成された GeoLite データを含んでいます。">
+<!ENTITY about.maxmindln2 "入手先:">
+<!-- used in all dialogs: -->
+<!ENTITY close "閉じる">
+<!-- Please don't forget to test your localizations in all 4 dialogs:  options, preview icons, add/edit action, about -->
+<!-- If you are localizing this file manually instead of using the WTS please cut out the notes and blank lines before uploading. -->

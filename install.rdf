@@ -1,50 +1,97 @@
 <?xml version="1.0"?>
-
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-
-    <Description about="urn:mozilla:install-manifest">
-
-        <em:id>{1018e4d6-728f-4b20-ad56-37578a4de76b}</em:id>
-        <em:name>Flagfox</em:name>
-        <em:version>5.2.11</em:version>
-        <em:description>Displays a flag depicting the location of the current server</em:description>
-
-        <em:creator>David Garrett</em:creator>
-        <!-- see Flagfox about dialog for a list of contributors and translators (metadata here only shows in generated about dialogs) -->
-        <em:aboutURL>chrome://flagfox/content/about.xul</em:aboutURL>
-
-        <em:iconURL>chrome://flagfox/content/flagfoxlogo.png</em:iconURL>
-        <em:icon64URL>chrome://flagfox/content/flagfoxlogo.png</em:icon64URL> <!-- needed for Addon Manager detailed view -->
-
-        <em:optionsURL>chrome://flagfox/content/options.xul</em:optionsURL>
-
-        <em:homepageURL>https://flagfox.wordpress.com/</em:homepageURL>
-
-        <em:type>2</em:type> <!-- type 2 addons are extensions; this is only added here to shut up the AMO validator -->
-        <em:bootstrap>true</em:bootstrap> <!-- restartless extension support required -->
-        <em:unpack>false</em:unpack> <!-- install as a single archive without extracting XPI into the profile -->
-        <em:multiprocessCompatible>true</em:multiprocessCompatible> <!-- compatible with electrolysis (e10s) -->
-        <em:hasEmbeddedWebExtension>true</em:hasEmbeddedWebExtension> <!-- has embedded WebExtension to migrate prefs -->
-
-        <!-- The current hard minimum version support is currently Firefox 19. Oldest ESR after that is Firefox 24. -->
-        <!-- NO addon of this current type is compatible with Firefox 57+; full WebExtensions only -->
-        <em:targetApplication>
-            <Description>
-                <!-- Firefox -->
-                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-                <em:minVersion>24.0</em:minVersion> <!-- Firefox 24 ESR (2013-9-17) -->
-                <em:maxVersion>56.*</em:maxVersion> <!-- Firefox 57+ is WebExtension only -->
-            </Description>
-        </em:targetApplication>
-        <em:targetApplication>
-            <Description>
-                <!-- SeaMonkey -->
-                <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
-                <em:minVersion>2.21</em:minVersion>
-                <em:maxVersion>2.53.*</em:maxVersion>
-            </Description>
-        </em:targetApplication>
-
-    </Description>
-
+ <Description about="urn:mozilla:install-manifest">
+  <em:name>GeoFlag</em:name>
+  <em:id>{76843B06-C8C5-5088-90C5-679EA2F00123}</em:id>
+  <em:version>5.3a1</em:version>
+  <em:type>2</em:type>
+  <em:targetApplication>
+   <Description>
+    <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+    <em:minVersion>25.0a1pre</em:minVersion>
+    <em:maxVersion>28.*</em:maxVersion>
+   </Description>
+  </em:targetApplication>
+  <em:description>Displays a flag depicting the location of the current server</em:description>
+  <em:optionsURL>chrome://geoflag/content/options.xul</em:optionsURL>
+  <em:homepageURL>https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/</em:homepageURL>
+  <em:updateURL>https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/update.rdf</em:updateURL>
+  <em:iconURL>chrome://geoflag/skin/logo.png</em:iconURL>
+  <em:icon64URL>chrome://geoflag/skin/logo64.png</em:icon64URL>
+  <em:creator>RealityRipple</em:creator>
+  <em:developer>David Garrett</em:developer>
+  <em:translator>BabelZilla.org - This community is awesome.</em:translator>
+  <em:translator>Thank you to every active member, especially these guys:</em:translator>
+  <em:translator>[Arabic] NassimJD (Nassim J Dhaher)</em:translator>
+  <em:translator>[Arabic] Natty Dreed</em:translator>
+  <em:translator>[Arabic] mutaz (Mutaz Ismail)</em:translator>
+  <em:translator>[Bulgarian] stoyan (Стоян Димитров)</em:translator>
+  <em:translator>[Bulgarian] Ivaylo</em:translator>
+  <em:translator>[Catalan] kampana</em:translator>
+  <em:translator>[Catalan] elGoomba (Adrià Laviós)</em:translator>
+  <em:translator>[Czech] davis776</em:translator>
+  <em:translator>[Czech] strepon</em:translator>
+  <em:translator>[Danish] Joergen</em:translator>
+  <em:translator>[German] Wawuschel</em:translator>
+  <em:translator>[German] Team erweiterungen.de</em:translator>
+  <em:translator>[Greek] Sonickydon (George Fiotakis)</em:translator>
+  <em:translator>[Spanish (Argentina)] Eduardo Leon</em:translator>
+  <em:translator>[Spanish (Argentina)] acushnir</em:translator>
+  <em:translator>[Spanish (Spain)] urko</em:translator>
+  <em:translator>[Finnish] Risse</em:translator>
+  <em:translator>[Finnish] kenmooda (Tommi Rautava)</em:translator>
+  <em:translator>[Finnish] AtteL</em:translator>
+  <em:translator>[Finnish] Jiipee</em:translator>
+  <em:translator>[French] Goofy</em:translator>
+  <em:translator>[Hebrew] Uri Hartmann</em:translator>
+  <em:translator>[Hebrew] SiiiE</em:translator>
+  <em:translator>[Croatian] gogo (Goran Vidović)</em:translator>
+  <em:translator>[Hungarian] kami</em:translator>
+  <em:translator>[Hungarian] SkH</em:translator>
+  <em:translator>[Armenian] Hrant Ohanyan (haysoft.org)</em:translator>
+  <em:translator>[Icelandic] Kristján Bjarni Guðmundsson</em:translator>
+  <em:translator>[Japanese] drry</em:translator>
+  <em:translator>[Japanese] Haebaru</em:translator>
+  <em:translator>[Korean] wtspout (용오름)</em:translator>
+  <em:translator>[Lithuanian] Rytis Savickis</em:translator>
+  <em:translator>[Lithuanian] gymka (Algimantas Margevičius)</em:translator>
+  <em:translator>[Lithuanian] tomasdd (Barkod)</em:translator>
+  <em:translator>[Latvian] Arabiks_</em:translator>
+  <em:translator>[Latvian] latvian87</em:translator>
+  <em:translator>[Malaysian] sepol05278 (Saiful Haziq AS)</em:translator>
+  <em:translator>[Dutch] markh van BabelZilla.org</em:translator>
+  <em:translator>[Polish] momus (Krzysztof Klimczak)</em:translator>
+  <em:translator>[Portuguese (Brazilian)] gulego</em:translator>
+  <em:translator>[Portuguese (Brazilian)] Humberto Sartini</em:translator>
+  <em:translator>[Portuguese (Brazilian)] Edgard Dias Magalhaes</em:translator>
+  <em:translator>[Portuguese (Portugal)] lloco (Carlos Simão)</em:translator>
+  <em:translator>[Portuguese (Portugal)] Ricardo Simões</em:translator>
+  <em:translator>[Romanian] x10firefox (Cătălin Zamfirescu)</em:translator>
+  <em:translator>[Russian] TLemur (Timur Timirkhanov)</em:translator>
+  <em:translator>[Russian] Anton Pinsky</em:translator>
+  <em:translator>[Russian] Salted</em:translator>
+  <em:translator>[Slovenian] Peter Klofutar</em:translator>
+  <em:translator>[Serbian] kapetance</em:translator>
+  <em:translator>[Serbian] kustodian (Strahinja Kustudić)</em:translator>
+  <em:translator>[Serbian] DakSrbija (ДакСРБИЈА)</em:translator>
+  <em:translator>[Swedish] StiffeL</em:translator>
+  <em:translator>[Swedish] Natanael_L01</em:translator>
+  <em:translator>[Swedish] Lakrits (Mikael Hiort af Ornäs)</em:translator>
+  <em:translator>[Turkish] MysticFox</em:translator>
+  <em:translator>[Turkish] Serdar ŞAHİN</em:translator>
+  <em:translator>[Ukrainian] Sappa</em:translator>
+  <em:translator>[Ukrainian] Zhouck</em:translator>
+  <em:translator>[Vietnamese] loveleeyoungae (NGUYỄN Mạnh Hùng)</em:translator>
+  <em:translator>[Vietnamese] longnh (Nguyễn Hoàng Long)</em:translator>
+  <em:translator>[Vietnamese] mxn (Minh Nguyễn)</em:translator>
+  <em:translator>[Chinese (Simplified)] fishbone</em:translator>
+  <em:translator>[Chinese (Simplified)] fiag</em:translator>
+  <em:translator>[Chinese (Simplified)] blackdire</em:translator>
+  <em:translator>[Chinese (Traditional)] ttakiol (kiol ou)</em:translator>
+  <em:translator>[Chinese (Traditional)] Tang Kai Yiu</em:translator>
+  <em:translator>Additional Translators:</em:translator>
+  <em:translator>[German] Marco Rist</em:translator>
+  <em:translator>[French] risbo</em:translator>
+  <em:translator>[Italian] Garibaldi (Marco Guadagnini)</em:translator>
+ </Description>
 </RDF>

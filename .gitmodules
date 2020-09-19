@@ -1,0 +1,3 @@
+[submodule "make-db/phpecc"]
+	path = make-db/phpecc
+	url = https://github.com/mdanter/phpecc.git

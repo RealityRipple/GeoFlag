@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond "%{HTTP:Accept-Encoding}" "gzip.*deflate|deflate.*gzip"
+RewriteCond %{REQUEST_FILENAME} "\.(db)$"
+RewriteCond %{REQUEST_FILENAME}.gz -s
+RewriteRule ^.*$ %{REQUEST_URI}.gz [L]
+
+<FilesMatch "\.db\.gz$">
+ AddEncoding gzip .gz
+ ForceType "application/octet-stream"
+</FilesMatch>
+
+<FilesMatch "\.(db|gz)$">
+  Header append Vary Accept-Encoding
+</FilesMatch>
+
+<FilesMatch "ipv4\.db(\.gz)?$">
+  Header set X-Signature-R "0000000000000000000000000000000000000000000000000000000000000000"
+  Header set X-Signature-S "0000000000000000000000000000000000000000000000000000000000000000"
+</FilesMatch>
+
+<FilesMatch "ipv6\.db(\.gz)?$">
+  Header set X-Signature-R "0000000000000000000000000000000000000000000000000000000000000000"
+  Header set X-Signature-S "0000000000000000000000000000000000000000000000000000000000000000"
+</FilesMatch>

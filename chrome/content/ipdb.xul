@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://geoflag/skin/style.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://geoflag/locale/geoflag.dtd">
+<prefwindow id="dlgPrefs"
+            class="dialog"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            orient="vertical"
+            autostretch="always"
+            onload="hasEC();"
+            title="GeoIP Database URL"
+            buttons="accept,cancel">
+ <prefpane id="dbPrefs">
+  <preferences>
+   <preference id="prefv4URL" name="extensions.geoflag.db.v4.url" type="string" instantApply="false" />
+   <preference id="prefv6URL" name="extensions.geoflag.db.v6.url" type="string" instantApply="false" />
+   <preference id="prefECKey" name="extensions.geoflag.db.ecdsa.key" type="string" instantApply="false" />
+   <preference id="prefECCurve" name="extensions.geoflag.db.ecdsa.curve" type="string" instantApply="false" />
+   <preference id="prefECHash" name="extensions.geoflag.db.ecdsa.hash" type="string" instantApply="false" />
+  </preferences>
+  <vbox>
+   <hbox>
+    <label value="IPv4 URL:" control="v4URL"/>
+    <spacer flex="1"/>
+    <textbox id="v4URL" preference="prefv4URL"/>
+   </hbox>
+   <hbox>
+    <label value="IPv6 URL:" control="v6URL"/>
+    <spacer flex="1"/>
+    <textbox id="v6URL" preference="prefv6URL"/>
+   </hbox>
+  </vbox>
+  <groupbox>
+   <caption><checkbox id="chkECDSA" label="ECDSA" checked="true" oncommand="toggleEC();"/></caption>
+   <hbox>
+    <label value="Public Key:" control="ecdsaKey"/>
+    <spacer flex="1"/>
+    <textbox id="ecdsaKey" preference="prefECKey"/>
+   </hbox>
+   <hbox>
+    <label value="Curve:" control="ecdsaCurve"/>
+    <spacer flex="1"/>
+    <menulist id="ecdsaCurve" sizetopopup="always" preference="prefECCurve">
+     <menupopup>
+      <menuitem id="ec256" label="P-256" value="P-256"/>
+      <menuitem id="ec384" label="P-384" value="P-384"/>
+      <menuitem id="ec521" label="P-521" value="P-521"/>
+     </menupopup>
+    </menulist>
+   </hbox>
+   <hbox>
+    <label value="Hash:" control="ecdsaHash"/>
+    <spacer flex="1"/>
+    <menulist id="ecdsaHash" sizetopopup="always" preference="prefECHash">
+     <menupopup>
+      <menuitem id="sha256" label="SHA-256" value="SHA-256"/>
+      <menuitem id="sha384" label="SHA-384" value="SHA-384"/>
+      <menuitem id="sha512" label="SHA-512" value="SHA-512"/>
+     </menupopup>
+    </menulist>
+   </hbox>
+  </groupbox>
+ </prefpane>
+ <script><![CDATA[
+  let oldKey = null;
+  function hasEC()
+  {
+   let setKey = document.getElementById('prefECKey').value;
+   if (setKey.length < 130 || setKey.substring(0, 2) !== '04')
+   {
+    document.getElementById('chkECDSA').checked = false;
+    toggleEC();
+   }
+  }
+  function toggleEC()
+  {
+   if (document.getElementById('chkECDSA').checked)
+   {
+    if (oldKey !== null)
+     document.getElementById('prefECKey').value = oldKey;
+    document.getElementById('ecdsaKey').removeAttribute('disabled');
+    document.getElementById('ecdsaCurve').removeAttribute('disabled');
+    document.getElementById('ecdsaHash').removeAttribute('disabled');
+   }
+   else
+   {
+    let setKey = document.getElementById('prefECKey').value;
+    if (setKey.length >= 130 || setKey.substring(0, 2) === '04')
+     oldKey = setKey;
+    document.getElementById('prefECKey').value = '';
+    document.getElementById('ecdsaKey').disabled = true;
+    document.getElementById('ecdsaCurve').disabled = true;
+    document.getElementById('ecdsaHash').disabled = true;
+   }
+  }
+ ]]></script>
+</prefwindow>

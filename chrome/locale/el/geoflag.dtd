@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "Επιλογές GeoFlag">
+<!ENTITY prefs.previewflagslabel "Προεπισκόπηση εικονιδίων σημαιών">
+<!ENTITY prefs.showfaviconslabel "Προβολή favicons για τις ενέργειες">
+<!ENTITY prefs.openinlabel "Οι ενέργειες θα ανοίγουν σελίδες σε:">
+<!ENTITY prefs.tabBGlabel "Νέα καρτέλα στο παρασκήνιο">
+<!ENTITY prefs.tabFGlabel "Νέα καρτέλα εστιασμένη">
+<!ENTITY prefs.winBGlabel "Νέο παράθυρο στο παρασκήνιο">
+<!ENTITY prefs.winFGlabel "Νέο παράθυρο εστιασμένο">
+<!ENTITY prefs.currentTablabel "Τρέχουσα καρτέλα">
+<!ENTITY prefs.customizeactionslabel "Προσαρμογή διαθέσιμων ενεργειών">
+<!ENTITY prefs.addnewactionlabel "Προσθήκη νέας ενέργειας">
+<!ENTITY prefs.cloneactionlabel "Κλωνοποίηση επιλεγμένης ενέργειας">
+<!ENTITY prefs.pasteactionlabel "Επικόλληση ενέργειας/ων από το πρόχειρο">
+<!ENTITY prefs.actionsforumlabel "Βρείτε περισσότερες ενέργειες ή μοιραστείτε τη δικιά σας">
+<!ENTITY prefs.moveselectedlabel "Μετακίνηση επιλεγμένης:">
+<!ENTITY prefs.resetmessageslabel "Εκκαθάριση μηνυμάτων">
+<!ENTITY prefs.previewicons "Προεπισκόπηση εικονιδίων">
+<!ENTITY prefs.sortflags "Ταξινόμηση σημαιών κατά:">
+<!ENTITY prefs.sortbycode "Χώρα/Κωδικό περιοχής">
+<!ENTITY prefs.sortbyname "Χώρα/Όνομα περιοχής">
+<!ENTITY prefs.sortbyratio "Αναλογία θέασης">
+<!ENTITY prefs.sortbycolor "Αντιπροσωπευτικό χρώμα">
+<!ENTITY action.namelabel "Όνομα:">
+<!ENTITY action.clicklabel "Κλικ στο εικονίδιο:">
+<!ENTITY action.hotkeylabel "Πλήκτρο συντόμευσης:">
+<!ENTITY action.templatelabel "Πρότυπο:">
+<!ENTITY action.middleclicktooltip "Μπορείτε προαιρετικά να χρησιμοποιήσετε ctrl+κλικ αντί μεσαίου κλικ">
+<!ENTITY action.hotkeyhelp "Τελεστής + πλήκτρο">
+<!ENTITY action.templatehelp "Βάλτε το URL της υπηρεσίας που θέλετε και μεταβλητές σαν ορίσματα">
+<!ENTITY action.placeholderslabel "Δεσμευτικά χώρου δεδομένων των πρότυπων">
+<!ENTITY action.pagetitle "Κείμενο τίτλου σελίδας:">
+<!ENTITY action.fullpageurl "Πλήρης διεύθυνση σελίδας (URL):">
+<!ENTITY action.domainname "Όνομα (κεντρικού) υπολογιστή/τομέα:">
+<!ENTITY action.ipaddress "Διεύθυνση IP διακομιστή">
+<!ENTITY action.country "Χώρα που βρίσκεται ο διακομιστής:">
+<!ENTITY action.exampleoutput "Παράδειγμα αποτελέσματος:">
+<!ENTITY action.seeforumslink "Δείτε το φόρουμ για υποστήριξη και περισσότερες ενέργειες">
+<!ENTITY showall "Εμφάνιση όλων...">
+<!ENTITY save "Αποθήκευση">
+<!ENTITY cancel "Ακύρωση">
+<!ENTITY about.title "Περί GeoFlag">
+<!ENTITY about.version "Έκδοση">
+<!ENTITY about.creator "Δημιουργήθηκε από:">
+<!ENTITY about.admin "Geotool &amp; διαχείριση διακομιστή:">
+<!ENTITY about.original "Βασισμένο στο πρόσθετου του:">
+<!ENTITY about.logo "Λογότυπο από:">
+<!ENTITY about.flagicons "Εικονίδια σημαιών:">
+<!ENTITY about.wikimediabasedln1 "Το GeoFlag χρησιμοποιεί ένα προσαρμοσμένο σετ εικονιδίων">
+<!ENTITY about.wikimediabasedln2 "σημαιών που βασίζεται σε ελεύθερα έργα του Wikimedia Commons.">
+<!ENTITY about.othericons "Πρόσθετα εικονίδια από:">
+<!ENTITY about.translators "Μεταφραστές:">
+<!ENTITY about.geolocation "Βάση δεδομένων διευθύνσεων IP γεωτοποθεσίας:">
+<!ENTITY about.maxmindln1 "Το προϊόν αυτό περιέχει δεδομένα GeoLite που δημιουργήθηκαν από την MaxMind,">
+<!ENTITY about.maxmindln2 "διαθέσιμα στο:">
+<!ENTITY close "Κλείσιμο">

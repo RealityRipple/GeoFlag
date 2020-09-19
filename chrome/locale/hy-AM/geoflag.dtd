@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag-ի ընտրանքները">
+<!ENTITY prefs.previewflagslabel "Նախադիտել երկրի դրոշի պատկերակները">
+<!ENTITY prefs.showfaviconslabel "Ցուցադրել գործող. պատկերակները">
+<!ENTITY prefs.openinlabel "Էջերը բացում են՝">
+<!ENTITY prefs.tabBGlabel "Նոր էջ խորապատկերում">
+<!ENTITY prefs.tabFGlabel "Նոր էջ առջևում">
+<!ENTITY prefs.winBGlabel "Նոր էջ խորապատկերում">
+<!ENTITY prefs.winFGlabel "Նոր պատուհան խորապատկերում">
+<!ENTITY prefs.currentTablabel "Ընթացիկ էջում">
+<!ENTITY prefs.customizeactionslabel "Կարգավորել ընտրանքները">
+<!ENTITY prefs.addnewactionlabel "Ավելացնել նոր գործողություն">
+<!ENTITY prefs.cloneactionlabel "Կրկնօրինակել գործողությունը">
+<!ENTITY prefs.pasteactionlabel "Պատճենված պահոցից">
+<!ENTITY prefs.actionsforumlabel "Ստանալ լրացուցիչ գործողություններ">
+<!ENTITY prefs.moveselectedlabel "Ջնջել ընտրվածը.">
+<!ENTITY prefs.resetmessageslabel "Ետարկել">
+<!ENTITY prefs.previewicons "Պատկերները">
+<!ENTITY prefs.sortflags "Խմբավորել դրոշները ըստ՝">
+<!ENTITY prefs.sortbycode "Երկրի/Տարածքի կոդի">
+<!ENTITY prefs.sortbyname "Երկրի/Տարածքի անվան">
+<!ENTITY prefs.sortbyratio "Ըստ հարաբերության">
+<!ENTITY prefs.sortbycolor "Ներկայացված գույնի">
+<!ENTITY action.namelabel "Անուն.">
+<!ENTITY action.clicklabel "Պատկերակը.">
+<!ENTITY action.hotkeylabel "Կարճուղին.">
+<!ENTITY action.templatelabel "Օրինակը.">
+<!ENTITY action.middleclicktooltip "Կարող եք օգտագործել ctrl+click՝ մկնիկի միջին կոճակի փոխարեն">
+<!ENTITY action.hotkeyhelp "Ընտրեք և սեղմեք կոճակների համադրությունը">
+<!ENTITY action.templatehelp "Տեղադրեք հղումը և հիմնաբառը">
+<!ENTITY action.placeholderslabel "Օրինակի տվյալների լրացումը">
+<!ENTITY action.pagetitle "Էջի գլխագրի անունը.">
+<!ENTITY action.fullpageurl "Էջի հասցեն.">
+<!ENTITY action.domainname "Տիրույթի անունը.">
+<!ENTITY action.ipaddress "IP հասցեն.">
+<!ENTITY action.country "Սպասարկիչի տեղը.">
+<!ENTITY action.exampleoutput "Օրինակ արտածել՝">
+<!ENTITY action.seeforumslink "Լրացուցիչ տեղեկությունները ֆորումում">
+<!ENTITY showall "Ցուցադրել բոլորը…">
+<!ENTITY save "Պահպանել">
+<!ENTITY cancel "Մերժել">
+<!ENTITY about.title "GeoFlag-ի մասին">
+<!ENTITY about.version "Տարբերակը">
+<!ENTITY about.creator "Ստեղծվել է՝">
+<!ENTITY about.admin "Geotool և սպասարկիչի Ադմին.">
+<!ENTITY about.original "Հիմնված օրիգինալ հավելմանը՝">
+<!ENTITY about.logo "Լոգոն՝">
+<!ENTITY about.flagicons "Դրոշի պատկերակները.">
+<!ENTITY about.wikimediabasedln1 "GeoFlag-ը օգտագործում է պատկերակներ հիմնված">
+<!ENTITY about.wikimediabasedln2 "Wikimedia Commons-ի կողմից տրամադրած հանրային տիրույթների աշխատանքների վրա։">
+<!ENTITY about.othericons "Լրացուցիչ պատկերակներ՝">
+<!ENTITY about.translators "Թարգմանիչներ.">
+<!ENTITY about.geolocation "IP հասցեների տեղադրության տվյալները.">
+<!ENTITY about.maxmindln1 "Ներառում է GeoLite-ի տվյալները, ստեղծված՝ MaxMind-ի կողմից,">
+<!ENTITY about.maxmindln2 "հասանելի է՝">
+<!ENTITY close "Փակել">

@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag - ustawienia">
+<!ENTITY prefs.previewflagslabel "Podgląd ikon">
+<!ENTITY prefs.showfaviconslabel "Pokaż ikonę strony dla akcji">
+<!ENTITY prefs.openinlabel "Akcje otwierają strony w:">
+<!ENTITY prefs.tabBGlabel "nowej karcie w tle">
+<!ENTITY prefs.tabFGlabel "nowej aktywnej karcie">
+<!ENTITY prefs.winBGlabel "nowym oknie w tle">
+<!ENTITY prefs.winFGlabel "nowym aktywnym oknie">
+<!ENTITY prefs.currentTablabel "aktywnej karcie">
+<!ENTITY prefs.customizeactionslabel "Dostosuj dostępne akcje">
+<!ENTITY prefs.addnewactionlabel "Dodaj nową akcję">
+<!ENTITY prefs.cloneactionlabel "Sklonuj zaznaczoną akcję">
+<!ENTITY prefs.pasteactionlabel "Wklej akcje ze schowka">
+<!ENTITY prefs.actionsforumlabel "Uzyskaj więcej akcji lub podziel się własnymi">
+<!ENTITY prefs.moveselectedlabel "Przenieś zaznaczone:">
+<!ENTITY prefs.resetmessageslabel "Resetuj wiadomości">
+<!ENTITY prefs.previewicons "Podgląd ikon">
+<!ENTITY prefs.sortflags "Sortuj flagi po:">
+<!ENTITY prefs.sortbycode "Kodzie kraju/terytorium">
+<!ENTITY prefs.sortbyname "Nazwie kraju/terytorium">
+<!ENTITY prefs.sortbyratio "Formacie ikony">
+<!ENTITY prefs.sortbycolor "Kolorze wiodącym">
+<!ENTITY action.namelabel "Nazwa:">
+<!ENTITY action.clicklabel "Kliknięcie ikony:">
+<!ENTITY action.hotkeylabel "Klawisz skrótu:">
+<!ENTITY action.templatelabel "Szablon:">
+<!ENTITY action.middleclicktooltip "Możesz także opcjonalnie użyć ctrl+kliknięcie zamiast środkowego przycisku myszy">
+<!ENTITY action.hotkeyhelp "Kliknij tutaj, a następnie naciśnij kombinacje klawiszy">
+<!ENTITY action.templatehelp "Wklej adres URL wyszukiwania i zastąp słowa kluczowe przeznaczonymi im symbolami zastępczymi">
+<!ENTITY action.placeholderslabel "Szablon danych zastępczych">
+<!ENTITY action.pagetitle "Tytuł strony:">
+<!ENTITY action.fullpageurl "Pełny adres strony (URL):">
+<!ENTITY action.domainname "Nazwa domeny (hosta):">
+<!ENTITY action.ipaddress "Adres IP serwera:">
+<!ENTITY action.country "Kraj serwera:">
+<!ENTITY action.exampleoutput "Przykładowe wyjście:">
+<!ENTITY action.seeforumslink "Zobacz forum by uzyskać pomoc i więcej akcji">
+<!ENTITY showall "Pokaż wszystkie">
+<!ENTITY save "Zapisz">
+<!ENTITY cancel "Anuluj">
+<!ENTITY about.title "GeoFlag - informacje">
+<!ENTITY about.version "Wersja">
+<!ENTITY about.creator "Stworzone przez:">
+<!ENTITY about.admin "Geotool &amp; administracja serwera:">
+<!ENTITY about.original "Wzorowany na oryginalnym dodatku autorstwa:">
+<!ENTITY about.logo "Logo stworzone przez:">
+<!ENTITY about.flagicons "Ikony flag:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag wykorzystuje własny wbudowany zestaw flag na podstawie">
+<!ENTITY about.wikimediabasedln2 "prac z domeny publicznej dostarczonych przez Wikipedię.">
+<!ENTITY about.othericons "Dodatkowe ikony stworzone przez:">
+<!ENTITY about.translators "Tłumacze:">
+<!ENTITY about.geolocation "Baza geolokalizacyjna adresów IP:">
+<!ENTITY about.maxmindln1 "Rozszerzenia zawiera dane GeoLite autorstwa MaxMind">
+<!ENTITY about.maxmindln2 "dostępne na stronie:">
+<!ENTITY close "Zamknij">

@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "Paramètres de GeoFlag">
+<!ENTITY prefs.previewflagslabel "Prévisualisation des icônes de drapeaux nationaux">
+<!ENTITY prefs.showfaviconslabel "Afficher les favicônes pour les actions">
+<!ENTITY prefs.openinlabel "Les actions ouvrent les pages dans :">
+<!ENTITY prefs.tabBGlabel "un nouvel onglet en arrière-plan">
+<!ENTITY prefs.tabFGlabel "un nouvel onglet au premier plan">
+<!ENTITY prefs.winBGlabel "une nouvelle fenêtre en arrière-plan">
+<!ENTITY prefs.winFGlabel "une nouvelle fenêtre au premier plan">
+<!ENTITY prefs.currentTablabel "l'onglet courant">
+<!ENTITY prefs.customizeactionslabel "Personnaliser les actions possibles">
+<!ENTITY prefs.addnewactionlabel "Ajouter une nouvelle action">
+<!ENTITY prefs.cloneactionlabel "Reproduire l'action choisie">
+<!ENTITY prefs.pasteactionlabel "Coller la ou les actions depuis le presse-papiers">
+<!ENTITY prefs.actionsforumlabel "Opérez davantage d'actions ou partagez les vôtres">
+<!ENTITY prefs.moveselectedlabel "Déplacer la sélection :">
+<!ENTITY prefs.resetmessageslabel "Restaurer les messages">
+<!ENTITY prefs.previewicons "Aperçu des icônes">
+<!ENTITY prefs.sortflags "Classer les drapeaux par :">
+<!ENTITY prefs.sortbycode "Code de pays / territoire">
+<!ENTITY prefs.sortbyname "Nom de pays / territoire">
+<!ENTITY prefs.sortbyratio "Proportion">
+<!ENTITY prefs.sortbycolor "Couleur significative">
+<!ENTITY action.namelabel "Nom :">
+<!ENTITY action.clicklabel "Clic sur l'icône :">
+<!ENTITY action.hotkeylabel "Touche de fonction :">
+<!ENTITY action.templatelabel "Modèle :">
+<!ENTITY action.middleclicktooltip "Vous pouvez également utiliser Ctrl+clic au lieu du clic milieu (molette)">
+<!ENTITY action.hotkeyhelp "Choisir et appuyer sur la combinaison de touches">
+<!ENTITY action.templatehelp "Coller l'URL de la recherche et remplacer les mots-clés par les substituts désirés">
+<!ENTITY action.placeholderslabel "Substituts des modèles de données">
+<!ENTITY action.pagetitle "Texte du titre de la page :">
+<!ENTITY action.fullpageurl "Adresse complète de la page (URL) :">
+<!ENTITY action.domainname "nom de domaine (hôte) :">
+<!ENTITY action.ipaddress "Adresse IP du serveur :">
+<!ENTITY action.country "Le serveur du pays est en :">
+<!ENTITY action.exampleoutput "Résultat par exemple :">
+<!ENTITY action.seeforumslink "Parcourir les forums pour de l'aide et davantage d'actions">
+<!ENTITY showall "Tout afficher…">
+<!ENTITY save "Enregistrer">
+<!ENTITY cancel "Annuler">
+<!ENTITY about.title "À propos de GeoFlag">
+<!ENTITY about.version "Version">
+<!ENTITY about.creator "Créée par :">
+<!ENTITY about.admin "Geotool &amp; administration du serveur :">
+<!ENTITY about.original "Basée sur l'extension originale de :">
+<!ENTITY about.logo "Logo par :">
+<!ENTITY about.flagicons "Icônes de drapeaux :">
+<!ENTITY about.wikimediabasedln1 "GeoFlag utilise un jeu d'icônes de drapeau sur la base">
+<!ENTITY about.wikimediabasedln2 "du domaine public, fourni par Wikimedia Commons.">
+<!ENTITY about.othericons "Icônes supplémentaires par :">
+<!ENTITY about.translators "Traducteurs :">
+<!ENTITY about.geolocation "Base de données pour la géolocalisation IP :">
+<!ENTITY about.maxmindln1 "Ce produit inclut des données de GeoLite créées par MaxMind,">
+<!ENTITY about.maxmindln2 "disponibles depuis :">
+<!ENTITY close "Fermer">

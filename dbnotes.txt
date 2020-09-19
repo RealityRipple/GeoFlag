@@ -1,0 +1,29 @@
+Geo IP databases are loaded from the RealityRipple Software website by default, with GZ compression and ECDSA signing.
+Databases are updated once a month, no sooner than the second week of the month, 28 or more days since the previous update.
+
+The server sends two additional headers with each database, 'X-Signature-R' and 'X-Signature-S', which contain the hexidecimal R and S ECDSA signature values.
+
+The URLs for the databases can be modified with the 'extensions.geoflag.db.v4.url' and 'extensions.geoflag.db.v6.url' preferences.
+
+The ECDSA signature curve, hash algorithm, and public key can also be modified with 'extensions.geoflag.db.ecdsa.curve', 'extensions.geoflag.db.ecdsa.hash', and 'extensions.geoflag.db.ecdsa.key' respectively.
+
+Valid values for 'curve' are 'P-256', 'P-384', and 'P-521'.
+Valid values for 'hash' are 'SHA-256', 'SHA-384', and 'SHA-512'.
+Valid values for 'key' are '04' + X coordinate + Y coordinate in hexidecimal, standardized as the Uncompressed Public Key format in RFC 5480. JavaScript does not understand compressed public keys at this time.
+
+If 'curve' or 'hash' are invalid, or if 'key' is empty, the ECDSA verification process will be skipped when retrieving new databases.
+
+
+Database layouts are extremely simple: Start of Range, End of Range, 2-Char Country Code
+
+For IPv4, the Start and End are 4 bytes each. Each range is 10 bytes.
+ 192.168.0.1 would be stored as C0 A8 00 01.
+ An example line would be: 4ACEA0004AD1FFFF5553
+  which means 74.206.160.0 - 74.209.255.255 = US
+
+For IPv4, the Start and End are 16 bytes each. Each range is 34 bytes.
+ 2001:0db8:85a3:0000:0000:8a2e:0370:7334 would be stored as 20 01 0D B8 85 A3 00 00 00 00 8A 2E 03 70 73 34
+ An example line would be: 2A009CE00000000000000000000000002A009CE0FFFFFFFFFFFFFFFFFFFFFFFF4742
+  which means 2a00:9ce0:0000:0000:0000:0000:0000:0000 - 2a00:9ce0:ffff:ffff:ffff:ffff:ffff:ffff = GB
+
+Aside from standard ISO country codes, the custom codes 'A1' and 'A2' also exist. A1 is for anonymous (proxy) IPs, and A2 is for satellite internet IPs.

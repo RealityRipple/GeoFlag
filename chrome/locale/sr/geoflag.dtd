@@ -1,0 +1,55 @@
+<!ENTITY prefs.title "GeoFlag - опције">
+<!ENTITY prefs.previewflagslabel "Преглед икона застава">
+<!ENTITY prefs.showfaviconslabel "Прикажи фавиконе за активности">
+<!ENTITY prefs.openinlabel "Активности отварају странице у:">
+<!ENTITY prefs.tabBGlabel "новом листу у позадини">
+<!ENTITY prefs.tabFGlabel "новом језичку у првом плану">
+<!ENTITY prefs.winBGlabel "новом прозору у позадини">
+<!ENTITY prefs.winFGlabel "новом прозору у првом плану">
+<!ENTITY prefs.currentTablabel "тренутном језичку">
+<!ENTITY prefs.customizeactionslabel "Прилагоди доступне радње">
+<!ENTITY prefs.addnewactionlabel "Додај нову радњу">
+<!ENTITY prefs.cloneactionlabel "Копирај изабрану акцију">
+<!ENTITY prefs.pasteactionlabel "Налепи акцију(е) из оставе">
+<!ENTITY prefs.actionsforumlabel "Набави више акција или подели своју">
+<!ENTITY prefs.moveselectedlabel "Премести одабрано:">
+<!ENTITY prefs.resetmessageslabel "Поништи поруке">
+<!ENTITY prefs.previewicons "Преглед икона">
+<!ENTITY prefs.sortflags "Поређај заставе по:">
+<!ENTITY prefs.sortbycode "Кôд државе/територије">
+<!ENTITY prefs.sortbyname "Назив државе/територије">
+<!ENTITY prefs.sortbyratio "Размера">
+<!ENTITY prefs.sortbycolor "Репрезентативна боја">
+<!ENTITY action.namelabel "Назив:">
+<!ENTITY action.clicklabel "Клик на иконе:">
+<!ENTITY action.hotkeylabel "Пречица:">
+<!ENTITY action.templatelabel "Образац:">
+<!ENTITY action.middleclicktooltip "Можете да поставите ктрл+клик уместо средњег клика">
+<!ENTITY action.hotkeyhelp "Пребаците и притисните пречицу">
+<!ENTITY action.templatehelp "Налепите адресу за проналажење и замените кључне речи жељеним држачима">
+<!ENTITY action.placeholderslabel "Држач обрасца података">
+<!ENTITY action.pagetitle "Наслов странице:">
+<!ENTITY action.fullpageurl "Пуна адреса странице (URL):">
+<!ENTITY action.domainname "Назив домена:">
+<!ENTITY action.ipaddress "IP адреса сервера:">
+<!ENTITY action.country "Сервер државе је у:">
+<!ENTITY action.exampleoutput "Пример излаза:">
+<!ENTITY action.seeforumslink "Посетите форуме да бисте добили помоћ">
+<!ENTITY showall "Прикажи све…">
+<!ENTITY save "Сачувај">
+<!ENTITY cancel "Откажи">
+<!ENTITY about.title "О додатку GeoFlag">
+<!ENTITY about.version "верзија">
+<!ENTITY about.creator "Аутор:">
+<!ENTITY about.admin "Geotool &amp; администратор сервера:">
+<!ENTITY about.original "Засновано на оригиналном додатку:">
+<!ENTITY about.logo "Лого:">
+<!ENTITY about.flagicons "Иконе застава:">
+<!ENTITY about.wikimediabasedln1 "GeoFlag користи сопствени комплет икона застава, који је заснован на">
+<!ENTITY about.wikimediabasedln2 "радовима у јавном домену, које пружа Викимедијина остава.">
+<!ENTITY about.othericons "Додатне иконе нуде:">
+<!ENTITY about.translators "Преводиоци:">
+<!ENTITY about.geolocation "База података геолокација IP адреса:">
+<!ENTITY about.maxmindln1 "Овај програм укључује податке GeoLite-а,">
+<!ENTITY about.maxmindln2 "које је направио MaxMind, а који су доступни на:">
+<!ENTITY close "Затвори">

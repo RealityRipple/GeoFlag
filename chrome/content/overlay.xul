@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<overlay id="geoflagOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ <script src="chrome://geoflag/content/texttools.js" />
+ <script src="chrome://geoflag/content/tools.js" />
+ <script src="chrome://geoflag/content/ipdb.js" />
+ <script src="chrome://geoflag/content/contrentscript.js" />
+ <script src="chrome://geoflag/content/actions.js" />
+ <script src="chrome://geoflag/content/dns.js" />
+ <script src="chrome://geoflag/content/geoflag.js" />
+ <script src="chrome://geoflag/content/overlay.js" />
+</overlay>
