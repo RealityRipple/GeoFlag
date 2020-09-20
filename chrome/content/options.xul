@@ -38,6 +38,12 @@
  <groupbox id="generalOptions">
   <separator class="thin"/>
   <hbox>
+   <label value="&prefs.flagicons;" control="flagSizeScale"/>
+   <scale id="flagSizeScale" flex="1" increment="1" pageincrement="2" onchange="geoflag_Options.setFlagSize();"/>
+   <label id="flagSizePx" value="px"/>
+  </hbox>
+  <separator class="thin"/>
+  <hbox>
    <checkbox label="&prefs.showfaviconslabel;" id="showFaviconsCheckbox" oncommand="geoflag_Options.setShowFavicons(); geoflag_Options.generateActionsEditList();"/>   
    <spacer flex="1"/>
    <hbox id="customDBLink" class="icon text-link" onclick="if(event.button === 0) geoflag_Options.openIPDB();">
@@ -97,8 +103,8 @@
    </button>
    <spacer minwidth="20" flex="1"/>
    <label value="&prefs.moveselectedlabel;"/>
-   <label value="&#x25bc;" class="emojicon" id="down" onclick="if(event.button === 0) geoflag_Options.moveSelectedAction(+1);"/>
-   <label value="&#x25b2;" class="emojicon" id="up" onclick="if(event.button === 0) geoflag_Options.moveSelectedAction(-1);"/>
+   <label value="&#x25bc;&#xfe0f;" class="emojicon" id="down" onclick="if(event.button === 0) geoflag_Options.moveSelectedAction(+1);"/>
+   <label value="&#x25b2;&#xfe0f;" class="emojicon" id="up" onclick="if(event.button === 0) geoflag_Options.moveSelectedAction(-1);"/>
   </hbox>
  </groupbox>
  <hbox>

@@ -24,6 +24,12 @@ var geoflag_Options = {
   geoflag_Options._locale = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
   geoflag_Options._actionsBox = document.getElementById('actionsRichlistbox');
   geoflag_Options._platformKeys = document.getElementById('platformKeys');
+  let maxFlagScale = geoflag_Options._getMaxScale();
+  if (maxFlagScale === -1)
+   maxFlagScale = geoflag.minIconSize * 2;
+  document.getElementById('flagSizeScale').setAttribute('value', geoflag_Options._Prefs.getIntPref('flagsize'));
+  document.getElementById('flagSizeScale').setAttribute('max', maxFlagScale);
+  document.getElementById('flagSizeScale').setAttribute('min', geoflag.minIconSize);
   geoflag_Options.generateActionsEditList();
   if (geoflag_Options._Prefs.prefHasUserValue('warn.proxy') || geoflag_Options._Prefs.prefHasUserValue('warn.tld') || geoflag_Options._Prefs.prefHasUserValue('warn.update'))
    document.getElementById('resetMessagesLink').hidden = false;
@@ -32,6 +38,34 @@ var geoflag_Options = {
   window.addEventListener('dragover', geoflag_Options._onDragOver);
   window.addEventListener('dragexit', geoflag_Options._onDragExit);
   window.addEventListener('drop', geoflag_Options._onDragDrop);
+ },
+ _getMaxScale: function()
+ {
+  let lowest = -1;
+  let wndList = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator).getEnumerator('navigator:browser');
+  while (wndList.hasMoreElements())
+  {
+   let wnd = wndList.getNext();
+   if (wnd.document.getElementById('urlbar-icons') === null)
+    continue;
+   let spaceHeight = wnd.document.getElementById('urlbar-icons').clientHeight;
+   if (lowest === -1)
+    lowest = spaceHeight;
+   else if (lowest > spaceHeight)
+    lowest = spaceHeight;
+  }
+  return lowest;
+ },
+ _setMaxScale: function()
+ {
+  let wndList = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator).getEnumerator('navigator:browser');
+  while (wndList.hasMoreElements())
+  {
+   let wnd = wndList.getNext();
+   if (wnd.document.getElementById('urlbar-icons') === null)
+    continue;
+   geoflag.setIconSize(wnd);
+  }
  },
  _getIDofActionFromChild: function(child)
  {
@@ -568,6 +602,13 @@ var geoflag_Options = {
  gotoGetMorePage: function()
  {
   geoflag_Tools.addTabInCurrentBrowser('https://flagfox.net/viewforum.php?f=5');
+ },
+ setFlagSize: function()
+ {
+  let lSize = document.getElementById('flagSizeScale').value;
+  document.getElementById('flagSizePx').value = lSize + 'px';
+  geoflag_Options._Prefs.setIntPref('flagsize', lSize);
+  geoflag_Options._setMaxScale();
  },
  setShowFavicons: function()
  {
