@@ -13,13 +13,11 @@ var geoFlagOverlay = {
    {
     onUninstalling: function(addon)
     {
-     console.log(addon);
      if(addon.id === '{76843B06-C8C5-5088-90C5-679EA2F00123}')
       geoFlagOverlay.cleanup = true;
     },
     onOperationCancelled: function(addon)
     {
-     console.log(addon);
      if(addon.id === '{76843B06-C8C5-5088-90C5-679EA2F00123}')
       geoFlagOverlay.cleanup = false;
     }
