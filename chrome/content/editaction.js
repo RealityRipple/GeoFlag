@@ -365,16 +365,16 @@ var geoflag_Edit = {
   }
   function createPasteButton(toPaste)
   {
-   let icon = document.createElement('image');
-   icon.setAttribute('class','icon');
-   icon.setAttribute('minwidth','16');
-   icon.setAttribute('minheight','16');
-   icon.setAttribute('src','chrome://geoflag/skin/icons/copy.png');
+   let icon = document.createElement('label');
+   icon.setAttribute('class', 'emojicon');
+   icon.setAttribute('value', String.fromCodePoint(0x1f4cb, 0xfe0f));
    let gBundle = Components.classes['@mozilla.org/intl/stringbundle;1'].getService(Components.interfaces.nsIStringBundleService);
    let locale = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
    icon.setAttribute('tooltiptext',locale.GetStringFromName('pasteintotemplate'));
-   icon.onclick = function()
+   icon.onclick = function(evt)
    {
+    if (evt.button !== 0)
+     return;
     geoflag_Edit.closeFullHelpPopup();
     geoflag_Edit._pastePlaceholder(toPaste);
    };
