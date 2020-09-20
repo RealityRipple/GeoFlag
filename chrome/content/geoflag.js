@@ -13,6 +13,7 @@ var geoflag = {
  _localeHelp: null,
  localeCtrys: null,
  shownWarnings: null,
+ minIconSize: 16,
  codePoints: {
   flags: {
    a: 0x1f1e6,
@@ -81,6 +82,36 @@ var geoflag = {
    console.log('Error loading icon for window', e);
   }
  },
+ setIconSize: function(wnd)
+ {
+  if (wnd.document.getElementById('urlbar-icons') === null)
+   return;
+  let icon = wnd.document.getElementById('geoflag-icon');
+  if (icon === null)
+   return;
+  let spaceHeight = wnd.document.getElementById('urlbar-icons').clientHeight;
+  let flagsize = geoflag.Prefs.getIntPref('flagsize');
+  if (!flagsize)
+  {
+   flagsize = geoflag.Prefs.clearUserPref('flagsize');
+   flagsize = geoflag.Prefs.getIntPref('flagsize');
+  }
+  if (flagsize < geoflag.minIconSize)
+  {
+   flagsize = geoflag.minIconSize;
+   geoflag.Prefs.setIntPref('flagsize', flagsize);
+  }
+  if (flagsize > spaceHeight + 2)
+  {
+   flagsize = spaceHeight + 2;
+   geoflag.Prefs.setIntPref('flagsize', flagsize);
+  }
+  icon.style.fontSize = flagsize + 'px';
+  let offset = (Math.ceil(flagsize / 6) + 1) * -1;
+  let center = Math.floor(spaceHeight / 2) - Math.floor(flagsize / 2);
+  offset += center;
+  icon.style.transform = 'translateY(' + offset + 'px)';
+ },
  _showDBNote: function(wnd)
  {
   let dbNote = true;
@@ -137,7 +168,7 @@ function newGeoFlagInstance(wnd)
   console.log('GeoFlag Error: failed to create/find icon in new window');
   return;
  }
- setIconSize();
+ geoflag.setIconSize(wnd);
  let dLoc = null;
  let DNSrequest = null;
  let menuContentAge = 0;
@@ -245,33 +276,8 @@ function newGeoFlagInstance(wnd)
    sIcon = String.fromCodePoint(geoflag.codePoints.special[name], 0xfe0f);
   if (icon.value === sIcon)
    return;
-  setIconSize();
+  geoflag.setIconSize(wnd);
   icon.value = sIcon;
- }
- function setIconSize()
- {
-  let spaceHeight = wnd.document.getElementById('urlbar-icons').clientHeight;
-  let flagsize = geoflag.Prefs.getIntPref('flagsize');
-  if (!flagsize)
-  {
-   flagsize = geoflag.Prefs.clearUserPref('flagsize');
-   flagsize = geoflag.Prefs.getIntPref('flagsize');
-  }
-  if (flagsize < 16)
-  {
-   flagsize = 16;
-   geoflag.Prefs.setIntPref('flagsize', flagsize);
-  }
-  if (flagsize > spaceHeight + 2)
-  {
-   flagsize = spaceHeight + 2;
-   geoflag.Prefs.setIntPref('flagsize', flagsize);
-  }
-  icon.style.fontSize = flagsize + 'px';
-  let offset = (Math.ceil(flagsize / 6) + 1) * -1;
-  let center = Math.floor(spaceHeight / 2) - Math.floor(flagsize / 2);
-  offset += center;
-  icon.style.transform = 'translateY(' + offset + 'px)';
  }
  function onLocationChange()
  {
