@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag-asetukset">
-<!ENTITY prefs.previewflagslabel "Esikatsele maiden lippujen kuvakkeita">
+<!ENTITY prefs.flagicons "Lippukuvakkeet:">
 <!ENTITY prefs.showfaviconslabel "Näytä sivuston kuvake toiminnoissa">
 <!ENTITY prefs.openinlabel "Sivujen avaus:">
 <!ENTITY prefs.tabBGlabel "taustalla, uudella välilehdellä">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Hanki lisää toimintoja tai jaa omasi">
 <!ENTITY prefs.moveselectedlabel "Siirrä valittu:">
 <!ENTITY prefs.resetmessageslabel "Nollaa viestit">
-<!ENTITY prefs.previewicons "Lippujen esikatselu">
-<!ENTITY prefs.sortflags "Lajittele liput seuraavan kriteerin mukaan:">
-<!ENTITY prefs.sortbycode "Maan/alueen koodi">
-<!ENTITY prefs.sortbyname "Maan/alueen nimi">
-<!ENTITY prefs.sortbyratio "Lipun mittasuhteet">
-<!ENTITY prefs.sortbycolor "Kuvaava väri">
 <!ENTITY action.namelabel "Nimi:">
 <!ENTITY action.clicklabel "Kuvakkeen napautus:">
 <!ENTITY action.hotkeylabel "Pikanäppäin:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Näytä kaikki...">
 <!ENTITY save "Tallenna">
 <!ENTITY cancel "Peru">
-<!ENTITY about.title "Tietoja GeoFlagista">
-<!ENTITY about.version "Versio">
-<!ENTITY about.creator "Tekijä:">
-<!ENTITY about.admin "Geotool- &amp; palvelinylläpitäjä:">
-<!ENTITY about.original "Alkuperäisen lisäosan tekijä:">
-<!ENTITY about.logo "Logo:">
-<!ENTITY about.flagicons "Lippukuvakkeet:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag käyttää mukautettua lippukuvakepakettia, joka">
-<!ENTITY about.wikimediabasedln2 "perustuu Wikimedia Commonsin julkiseen materiaaliin.">
-<!ENTITY about.othericons "Lisäkuvakkeiden lähde:">
-<!ENTITY about.translators "Kääntäjät:">
-<!ENTITY about.geolocation "IP-osoitteen maantieteellisen paikantamisen tietokanta:">
-<!ENTITY about.maxmindln1 "Tämä tuote sisältää MaxMindin luoman GeoLite-tietokannan,">
-<!ENTITY about.maxmindln2 "joka on saatavilla osoitteesta">
 <!ENTITY close "Sulje">

@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Opções do GeoFlag">
-<!ENTITY prefs.previewflagslabel "Ver ícones das bandeiras dos países">
+<!ENTITY prefs.flagicons "Ícones de Bandeiras:">
 <!ENTITY prefs.showfaviconslabel "Mostrar favicons para as ações">
 <!ENTITY prefs.openinlabel "Páginas de ações abrem:">
 <!ENTITY prefs.tabBGlabel "Nova aba em segundo plano">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Receba mais ações ou partilhe as suas próprias ações">
 <!ENTITY prefs.moveselectedlabel "Mover item selecionado:">
 <!ENTITY prefs.resetmessageslabel "Reiniciar mensagens">
-<!ENTITY prefs.previewicons "Pré-visualizar ícones">
-<!ENTITY prefs.sortflags "Ordenar bandeiras por:">
-<!ENTITY prefs.sortbycode "Código do País/Território">
-<!ENTITY prefs.sortbyname "Nome do País/Território">
-<!ENTITY prefs.sortbyratio "Tamanho">
-<!ENTITY prefs.sortbycolor "Cor representativa">
 <!ENTITY action.namelabel "Nome:">
 <!ENTITY action.clicklabel "Clique no ícone:">
 <!ENTITY action.hotkeylabel "Tecla de Atalho:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Mostrar todos...">
 <!ENTITY save "Salvar">
 <!ENTITY cancel "Cancelar">
-<!ENTITY about.title "Sobre o GeoFlag">
-<!ENTITY about.version "Versão">
-<!ENTITY about.creator "Criado por:">
-<!ENTITY about.admin "Geotool &amp; administração de servidores:">
-<!ENTITY about.original "Baseado no complemento original de:">
-<!ENTITY about.logo "Logotipo por:">
-<!ENTITY about.flagicons "Ícones de Bandeiras:">
-<!ENTITY about.wikimediabasedln1 "O GeoFlag usa uma biblioteca de ícones de bandeiras personalizada baseada em:">
-<!ENTITY about.wikimediabasedln2 "o domínio público é baseado no Wikimedia Commons.">
-<!ENTITY about.othericons "Ícones adicionais por:">
-<!ENTITY about.translators "Tradução:">
-<!ENTITY about.geolocation "Base de dados de geolocalização de endereços IP:">
-<!ENTITY about.maxmindln1 "Este produto inclui dados do GeoLite criado por MaxMind,">
-<!ENTITY about.maxmindln2 "disponível em:">
 <!ENTITY close "Fechar">

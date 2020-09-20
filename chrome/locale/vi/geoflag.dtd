@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Tùy chọn GeoFlag">
-<!ENTITY prefs.previewflagslabel "Xem trước các hình quốc kỳ">
+<!ENTITY prefs.flagicons "Hình ảnh lá cờ:">
 <!ENTITY prefs.showfaviconslabel "Hiện favicon cho các thao tác">
 <!ENTITY prefs.openinlabel "Các thao tác sẽ mở trang trong:">
 <!ENTITY prefs.tabBGlabel "Thẻ mới trong hậu cảnh">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Lấy thêm các hành động hoặc chia sẻ hành động của bạn">
 <!ENTITY prefs.moveselectedlabel "Di chuyển mục đã chọn:">
 <!ENTITY prefs.resetmessageslabel "Tạo lại các Thông báo">
-<!ENTITY prefs.previewicons "Xem trước Biểu tượng">
-<!ENTITY prefs.sortflags "Sắp xếp lá cờ theo:">
-<!ENTITY prefs.sortbycode "Mã Quốc gia/Lãnh thổ">
-<!ENTITY prefs.sortbyname "Tên Quốc gia/Lãnh thổ">
-<!ENTITY prefs.sortbyratio "Tỷ lệ Hình ảnh">
-<!ENTITY prefs.sortbycolor "Màu Tiêu biểu">
 <!ENTITY action.namelabel "Tên:">
 <!ENTITY action.clicklabel "Nhấn lên Biểu tượng:">
 <!ENTITY action.hotkeylabel "Phím tắt:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Hiển thị tất cả...">
 <!ENTITY save "Lưu">
 <!ENTITY cancel "Hủy bỏ">
-<!ENTITY about.title "Giới thiệu GeoFlag">
-<!ENTITY about.version "Phiên bản">
-<!ENTITY about.creator "Tạo bởi">
-<!ENTITY about.admin "Geotool &amp; quản trị máy chủ:">
-<!ENTITY about.original "Dựa trên tiện ích gốc của:">
-<!ENTITY about.logo "Biểu trưng bởi:">
-<!ENTITY about.flagicons "Hình ảnh lá cờ:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag sử dụng bộ hình ảnh lá cờ được vẽ riêng phỏng theo">
-<!ENTITY about.wikimediabasedln2 "các tác phẩm thuộc phạm vi công cộng do Wikimedia Commons cung cấp.">
-<!ENTITY about.othericons "Các hình ảnh thêm được vẽ bởi:">
-<!ENTITY about.translators "Người dịch:">
-<!ENTITY about.geolocation "Cơ sở dữ liệu định vị địa chỉ IP:">
-<!ENTITY about.maxmindln1 "Sản phẩm này bao gồm dữ liệu GeoLite">
-<!ENTITY about.maxmindln2 "tạo bởi MaxMind, hiện hữu từ:">
 <!ENTITY close "Đóng">

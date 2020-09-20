@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Možnosti GeoFlagu">
-<!ENTITY prefs.previewflagslabel "Náhled ikon vlajek">
+<!ENTITY prefs.flagicons "Ikony vlajek:">
 <!ENTITY prefs.showfaviconslabel "Zobrazovat ikony u akcí">
 <!ENTITY prefs.openinlabel "Otevírat stránky v">
 <!ENTITY prefs.tabBGlabel "Novém panelu v pozadí">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Získejte více akcí nebo sdílejte svoji">
 <!ENTITY prefs.moveselectedlabel "Přesunout označenou">
 <!ENTITY prefs.resetmessageslabel "Resetovat oznamování">
-<!ENTITY prefs.previewicons "Výběr ikonek">
-<!ENTITY prefs.sortflags "Seřadit vlajky podle:">
-<!ENTITY prefs.sortbycode "Kód země/území">
-<!ENTITY prefs.sortbyname "Jméno země/území">
-<!ENTITY prefs.sortbyratio "Poměru stran">
-<!ENTITY prefs.sortbycolor "Barvy">
 <!ENTITY action.namelabel "Název">
 <!ENTITY action.clicklabel "Klik. na ikonu">
 <!ENTITY action.hotkeylabel "Zkratka">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Zobrazit všechny">
 <!ENTITY save "Uložit">
 <!ENTITY cancel "Zrušit">
-<!ENTITY about.title "O GeoFlagu">
-<!ENTITY about.version "Verze">
-<!ENTITY about.creator "Vytvořil">
-<!ENTITY about.admin "Geotool &amp; server admin">
-<!ENTITY about.original "Založeno na původním rozšíření od">
-<!ENTITY about.logo "Logo vytvořil">
-<!ENTITY about.flagicons "Ikony vlajek:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag používá vlastní sadu vlajek">
-<!ENTITY about.wikimediabasedln2 "z Wikimedia Commons (public domain).">
-<!ENTITY about.othericons "Další ikony:">
-<!ENTITY about.translators "Překladatelé">
-<!ENTITY about.geolocation "Geolokační databáze:">
-<!ENTITY about.maxmindln1 "Tento produkt obsahuje GeoLite data vytvořená společností MaxMind">
-<!ENTITY about.maxmindln2 "dostupná na:">
 <!ENTITY close "Zavřít">

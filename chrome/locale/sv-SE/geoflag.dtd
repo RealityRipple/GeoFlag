@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Inställningar för Firefox">
-<!ENTITY prefs.previewflagslabel "Förhandsgranska ikoner för landsflaggor">
+<!ENTITY prefs.flagicons "Flaggikoner:">
 <!ENTITY prefs.showfaviconslabel "Visa sajtikoner för åtgärder">
 <!ENTITY prefs.openinlabel "Åtgärd öppnar sidor i:">
 <!ENTITY prefs.tabBGlabel "Ny flik i bakgrunden">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Hämta fler åtgärder eller dela ut dina egna">
 <!ENTITY prefs.moveselectedlabel "Flytta markerad(e):">
 <!ENTITY prefs.resetmessageslabel "Återställ meddelanden">
-<!ENTITY prefs.previewicons "Förhandsvisa ikoner">
-<!ENTITY prefs.sortflags "Sortera flaggor efter:">
-<!ENTITY prefs.sortbycode "Kod för land/territorium">
-<!ENTITY prefs.sortbyname "Namn på land/territorium">
-<!ENTITY prefs.sortbyratio "Bredd–höjd-förhållande">
-<!ENTITY prefs.sortbycolor "Färg">
 <!ENTITY action.namelabel "Namn:">
 <!ENTITY action.clicklabel "Klick på ikon">
 <!ENTITY action.hotkeylabel "Snabbtangent:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Visa alla…">
 <!ENTITY save "Spara">
 <!ENTITY cancel "Avbryt">
-<!ENTITY about.title "Om GeoFlag">
-<!ENTITY about.version "Version">
-<!ENTITY about.creator "Skapat av:">
-<!ENTITY about.admin "Geotool- &amp; serveradministratör:">
-<!ENTITY about.original "Baserad på originaltillägg av:">
-<!ENTITY about.logo "Logotyp av:">
-<!ENTITY about.flagicons "Flaggikoner:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag använder en skräddarsydd uppsättning av flaggikoner, baserad på">
-<!ENTITY about.wikimediabasedln2 "de upphovsrättsfria verk som tillhandahålls av Wikimedia Commons.">
-<!ENTITY about.othericons "Ytterligare ikoner av:">
-<!ENTITY about.translators "Översättare:">
-<!ENTITY about.geolocation "Geolokaliseringsdatabas för IP-adresser:">
-<!ENTITY about.maxmindln1 "Denna produkt innehåller GeoLite-data skapad av MaxMind.">
-<!ENTITY about.maxmindln2 "Den finns tillgänglig på:">
 <!ENTITY close "Stäng">

@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag opcijas">
-<!ENTITY prefs.previewflagslabel "Priekšskatīt valstu karogu ikonas">
+<!ENTITY prefs.flagicons "Karogu ikonas:">
 <!ENTITY prefs.showfaviconslabel "Rādīt mājaslapas ikonas darbībām">
 <!ENTITY prefs.openinlabel "Darbības atver lapas:">
 <!ENTITY prefs.tabBGlabel "Jaunā cilnē (fonā)">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Iegūsti vairāk iespēju vai dalies ar savām">
 <!ENTITY prefs.moveselectedlabel "Pārvietot izvēlētās">
 <!ENTITY prefs.resetmessageslabel "Atiestatīt ziņas">
-<!ENTITY prefs.previewicons "Skatīt ikonas">
-<!ENTITY prefs.sortflags "Kārtot karogus pēc:">
-<!ENTITY prefs.sortbycode "Valsts/Teritorijas kods">
-<!ENTITY prefs.sortbyname "Valsts/Teritorijas nosaukums">
-<!ENTITY prefs.sortbyratio "Attiecība">
-<!ENTITY prefs.sortbycolor "Reprezentējošā krāsa">
 <!ENTITY action.namelabel "Nosaukums">
 <!ENTITY action.clicklabel "Ikonas klikšķis">
 <!ENTITY action.hotkeylabel "Īsceļš">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Rādīt visu...">
 <!ENTITY save "Saglabāt">
 <!ENTITY cancel "Atcelt">
-<!ENTITY about.title "Par Flagbox">
-<!ENTITY about.version "Versija">
-<!ENTITY about.creator "Veidoja:">
-<!ENTITY about.admin "Geotool un servera administrators:">
-<!ENTITY about.original "Bāzēts uz oriģinālā spraudņa no:">
-<!ENTITY about.logo "Logo piedāvā:">
-<!ENTITY about.flagicons "Karogu ikonas:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag izmanto pašizveidotu karogu kopu, kas balstīta uz">
-<!ENTITY about.wikimediabasedln2 "publiskajā domēnā esošiem darbiem, kurus nodrošina Wikimedia Commons.">
-<!ENTITY about.othericons "Papildu ikonu autors:">
-<!ENTITY about.translators "Tulkotāji:">
-<!ENTITY about.geolocation "IP adrešu ģeolokācijas datubāze:">
-<!ENTITY about.maxmindln1 "Šis produkts sevī ietver MaxMind veidotus GeoLite datus,">
-<!ENTITY about.maxmindln2 "redzamus no:">
 <!ENTITY close "Aizvērt">

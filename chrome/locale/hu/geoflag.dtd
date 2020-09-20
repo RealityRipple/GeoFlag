@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag beállítások">
-<!ENTITY prefs.previewflagslabel "Országok zászló ikonjainak előnézete">
+<!ENTITY prefs.flagicons "Zászló ikonok:">
 <!ENTITY prefs.showfaviconslabel "Ikonok megjelenítése a műveletekhez">
 <!ENTITY prefs.openinlabel "Oldal megnyitása itt:">
 <!ENTITY prefs.tabBGlabel "Megnyitás új lapon a háttérben">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Szerezzen be műveleteket és ossza meg a sajátjait">
 <!ENTITY prefs.moveselectedlabel "Kiválasztott mozgatása:">
 <!ENTITY prefs.resetmessageslabel "Üzenetek visszaállítása">
-<!ENTITY prefs.previewicons "Előnézeti ikonok">
-<!ENTITY prefs.sortflags "Zászlók rendezése mint:">
-<!ENTITY prefs.sortbycode "Ország/terület kódja">
-<!ENTITY prefs.sortbyname "Ország/terület neve">
-<!ENTITY prefs.sortbyratio "Képarány">
-<!ENTITY prefs.sortbycolor "Jellegzetes szín">
 <!ENTITY action.namelabel "Név:">
 <!ENTITY action.clicklabel "Ikonra kattintás:">
 <!ENTITY action.hotkeylabel "Gyorsbillentyű:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Összes megjelenítése…">
 <!ENTITY save "Mentés">
 <!ENTITY cancel "Mégse">
-<!ENTITY about.title "A GeoFlag névjegye">
-<!ENTITY about.version "Verzió">
-<!ENTITY about.creator "Készítette:">
-<!ENTITY about.admin "Geoeszköz és kiszolgáló adminisztráció:">
-<!ENTITY about.original "Az eredeti kiterjesztés alapján:">
-<!ENTITY about.logo "Logót készítette:">
-<!ENTITY about.flagicons "Zászló ikonok:">
-<!ENTITY about.wikimediabasedln1 "A GeoFlag egyedi zászló ikonjai a Wikimedia Commons">
-<!ENTITY about.wikimediabasedln2 "által bíztosított munkák alapján készült.">
-<!ENTITY about.othericons "További ikonok:">
-<!ENTITY about.translators "Fordítók:">
-<!ENTITY about.geolocation "IP cím helymeghatározási adatbázis:">
-<!ENTITY about.maxmindln1 "Ez a termék a MaxMind által szolgáltatott GeoLite adatokat tesz elérhetővé.">
-<!ENTITY about.maxmindln2 "Elérhetőség:">
 <!ENTITY close "Bezárás">

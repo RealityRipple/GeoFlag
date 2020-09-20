@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag-ի ընտրանքները">
-<!ENTITY prefs.previewflagslabel "Նախադիտել երկրի դրոշի պատկերակները">
+<!ENTITY prefs.flagicons "Դրոշի պատկերակները.">
 <!ENTITY prefs.showfaviconslabel "Ցուցադրել գործող. պատկերակները">
 <!ENTITY prefs.openinlabel "Էջերը բացում են՝">
 <!ENTITY prefs.tabBGlabel "Նոր էջ խորապատկերում">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Ստանալ լրացուցիչ գործողություններ">
 <!ENTITY prefs.moveselectedlabel "Ջնջել ընտրվածը.">
 <!ENTITY prefs.resetmessageslabel "Ետարկել">
-<!ENTITY prefs.previewicons "Պատկերները">
-<!ENTITY prefs.sortflags "Խմբավորել դրոշները ըստ՝">
-<!ENTITY prefs.sortbycode "Երկրի/Տարածքի կոդի">
-<!ENTITY prefs.sortbyname "Երկրի/Տարածքի անվան">
-<!ENTITY prefs.sortbyratio "Ըստ հարաբերության">
-<!ENTITY prefs.sortbycolor "Ներկայացված գույնի">
 <!ENTITY action.namelabel "Անուն.">
 <!ENTITY action.clicklabel "Պատկերակը.">
 <!ENTITY action.hotkeylabel "Կարճուղին.">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Ցուցադրել բոլորը…">
 <!ENTITY save "Պահպանել">
 <!ENTITY cancel "Մերժել">
-<!ENTITY about.title "GeoFlag-ի մասին">
-<!ENTITY about.version "Տարբերակը">
-<!ENTITY about.creator "Ստեղծվել է՝">
-<!ENTITY about.admin "Geotool և սպասարկիչի Ադմին.">
-<!ENTITY about.original "Հիմնված օրիգինալ հավելմանը՝">
-<!ENTITY about.logo "Լոգոն՝">
-<!ENTITY about.flagicons "Դրոշի պատկերակները.">
-<!ENTITY about.wikimediabasedln1 "GeoFlag-ը օգտագործում է պատկերակներ հիմնված">
-<!ENTITY about.wikimediabasedln2 "Wikimedia Commons-ի կողմից տրամադրած հանրային տիրույթների աշխատանքների վրա։">
-<!ENTITY about.othericons "Լրացուցիչ պատկերակներ՝">
-<!ENTITY about.translators "Թարգմանիչներ.">
-<!ENTITY about.geolocation "IP հասցեների տեղադրության տվյալները.">
-<!ENTITY about.maxmindln1 "Ներառում է GeoLite-ի տվյալները, ստեղծված՝ MaxMind-ի կողմից,">
-<!ENTITY about.maxmindln2 "հասանելի է՝">
 <!ENTITY close "Փակել">

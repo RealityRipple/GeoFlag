@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Možnosti GeoFlag">
-<!ENTITY prefs.previewflagslabel "Predogled ikon zastav držav">
+<!ENTITY prefs.flagicons "Ikone zastav:">
 <!ENTITY prefs.showfaviconslabel "Prikaži ikone zaznamkov za dejanja">
 <!ENTITY prefs.openinlabel "Dejanja odprejo strani v:">
 <!ENTITY prefs.tabBGlabel "novem zavihku v ozadju">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Dobi več dejanj ali svoja daj v souporabo">
 <!ENTITY prefs.moveselectedlabel "Premakni izbrana:">
 <!ENTITY prefs.resetmessageslabel "Ponastavi sporočila">
-<!ENTITY prefs.previewicons "Predogled ikon">
-<!ENTITY prefs.sortflags "Razvrsti ikone po:">
-<!ENTITY prefs.sortbycode "državi/kodi ozemlja">
-<!ENTITY prefs.sortbyname "državi/imenu ozemlja">
-<!ENTITY prefs.sortbyratio "razmerju prikaza">
-<!ENTITY prefs.sortbycolor "predstavnostni barvi">
 <!ENTITY action.namelabel "Ime:">
 <!ENTITY action.clicklabel "Klik na ikono:">
 <!ENTITY action.hotkeylabel "Hitra tipka:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Prikaži vse …">
 <!ENTITY save "Shrani">
 <!ENTITY cancel "Prekliči">
-<!ENTITY about.title "O dodatku GeoFlag">
-<!ENTITY about.version "Različica">
-<!ENTITY about.creator "Avtor:">
-<!ENTITY about.admin "Geotool in skrbništvo strežnika:">
-<!ENTITY about.original "Osnovano na izvirnem dodatku od:">
-<!ENTITY about.logo "Avtor logotipa:">
-<!ENTITY about.flagicons "Ikone zastav:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag uporablja ikone zastav izgrajene po meri glede">
-<!ENTITY about.wikimediabasedln2 "na delo javne domene, ki jo dobavlja Wikimedia Commons.">
-<!ENTITY about.othericons "Avtor dodatnih ikon:">
-<!ENTITY about.translators "Prevajalci:">
-<!ENTITY about.geolocation "Podatkovna zbirka geografske lokacije naslovov IP:">
-<!ENTITY about.maxmindln1 "Ta izdelek vključuje podatke GeoLite, ki jih je">
-<!ENTITY about.maxmindln2 "ustvaril MaxMind in so na voljo na:">
 <!ENTITY close "Zapri">

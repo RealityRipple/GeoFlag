@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag indstillinger">
-<!ENTITY prefs.previewflagslabel "Forhåndsvis landes flagikoner">
+<!ENTITY prefs.flagicons "Flagikoner:">
 <!ENTITY prefs.showfaviconslabel "Vis favikoner for handlinger">
 <!ENTITY prefs.openinlabel "Handling åbner side i:">
 <!ENTITY prefs.tabBGlabel "Nyt faneblad i baggrunden">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Hent flere handlinger eller del dine egne">
 <!ENTITY prefs.moveselectedlabel "Flyt valgte:">
 <!ENTITY prefs.resetmessageslabel "Nulstil meddelelser">
-<!ENTITY prefs.previewicons "Forhåndsvis ikoner">
-<!ENTITY prefs.sortflags "Sorter flag efter:">
-<!ENTITY prefs.sortbycode "Land/Områdekode">
-<!ENTITY prefs.sortbyname "Land/Områdenavn">
-<!ENTITY prefs.sortbyratio "Størrelsesforhold">
-<!ENTITY prefs.sortbycolor "Repræsentativ farve">
 <!ENTITY action.namelabel "Navn:">
 <!ENTITY action.clicklabel "Klik på ikon:">
 <!ENTITY action.hotkeylabel "Genvejstast:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Vis alle…">
 <!ENTITY save "Gem">
 <!ENTITY cancel "Annuller">
-<!ENTITY about.title "Om GeoFlag">
-<!ENTITY about.version "Version">
-<!ENTITY about.creator "Lavet af:">
-<!ENTITY about.admin "Geotool &amp; server admin:">
-<!ENTITY about.original "Baseret på en oprindelig tilføjelse af:">
-<!ENTITY about.logo "Logo af:">
-<!ENTITY about.flagicons "Flagikoner:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag bruger et specialudviklet sæt flagikoner baseret på">
-<!ENTITY about.wikimediabasedln2 "de offentligt tilgængelige værker fra Wikimedia Commons.">
-<!ENTITY about.othericons "Yderligere ikoner af:">
-<!ENTITY about.translators "Oversættere:">
-<!ENTITY about.geolocation "IP-adresse positionsdatabase:">
-<!ENTITY about.maxmindln1 "Dette produkt inkluderer GeoLite data skabt af MaxMind,">
-<!ENTITY about.maxmindln2 "tilgængelig fra:">
 <!ENTITY close "Luk">

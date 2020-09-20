@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Opzioni GeoFlag">
-<!ENTITY prefs.previewflagslabel "Anteprima bandiere">
+<!ENTITY prefs.flagicons "Icone bandiere:">
 <!ENTITY prefs.showfaviconslabel "Mostra icone favorite per le azioni">
 <!ENTITY prefs.openinlabel "Le azioni aprono le pagine in:">
 <!ENTITY prefs.tabBGlabel "nuovo tab in background">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Installa più azioni o condividi le tue">
 <!ENTITY prefs.moveselectedlabel "Muovi selezionato:">
 <!ENTITY prefs.resetmessageslabel "Resetta messaggi">
-<!ENTITY prefs.previewicons "Anteprima icone">
-<!ENTITY prefs.sortflags "Ordina bandiere per:">
-<!ENTITY prefs.sortbycode "Codice nazione/territorio">
-<!ENTITY prefs.sortbyname "Nome nazione/territorio">
-<!ENTITY prefs.sortbyratio "Proporzione aspetto">
-<!ENTITY prefs.sortbycolor "Colore rappresentativo">
 <!ENTITY action.namelabel "Nome:">
 <!ENTITY action.clicklabel "Click sull'icona:">
 <!ENTITY action.hotkeylabel "Tasti di scelta rapida:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Mostra tutto…">
 <!ENTITY save "Salva">
 <!ENTITY cancel "Cancella">
-<!ENTITY about.title "Su GeoFlag">
-<!ENTITY about.version "Versione">
-<!ENTITY about.creator "Creato da:">
-<!ENTITY about.admin "Amministratore di Geotool &amp; server">
-<!ENTITY about.original "Basato sull'addon originale di:">
-<!ENTITY about.logo "Logo di:">
-<!ENTITY about.flagicons "Icone bandiere:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag utilizza un gruppo di bandiere proprio basato">
-<!ENTITY about.wikimediabasedln2 "sui contenuti di pubblico dominio di Wikimedia Commons.">
-<!ENTITY about.othericons "Icone aggiuntive di:">
-<!ENTITY about.translators "Traduttori:">
-<!ENTITY about.geolocation "Database di geolocalizzazione indirizzi IP:">
-<!ENTITY about.maxmindln1 "Questo prodotto include GeoLite data creato da MaxMind,">
-<!ENTITY about.maxmindln2 "disponibile su:">
 <!ENTITY close "Chiudi">

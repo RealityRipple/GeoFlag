@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Opcions del GeoFlag">
-<!ENTITY prefs.previewflagslabel "Vista prèvia d'icones de banderes">
+<!ENTITY prefs.flagicons "Icones de banderes:">
 <!ENTITY prefs.showfaviconslabel "Mostra &quot;favicons&quot; per les accions">
 <!ENTITY prefs.openinlabel "Les accions obren pàgines a">
 <!ENTITY prefs.tabBGlabel "Nova pestanya en segon pla">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Obtenir més accions o compartir les pròpies">
 <!ENTITY prefs.moveselectedlabel "Moure seleccionades:">
 <!ENTITY prefs.resetmessageslabel "Reiniciar missatges">
-<!ENTITY prefs.previewicons "Vista prèvia d'icones">
-<!ENTITY prefs.sortflags "Ordenar banderes per:">
-<!ENTITY prefs.sortbycode "Codi del país/territori">
-<!ENTITY prefs.sortbyname "Nom del país/territori">
-<!ENTITY prefs.sortbyratio "Relació d'aspecte">
-<!ENTITY prefs.sortbycolor "Color representatiu">
 <!ENTITY action.namelabel "Nom:">
 <!ENTITY action.clicklabel "Clic a la icona:">
 <!ENTITY action.hotkeylabel "Drecera:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Mostra-ho tot…">
 <!ENTITY save "Desa">
 <!ENTITY cancel "Cancel·la">
-<!ENTITY about.title "Quant al GeoFlag">
-<!ENTITY about.version "Versió">
-<!ENTITY about.creator "Creat per:">
-<!ENTITY about.admin "Administrador del servidor Geotool:">
-<!ENTITY about.original "Basat en l'extensió original per:">
-<!ENTITY about.logo "Logotip de:">
-<!ENTITY about.flagicons "Icones de banderes:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag fa servir un conjunt intern d'icones de banderes basades">
-<!ENTITY about.wikimediabasedln2 "en treballs de domini públic de Wikimedia Commons.">
-<!ENTITY about.othericons "Icones addicionals de:">
-<!ENTITY about.translators "Traductors:">
-<!ENTITY about.geolocation "Base de dades de geolocalització d'adreces IP:">
-<!ENTITY about.maxmindln1 "Aquest producte inclou dades de GeoLite creades per MaxMind,">
-<!ENTITY about.maxmindln2 "disponibles des de:">
 <!ENTITY close "Surt">

@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Налаштування GeoFlag">
-<!ENTITY prefs.previewflagslabel "Перегляд іконок прапорів країн">
+<!ENTITY prefs.flagicons "Іконки прапора:">
 <!ENTITY prefs.showfaviconslabel "Показувати іконки сайтів для дій">
 <!ENTITY prefs.openinlabel "Дії відкривають сторінку в:">
 <!ENTITY prefs.tabBGlabel "Нова вкладка в фоні">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Отримати більше дій чи поділитися власними">
 <!ENTITY prefs.moveselectedlabel "Перемістити вибрані:">
 <!ENTITY prefs.resetmessageslabel "Скинути повідомлення">
-<!ENTITY prefs.previewicons "Перегляд іконок">
-<!ENTITY prefs.sortflags "Сортувати прапори за:">
-<!ENTITY prefs.sortbycode "Кодом країни/території">
-<!ENTITY prefs.sortbyname "Назвою країни/території">
-<!ENTITY prefs.sortbyratio "Співвідношення сторін">
-<!ENTITY prefs.sortbycolor "Представлений колір">
 <!ENTITY action.namelabel "Назва:">
 <!ENTITY action.clicklabel "Клацання по іконці:">
 <!ENTITY action.hotkeylabel "Гаряча клавіша:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Показати все:">
 <!ENTITY save "Зберегти">
 <!ENTITY cancel "Скасувати">
-<!ENTITY about.title "Про GeoFlag">
-<!ENTITY about.version "Версія">
-<!ENTITY about.creator "Автор:">
-<!ENTITY about.admin "Адміністратор сервера Geotool">
-<!ENTITY about.original "Базується на оригінальному додатку від:">
-<!ENTITY about.logo "Логотип від:">
-<!ENTITY about.flagicons "Іконки прапора:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag використовує модифікований набір прапорів, що базується на">
-<!ENTITY about.wikimediabasedln2 "роботах з Wikimedia Commons, що знаходяться в публічному доступі.">
-<!ENTITY about.othericons "Додаткові іконки від:">
-<!ENTITY about.translators "Перекладачі:">
-<!ENTITY about.geolocation "База даних георозміщень IP адрес">
-<!ENTITY about.maxmindln1 "Цей продукт включає дані GeoLite створені за допомогою MaxMind">
-<!ENTITY about.maxmindln2 "доступні з">
 <!ENTITY close "Закрити">

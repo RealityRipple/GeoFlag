@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag Опции">
-<!ENTITY prefs.previewflagslabel "Преглед на флаговете на държавите като икони">
+<!ENTITY prefs.flagicons "Флаг икони:">
 <!ENTITY prefs.showfaviconslabel "Покажи иконите за любимите действия">
 <!ENTITY prefs.openinlabel "При действие отвори страницата в:">
 <!ENTITY prefs.tabBGlabel "Нов под прозорец във заден режим">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Получете повече действия или сподели своите собствени">
 <!ENTITY prefs.moveselectedlabel "Премести избрани:">
 <!ENTITY prefs.resetmessageslabel "Показване на съобщенията по подразбиране">
-<!ENTITY prefs.previewicons "Преглед на икони">
-<!ENTITY prefs.sortflags "Сортиране на флаговете по:">
-<!ENTITY prefs.sortbycode "Държава/код на територията">
-<!ENTITY prefs.sortbyname "Държава/име на територията">
-<!ENTITY prefs.sortbyratio "Съотношение на страните">
-<!ENTITY prefs.sortbycolor "Представителен цвят">
 <!ENTITY action.namelabel "Име:">
 <!ENTITY action.clicklabel "Икона Щракнете:">
 <!ENTITY action.hotkeylabel "Клавиш:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Покажи всичко...">
 <!ENTITY save "Запази">
 <!ENTITY cancel "Отказ">
-<!ENTITY about.title "За GeoFlag">
-<!ENTITY about.version "Версия">
-<!ENTITY about.creator "Създаден от:">
-<!ENTITY about.admin "Geotool &amp; сървър админ:">
-<!ENTITY about.original "На базата на оригиналната добавка от:">
-<!ENTITY about.logo "Лого от:">
-<!ENTITY about.flagicons "Флаг икони:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag ползва собствени икони базирани на">
-<!ENTITY about.wikimediabasedln2 "публичните домейни работят благодарение на Wikimedia Commons.">
-<!ENTITY about.othericons "Допълнителни икони от:">
-<!ENTITY about.translators "Преводачи:">
-<!ENTITY about.geolocation "IP Адреси Геологическа датабаза:">
-<!ENTITY about.maxmindln1 "Този продукт включва информацията на GeoLite създадена от MaxMind,">
-<!ENTITY about.maxmindln2 "достъпна на:">
 <!ENTITY close "Затваряне">

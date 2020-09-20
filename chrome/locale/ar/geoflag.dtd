@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "خيارات فلاج فوكس">
-<!ENTITY prefs.previewflagslabel "عرض ايقونات اعلام البلاد">
+<!ENTITY prefs.flagicons "أيقونات الاعلام">
 <!ENTITY prefs.showfaviconslabel "عرض أيقونة للأوامر">
 <!ENTITY prefs.openinlabel "فتح الصفحات في:">
 <!ENTITY prefs.tabBGlabel "لسان جديد في الخلفية">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "إحصل على المزيد من الأوامر أو شارك أوامرك">
 <!ENTITY prefs.moveselectedlabel "تحريك المختار:">
 <!ENTITY prefs.resetmessageslabel "استعادة الرسائل">
-<!ENTITY prefs.previewicons "استعراض الرموز">
-<!ENTITY prefs.sortflags "رتب الاعلام بواسطة">
-<!ENTITY prefs.sortbycode "رمز المنطقه او البلد">
-<!ENTITY prefs.sortbyname "اسم المنطقه او البلد">
-<!ENTITY prefs.sortbyratio "جانب من النسبة">
-<!ENTITY prefs.sortbycolor "لون تمثيلي">
 <!ENTITY action.namelabel "الإسم:">
 <!ENTITY action.clicklabel "أيقونة النقرة:">
 <!ENTITY action.hotkeylabel "إختصار لوحة المفاتيح:">
@@ -35,28 +29,7 @@
 <!ENTITY action.country "خادم الدولة في:">
 <!ENTITY action.exampleoutput "مثال:">
 <!ENTITY action.seeforumslink "انظر المنتديات للمساعدة وأوامر أخرى">
-<!ENTITY showall "عرض الكل…">
+<!ENTITY showall "…عرض الكل">
 <!ENTITY save "حفظ">
 <!ENTITY cancel "إلغاء">
-<!ENTITY about.title "حول فلاج فوكس">
-<!ENTITY about.version "الاصدار">
-<!ENTITY about.creator "تم إنشاءه من قبل:">
-<!ENTITY about.admin "جيوتول و مدير السيرفر:">
-<!ENTITY about.original "بنأ على إضافات أساسية من قبل:">
-<!ENTITY about.logo "الرمز من:">
-<!ENTITY about.flagicons "أيقونات الاعلام">
-<!ENTITY about.wikimediabasedln1 "الفلاج فكس يستخدم مجموعة مخصصة من الرموز
-
-
-
-
-
-
- بنيت على أساس العلم">
-<!ENTITY about.wikimediabasedln2 "اسم النطاق يقدمه ويكي ميديا">
-<!ENTITY about.othericons "ايقونات اضافية بواسطة">
-<!ENTITY about.translators "المترجمون:">
-<!ENTITY about.geolocation "قاعدة بيانات الاي بي والموقع الجغرافي">
-<!ENTITY about.maxmindln1 "هذا المنتج يحتوي أيضاً على جيولايت, تصميم ماكس مايند,">
-<!ENTITY about.maxmindln2 "متوفر من:">
 <!ENTITY close "اغلاق">

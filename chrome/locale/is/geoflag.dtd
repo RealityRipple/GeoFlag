@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag stillingar">
-<!ENTITY prefs.previewflagslabel "Forskoða fánamyndir">
+<!ENTITY prefs.flagicons "Táknmyndir fána:">
 <!ENTITY prefs.showfaviconslabel "Sýna favicons fyrir aðgerðir">
 <!ENTITY prefs.openinlabel "Aðgerðir opna síður í:">
 <!ENTITY prefs.tabBGlabel "Nýjum flipa í bakgrunni">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Ná í fleiri aðgerðir eða deildu þínum">
 <!ENTITY prefs.moveselectedlabel "Færa valið:">
 <!ENTITY prefs.resetmessageslabel "Endurstilla skilaboð">
-<!ENTITY prefs.previewicons "Forsýna táknmyndir">
-<!ENTITY prefs.sortflags "Raða fánum eftir:">
-<!ENTITY prefs.sortbycode "Land/Svæða kóði">
-<!ENTITY prefs.sortbyname "Landi/Landsvæði">
-<!ENTITY prefs.sortbyratio "Sniðhlutfall">
-<!ENTITY prefs.sortbycolor "Lit">
 <!ENTITY action.namelabel "Nafn:">
 <!ENTITY action.clicklabel "Táknmyndasmellur:">
 <!ENTITY action.hotkeylabel "Flýtilykill:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Sýna allt...">
 <!ENTITY save "Vista">
 <!ENTITY cancel "Hætta við">
-<!ENTITY about.title "Upplýsingar um GeoFlag">
-<!ENTITY about.version "Útgáfa">
-<!ENTITY about.creator "Höfundur:">
-<!ENTITY about.admin "Geotool og kerfisstjóri:">
-<!ENTITY about.original "Byggt á upprunalegri viðbót frá:">
-<!ENTITY about.logo "Táknmynd frá:">
-<!ENTITY about.flagicons "Táknmyndir fána:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag notar sérsniðið sett af fánamyndum byggt á">
-<!ENTITY about.wikimediabasedln2 "efni sem er frjálst til afnota er fengið frá Wikimedia Commons.">
-<!ENTITY about.othericons "Auka táknmyndir frá:">
-<!ENTITY about.translators "Þýðendur:">
-<!ENTITY about.geolocation "IP vistfang hnattstaðsetninga gagnagrunnur:">
-<!ENTITY about.maxmindln1 "Þessi vara inniheldur GeoLite gögn búinn til af MaxMind,">
-<!ENTITY about.maxmindln2 "fáanlegur frá:">
 <!ENTITY close "Loka">

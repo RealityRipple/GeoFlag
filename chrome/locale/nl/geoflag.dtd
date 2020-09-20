@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag-opties">
-<!ENTITY prefs.previewflagslabel "Voorbeeld vlagpictogrammen">
+<!ENTITY prefs.flagicons "Vlagpictogrammen:">
 <!ENTITY prefs.showfaviconslabel "Favicons weergeven voor acties">
 <!ENTITY prefs.openinlabel "Acties openen pagina’s in:">
 <!ENTITY prefs.tabBGlabel "nieuw tabblad op de achtergrond">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Meer acties ophalen of uw eigen acties delen">
 <!ENTITY prefs.moveselectedlabel "Selectie verplaatsen:">
 <!ENTITY prefs.resetmessageslabel "Berichten resetten">
-<!ENTITY prefs.previewicons "Voorbeeld van pictogrammen">
-<!ENTITY prefs.sortflags "Vlaggen sorteren op:">
-<!ENTITY prefs.sortbycode "Land-/Territoriumcode">
-<!ENTITY prefs.sortbyname "Land-/Territoriumnaam">
-<!ENTITY prefs.sortbyratio "Verhouding">
-<!ENTITY prefs.sortbycolor "Representatieve kleur">
 <!ENTITY action.namelabel "Naam:">
 <!ENTITY action.clicklabel "Pictogramklik:">
 <!ENTITY action.hotkeylabel "Sneltoets:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Alles weergeven…">
 <!ENTITY save "Opslaan">
 <!ENTITY cancel "Annuleren">
-<!ENTITY about.title "Over GeoFlag">
-<!ENTITY about.version "Versie">
-<!ENTITY about.creator "Gemaakt door:">
-<!ENTITY about.admin "Geotool &amp; serverbeheer:">
-<!ENTITY about.original "Gebaseerd op de oorspronkelijke add-on door:">
-<!ENTITY about.logo "Logo door:">
-<!ENTITY about.flagicons "Vlagpictogrammen:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag gebruikt een aangepaste set vlagpictogrammen op basis van">
-<!ENTITY about.wikimediabasedln2 "het publieke werk zoals verstrekt door Wikimedia Commons.">
-<!ENTITY about.othericons "Aanvullende pictogrammen door:">
-<!ENTITY about.translators "Vertalers:">
-<!ENTITY about.geolocation "IP-adres-geolocatiedatabase:">
-<!ENTITY about.maxmindln1 "Dit product bevat GeoLite-gegevens door MaxMind,">
-<!ENTITY about.maxmindln2 "beschikbaar op:">
 <!ENTITY close "Sluiten">

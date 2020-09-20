@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Paramètres de GeoFlag">
-<!ENTITY prefs.previewflagslabel "Prévisualisation des icônes de drapeaux nationaux">
+<!ENTITY prefs.flagicons "Icônes de drapeaux :">
 <!ENTITY prefs.showfaviconslabel "Afficher les favicônes pour les actions">
 <!ENTITY prefs.openinlabel "Les actions ouvrent les pages dans :">
 <!ENTITY prefs.tabBGlabel "un nouvel onglet en arrière-plan">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Opérez davantage d'actions ou partagez les vôtres">
 <!ENTITY prefs.moveselectedlabel "Déplacer la sélection :">
 <!ENTITY prefs.resetmessageslabel "Restaurer les messages">
-<!ENTITY prefs.previewicons "Aperçu des icônes">
-<!ENTITY prefs.sortflags "Classer les drapeaux par :">
-<!ENTITY prefs.sortbycode "Code de pays / territoire">
-<!ENTITY prefs.sortbyname "Nom de pays / territoire">
-<!ENTITY prefs.sortbyratio "Proportion">
-<!ENTITY prefs.sortbycolor "Couleur significative">
 <!ENTITY action.namelabel "Nom :">
 <!ENTITY action.clicklabel "Clic sur l'icône :">
 <!ENTITY action.hotkeylabel "Touche de fonction :">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Tout afficher…">
 <!ENTITY save "Enregistrer">
 <!ENTITY cancel "Annuler">
-<!ENTITY about.title "À propos de GeoFlag">
-<!ENTITY about.version "Version">
-<!ENTITY about.creator "Créée par :">
-<!ENTITY about.admin "Geotool &amp; administration du serveur :">
-<!ENTITY about.original "Basée sur l'extension originale de :">
-<!ENTITY about.logo "Logo par :">
-<!ENTITY about.flagicons "Icônes de drapeaux :">
-<!ENTITY about.wikimediabasedln1 "GeoFlag utilise un jeu d'icônes de drapeau sur la base">
-<!ENTITY about.wikimediabasedln2 "du domaine public, fourni par Wikimedia Commons.">
-<!ENTITY about.othericons "Icônes supplémentaires par :">
-<!ENTITY about.translators "Traducteurs :">
-<!ENTITY about.geolocation "Base de données pour la géolocalisation IP :">
-<!ENTITY about.maxmindln1 "Ce produit inclut des données de GeoLite créées par MaxMind,">
-<!ENTITY about.maxmindln2 "disponibles depuis :">
 <!ENTITY close "Fermer">

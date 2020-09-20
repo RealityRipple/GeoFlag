@@ -1,7 +1,8 @@
 <!-- ## options dialog ## -->
 <!ENTITY prefs.title "GeoFlag Options">
 
-<!ENTITY prefs.previewflagslabel "Preview country flag icons">
+<!ENTITY prefs.flagicons "Flag icons:">
+
 <!ENTITY prefs.showfaviconslabel "Show favicons for actions">
 
 <!ENTITY prefs.openinlabel "Actions open pages in:">
@@ -19,15 +20,6 @@
 <!ENTITY prefs.moveselectedlabel "Move selected:">
 
 <!ENTITY prefs.resetmessageslabel "Reset messages">
-
-<!-- ## preview icons dialog ## -->
-<!ENTITY prefs.previewicons "Preview Icons">
-
-<!ENTITY prefs.sortflags "Sort flags by:">
-<!ENTITY prefs.sortbycode "Country/Territory Code">
-<!ENTITY prefs.sortbyname "Country/Territory Name">
-<!ENTITY prefs.sortbyratio "Aspect Ratio">
-<!ENTITY prefs.sortbycolor "Representative Color">
 
 <!-- ## add/edit action dialog ## -->
 <!ENTITY action.namelabel "Name:">
@@ -57,32 +49,8 @@
 <!ENTITY save "Save">
 <!ENTITY cancel "Cancel">
 
-<!-- ## about dialog ## -->
-<!ENTITY about.title "About GeoFlag">
-<!ENTITY about.version "Version">
-
-<!ENTITY about.creator "Created by:">
-<!ENTITY about.admin "Geotool &amp; server admin:">
-<!ENTITY about.original "Based on original addon by:">
-
-<!ENTITY about.logo "Logo by:">
-
-<!ENTITY about.flagicons "Flag icons:">
-<!-- the following two strings constitute a single sentence split across two lines; break the sentence where it fits in the window best: -->
-<!ENTITY about.wikimediabasedln1 "GeoFlag uses a custom built set of flag icons based on">
-<!ENTITY about.wikimediabasedln2 "the public domain works provided by Wikimedia Commons.">
-
-<!ENTITY about.othericons "Additional icons by:">
-
-<!ENTITY about.translators "Translators:">
-
-<!ENTITY about.geolocation "IP address geolocation database:">
-<!-- the following two strings constitute a single sentence fragment split across two lines; break the sentence where it fits in the window best: -->
-<!ENTITY about.maxmindln1 "This product includes GeoLite data created by MaxMind,">
-<!ENTITY about.maxmindln2 "available from:">
-
 <!-- used in all dialogs: -->
 <!ENTITY close "Close">
 
-<!-- Please don't forget to test your localizations in all 4 dialogs:  options, preview icons, add/edit action, about -->
+<!-- Please don't forget to test your localizations in both the Options and Add/Edit Action dialogs -->
 <!-- If you are localizing this file manually instead of using the WTS please cut out the notes and blank lines before uploading. -->

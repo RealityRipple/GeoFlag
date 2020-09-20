@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag אפשרויות">
-<!ENTITY prefs.previewflagslabel "תצוגה מקדימה לאייקוני דגלי המדינות">
+<!ENTITY prefs.flagicons "אייקוני דגל:">
 <!ENTITY prefs.showfaviconslabel "הצגת אייקון המועדפים לפעולות">
 <!ENTITY prefs.openinlabel "פעולות פותחות עמודים ב:">
 <!ENTITY prefs.tabBGlabel "לשונית חדשה ברקע">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "השגת פעולות נוספות או שיתוף פעולות משלכם">
 <!ENTITY prefs.moveselectedlabel "הזזת הנבחר:">
 <!ENTITY prefs.resetmessageslabel "איפוס הודעות">
-<!ENTITY prefs.previewicons "תצוגה מקדימה של האייקון">
-<!ENTITY prefs.sortflags "סידור הדגלים לפי:">
-<!ENTITY prefs.sortbycode "קוד מדינה/טריטוריה">
-<!ENTITY prefs.sortbyname "שם מדינה/טריטוריה">
-<!ENTITY prefs.sortbyratio "יחס מימדים">
-<!ENTITY prefs.sortbycolor "צבע מייצג">
 <!ENTITY action.namelabel "שם:">
 <!ENTITY action.clicklabel "לחיצת אייקון:">
 <!ENTITY action.hotkeylabel "קיצור דרך מקלדת:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "הצגת הכל...">
 <!ENTITY save "שמירה">
 <!ENTITY cancel "ביטול">
-<!ENTITY about.title "אודות GeoFlag">
-<!ENTITY about.version "גרסה">
-<!ENTITY about.creator "נוצר על ידי:">
-<!ENTITY about.admin "Geotool ומנהל מערכת השרת:">
-<!ENTITY about.original "מבוסס על ההרחבה המקורית של:">
-<!ENTITY about.logo "לוגו על ידי:">
-<!ENTITY about.flagicons "אייקוני דגל:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag משתמש במערך מותאם אישית מובנה של אייקוני דגל המבוסס על">
-<!ENTITY about.wikimediabasedln2 "רשות הציבור המסופק על ידי ויקישיתוף.">
-<!ENTITY about.othericons "אייקונים נוספים על ידי:">
-<!ENTITY about.translators "מתרגמים:">
-<!ENTITY about.geolocation "מסד נתונים למיקום גאוגרפי של כתובות ה-IP:">
-<!ENTITY about.maxmindln1 "מוצר זה כולל מידע GeoLite הנוצר על ידי חברת MaxMind,">
-<!ENTITY about.maxmindln2 "הזמין מ:">
 <!ENTITY close "סגירה">

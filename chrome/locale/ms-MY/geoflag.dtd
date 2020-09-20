@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "Tetapan FlagFlox">
-<!ENTITY prefs.previewflagslabel "Pralihat ikon bendera negara">
+<!ENTITY prefs.flagicons "Ikon bendera:">
 <!ENTITY prefs.showfaviconslabel "Pamer favicon untuk tindakan">
 <!ENTITY prefs.openinlabel "Buka tindakan halaman dalam:">
 <!ENTITY prefs.tabBGlabel "Tab baru di belakang">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Dapatkan lebih tindakan atau untuk kegunaan sendiri">
 <!ENTITY prefs.moveselectedlabel "Ubah pilihan:">
 <!ENTITY prefs.resetmessageslabel "Buat semula mesej">
-<!ENTITY prefs.previewicons "Ikon Pralihat">
-<!ENTITY prefs.sortflags "Susun bendera mengikut:">
-<!ENTITY prefs.sortbycode "Kod Negara/Wilayah">
-<!ENTITY prefs.sortbyname "Nama Negara/Wilayah">
-<!ENTITY prefs.sortbyratio "Aspek Nisbah">
-<!ENTITY prefs.sortbycolor "Warna Perwakilan">
 <!ENTITY action.namelabel "Nama:">
 <!ENTITY action.clicklabel "Klik Ikon:">
 <!ENTITY action.hotkeylabel "Kekunci pantas:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Pamer semua...">
 <!ENTITY save "Simpan">
 <!ENTITY cancel "Batal">
-<!ENTITY about.title "Tentang GeoFlag">
-<!ENTITY about.version "Versi">
-<!ENTITY about.creator "Dicipta oleh:">
-<!ENTITY about.admin "Geotool &amp; server admin:">
-<!ENTITY about.original "Berdasarkan addon asal oleh:">
-<!ENTITY about.logo "Logo oleh:">
-<!ENTITY about.flagicons "Ikon bendera:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag menggunakan set binaan kebiasaan berdasarkan">
-<!ENTITY about.wikimediabasedln2 "kerja domain awam disediakan oleh Wikimedia Commons.">
-<!ENTITY about.othericons "Ikon tambahan oleh:">
-<!ENTITY about.translators "Penterjemah:">
-<!ENTITY about.geolocation "Pangkalan data alamat IP geolokasi:">
-<!ENTITY about.maxmindln1 "Produk ini termasuk GeoLite data dicipta oleh MaxMind,">
-<!ENTITY about.maxmindln2 "didapati dari:">
 <!ENTITY close "Tutup">

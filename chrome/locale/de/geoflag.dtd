@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag - Einstellungen">
-<!ENTITY prefs.previewflagslabel "Vorschau der Flaggen-Sets">
+<!ENTITY prefs.flagicons "Flaggensymbole">
 <!ENTITY prefs.showfaviconslabel "Symbol der Aktionen anzeigen">
 <!ENTITY prefs.openinlabel "Aktion soll neue Seite öffnen...">
 <!ENTITY prefs.tabBGlabel "in neuem Tab im Hintergrund">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Weitere Aktionen erhalten oder Ihre eigenen mit anderen teilen">
 <!ENTITY prefs.moveselectedlabel "Ausgewähltes Element verschieben:">
 <!ENTITY prefs.resetmessageslabel "Hinweistext erneut anzeigen">
-<!ENTITY prefs.previewicons "Vorschau der Flaggen-Sets">
-<!ENTITY prefs.sortflags "Flaggen soertieren nach:">
-<!ENTITY prefs.sortbycode "Landes-/Territorialcode">
-<!ENTITY prefs.sortbyname "Landes-/Territorialname">
-<!ENTITY prefs.sortbyratio "Seitenverhältnis">
-<!ENTITY prefs.sortbycolor "Repräsentative Farbe">
 <!ENTITY action.namelabel "Name:">
 <!ENTITY action.clicklabel "Symbol-Mausklick:">
 <!ENTITY action.hotkeylabel "Tastaturkürzel:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Alle anzeigen…">
 <!ENTITY save "Speichern">
 <!ENTITY cancel "Abbrechen">
-<!ENTITY about.title "Über GeoFlag">
-<!ENTITY about.version "Version">
-<!ENTITY about.creator "Erstellt von:">
-<!ENTITY about.admin "Geotool- &amp; Server-Administrator:">
-<!ENTITY about.original "Basiert auf der Original-Erweiterung von:">
-<!ENTITY about.logo "Logo erstellt von:">
-<!ENTITY about.flagicons "Flaggensymbole">
-<!ENTITY about.wikimediabasedln1 "GeoFlag verwendet einen speziell angefertigten Satz von Flaggen-Symbolen, die auf der">
-<!ENTITY about.wikimediabasedln2 "Grundlage der gemeinfreien Werke von Wikimedia Commons zur Verfügung gestellt wurden.">
-<!ENTITY about.othericons "Weitere Symbole von:">
-<!ENTITY about.translators "Übersetzer:">
-<!ENTITY about.geolocation "IP-Adressen-Ortsbestimmungs-Datenbank:">
-<!ENTITY about.maxmindln1 "Dieses Produkt basiert auf von MaxMind zusammengestellten GeoLite-Daten,">
-<!ENTITY about.maxmindln2 "zu finden unter:">
 <!ENTITY close "Schließen">

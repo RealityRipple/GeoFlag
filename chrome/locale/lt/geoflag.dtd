@@ -1,6 +1,5 @@
-<!-- ## options dialog ## -->
 <!ENTITY prefs.title "GeoFlag nustatymai">
-<!ENTITY prefs.previewflagslabel "Rodyti šalių vėliavėles">
+<!ENTITY prefs.flagicons "Vėliavėlės:">
 <!ENTITY prefs.showfaviconslabel "Rodyti veiksmų piktogramas">
 <!ENTITY prefs.openinlabel "Veiksmas atveria naują puslapį:">
 <!ENTITY prefs.tabBGlabel "naujoje kortelėje priešaky">
@@ -15,24 +14,13 @@
 <!ENTITY prefs.actionsforumlabel "Gaukite daugiau veiksmų ar pasidalinkite savais">
 <!ENTITY prefs.moveselectedlabel "Perkelti pasirinktą:">
 <!ENTITY prefs.resetmessageslabel "Atstatyti">
-<!-- ## preview icons dialog ## -->
-<!ENTITY prefs.previewicons "Rodyti vėliavėles">
-<!ENTITY prefs.sortflags "Rūšiuoti vėliavas pagal:">
-<!ENTITY prefs.sortbycode "Šalies/teritorijos kodas">
-<!ENTITY prefs.sortbyname "Šalies/teritorijos pavadinimas">
-<!ENTITY prefs.sortbyratio "Vaizdo santykis">
-<!ENTITY prefs.sortbycolor "Spalva">
-<!-- ## add/edit action dialog ## -->
 <!ENTITY action.namelabel "Pavadinimas:">
 <!ENTITY action.clicklabel "Paspaudus vėliavėlę:">
 <!ENTITY action.hotkeylabel "Kombinacija:">
 <!ENTITY action.templatelabel "Šablonas:">
 <!ENTITY action.middleclicktooltip "Vietoje vidurinio pelės mygtuko paspaudimo jūs taip pat galite naudoti kombinaciją ctrl+click">
-<!-- used as empty text for hotkey field; may not exceed length of field; you can shorten it to "Focus, press hotkey" or similar if needed: -->
 <!ENTITY action.hotkeyhelp "Surinkite kombinaciją">
-<!-- used as empty text for template field; may not exceed length of field; you can reword it to fit into the given space if needed: -->
 <!ENTITY action.templatehelp "Įterpkite nukopijuotą URL ir pakeiskite objekto raktažodžius">
-<!-- the placeholder labels should all fit in the same box in the dialog without wasting space; you can reword them slightly if needed: -->
 <!ENTITY action.placeholderslabel "Duomenų laikiklių šablonas">
 <!ENTITY action.pagetitle "Puslapio pavadinimo tekstas:">
 <!ENTITY action.fullpageurl "Pilnas puslapio adresas (URL):">
@@ -41,27 +29,7 @@
 <!ENTITY action.country "Šalies serveris yra:">
 <!ENTITY action.exampleoutput "Pavyzdinis rezultatas:">
 <!ENTITY action.seeforumslink "Jei reikia pagalbos ir daugiau veiksmų aplankykite forumus">
-<!-- make sure to keep the ellipsis character (rather than 3 periods, which takes up more space) or replace it with a localized equivalent, if needed: -->
 <!ENTITY showall "Rodyti visus...">
 <!ENTITY save "Išsaugoti">
 <!ENTITY cancel "Atšaukti">
-<!-- ## about dialog ## -->
-<!ENTITY about.title "Apie GeoFlag">
-<!ENTITY about.version "Versija">
-<!ENTITY about.creator "Sukūrė:">
-<!ENTITY about.admin "Geotool ir serverio administratorius:">
-<!ENTITY about.original "Kurtas originalaus priedo pagrindu:">
-<!ENTITY about.logo "Logotipas:">
-<!ENTITY about.flagicons "Vėliavėlės:">
-<!-- the following two strings constitute a single sentence fragment split across two lines; break the sentence where it fits in the window best: -->
-<!ENTITY about.wikimediabasedln1 "GeoFlag naudoja savaip modifikuotą vėliavėlių rinkinį iš">
-<!ENTITY about.wikimediabasedln2 "viešo naudojimo darbai naudojami iš Wikimedia Commons archyvų.">
-<!ENTITY about.othericons "Papildomos ikonos:">
-<!ENTITY about.translators "Vertėjai:">
-<!ENTITY about.geolocation "IP adresų geolokacijos duomenų bazė:">
-<!-- used in all dialogs: -->
-<!ENTITY about.maxmindln1 "Šiame produkte naudojama GeoLite, kurį sukūrė MaxMind,">
-<!ENTITY about.maxmindln2 "galima gauti iš:">
-<!-- Please don't forget to test your localizations in all 4 dialogs:  options, preview icons, add/edit action, about -->
 <!ENTITY close "Uždaryti">
-<!-- If you are localizing this file manually instead of using the WTS please cut out the notes and blank lines before uploading. -->

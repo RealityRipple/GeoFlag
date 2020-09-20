@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag - опције">
-<!ENTITY prefs.previewflagslabel "Преглед икона застава">
+<!ENTITY prefs.flagicons "Иконе застава:">
 <!ENTITY prefs.showfaviconslabel "Прикажи фавиконе за активности">
 <!ENTITY prefs.openinlabel "Активности отварају странице у:">
 <!ENTITY prefs.tabBGlabel "новом листу у позадини">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Набави више акција или подели своју">
 <!ENTITY prefs.moveselectedlabel "Премести одабрано:">
 <!ENTITY prefs.resetmessageslabel "Поништи поруке">
-<!ENTITY prefs.previewicons "Преглед икона">
-<!ENTITY prefs.sortflags "Поређај заставе по:">
-<!ENTITY prefs.sortbycode "Кôд државе/територије">
-<!ENTITY prefs.sortbyname "Назив државе/територије">
-<!ENTITY prefs.sortbyratio "Размера">
-<!ENTITY prefs.sortbycolor "Репрезентативна боја">
 <!ENTITY action.namelabel "Назив:">
 <!ENTITY action.clicklabel "Клик на иконе:">
 <!ENTITY action.hotkeylabel "Пречица:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Прикажи све…">
 <!ENTITY save "Сачувај">
 <!ENTITY cancel "Откажи">
-<!ENTITY about.title "О додатку GeoFlag">
-<!ENTITY about.version "верзија">
-<!ENTITY about.creator "Аутор:">
-<!ENTITY about.admin "Geotool &amp; администратор сервера:">
-<!ENTITY about.original "Засновано на оригиналном додатку:">
-<!ENTITY about.logo "Лого:">
-<!ENTITY about.flagicons "Иконе застава:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag користи сопствени комплет икона застава, који је заснован на">
-<!ENTITY about.wikimediabasedln2 "радовима у јавном домену, које пружа Викимедијина остава.">
-<!ENTITY about.othericons "Додатне иконе нуде:">
-<!ENTITY about.translators "Преводиоци:">
-<!ENTITY about.geolocation "База података геолокација IP адреса:">
-<!ENTITY about.maxmindln1 "Овај програм укључује податке GeoLite-а,">
-<!ENTITY about.maxmindln2 "које је направио MaxMind, а који су доступни на:">
 <!ENTITY close "Затвори">

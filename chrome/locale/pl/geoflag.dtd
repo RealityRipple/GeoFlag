@@ -1,5 +1,5 @@
 <!ENTITY prefs.title "GeoFlag - ustawienia">
-<!ENTITY prefs.previewflagslabel "Podgląd ikon">
+<!ENTITY prefs.flagicons "Ikony flag:">
 <!ENTITY prefs.showfaviconslabel "Pokaż ikonę strony dla akcji">
 <!ENTITY prefs.openinlabel "Akcje otwierają strony w:">
 <!ENTITY prefs.tabBGlabel "nowej karcie w tle">
@@ -14,12 +14,6 @@
 <!ENTITY prefs.actionsforumlabel "Uzyskaj więcej akcji lub podziel się własnymi">
 <!ENTITY prefs.moveselectedlabel "Przenieś zaznaczone:">
 <!ENTITY prefs.resetmessageslabel "Resetuj wiadomości">
-<!ENTITY prefs.previewicons "Podgląd ikon">
-<!ENTITY prefs.sortflags "Sortuj flagi po:">
-<!ENTITY prefs.sortbycode "Kodzie kraju/terytorium">
-<!ENTITY prefs.sortbyname "Nazwie kraju/terytorium">
-<!ENTITY prefs.sortbyratio "Formacie ikony">
-<!ENTITY prefs.sortbycolor "Kolorze wiodącym">
 <!ENTITY action.namelabel "Nazwa:">
 <!ENTITY action.clicklabel "Kliknięcie ikony:">
 <!ENTITY action.hotkeylabel "Klawisz skrótu:">
@@ -38,18 +32,4 @@
 <!ENTITY showall "Pokaż wszystkie">
 <!ENTITY save "Zapisz">
 <!ENTITY cancel "Anuluj">
-<!ENTITY about.title "GeoFlag - informacje">
-<!ENTITY about.version "Wersja">
-<!ENTITY about.creator "Stworzone przez:">
-<!ENTITY about.admin "Geotool &amp; administracja serwera:">
-<!ENTITY about.original "Wzorowany na oryginalnym dodatku autorstwa:">
-<!ENTITY about.logo "Logo stworzone przez:">
-<!ENTITY about.flagicons "Ikony flag:">
-<!ENTITY about.wikimediabasedln1 "GeoFlag wykorzystuje własny wbudowany zestaw flag na podstawie">
-<!ENTITY about.wikimediabasedln2 "prac z domeny publicznej dostarczonych przez Wikipedię.">
-<!ENTITY about.othericons "Dodatkowe ikony stworzone przez:">
-<!ENTITY about.translators "Tłumacze:">
-<!ENTITY about.geolocation "Baza geolokalizacyjna adresów IP:">
-<!ENTITY about.maxmindln1 "Rozszerzenia zawiera dane GeoLite autorstwa MaxMind">
-<!ENTITY about.maxmindln2 "dostępne na stronie:">
 <!ENTITY close "Zamknij">
