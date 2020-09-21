@@ -410,7 +410,7 @@ var geoflag_Options = {
   let newActions = [];
   for (let i = lineIsTemplate.lastIndexOf(true); i >= 0; i--)
   {
-   if (lineIsTemplate[i] && lines[i-1] !== undefined && !lineIsTemplate[i-1])
+   if (lineIsTemplate[i] && typeof lines[i-1] !== 'undefined' && lines[i-1] !== null && !lineIsTemplate[i-1])
    {
     newActions.unshift(
      {

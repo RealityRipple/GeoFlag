@@ -612,7 +612,7 @@ function newGeoFlagInstance(wnd)
  }
  function isActionAllowed(id)
  {
-  if (id === undefined || id === null)
+  if (typeof id === 'undefined' || id === null)
    return false;
   if (id === 'options')
    return true;

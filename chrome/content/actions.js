@@ -152,7 +152,7 @@ var geoflag_Actions = {
     packedAction[4] = obj.template;
    for (let i=0; i<packedAction.length; i++)
    {
-    if (packedAction[i] === undefined)
+    if (typeof packedAction[i] === 'undefined' || packedAction[i] === null)
      packedAction[i] = 0;
    }
    return packedAction;

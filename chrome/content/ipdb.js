@@ -229,7 +229,7 @@ var geoflag_IPDB =
   }
   bIn.close();
   fIn.close();
-  if (bData === undefined)
+  if (typeof bData === 'undefined' || bData === null)
    return null;
   let uData = new Uint8Array(bData);
   geoflag_IPData.db4 = uData;
@@ -517,7 +517,7 @@ var geoflag_IPDB =
   }
   bIn.close();
   fIn.close();
-  if (bData === undefined)
+  if (typeof bData === 'undefined' || bData === null)
    return null;
   let uData = new Uint8Array(bData);
   geoflag_IPData.db6 = uData;

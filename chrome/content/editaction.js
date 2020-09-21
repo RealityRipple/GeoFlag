@@ -47,7 +47,7 @@ var geoflag_Edit = {
   {
    clickMenuItems[i].label = locale.GetStringFromName(clickMenuItems[i].id);
   }
-  if (!window.arguments || window.arguments[0] === undefined || window.arguments[0] === null)
+  if (!window.arguments || typeof window.arguments[0] === 'undefined' || window.arguments[0] === null)
    throw 'No argument passed to dialog';
   geoflag_Edit._id = window.arguments[0];
   if (geoflag_Edit._id !== 'new')
@@ -99,7 +99,7 @@ var geoflag_Edit = {
  save: function()
  {
   geoflag_Actions.assertLoaded();
-  if (geoflag_Edit._id === undefined || geoflag_Edit._id === null)
+  if (typeof geoflag_Edit._id === 'undefined' || geoflag_Edit._id === null)
    throw 'No id to save';
   if (geoflag_Edit._id === 'new')
    geoflag_Edit._id = geoflag_Actions.create();
@@ -143,14 +143,14 @@ var geoflag_Edit = {
   else if (event.dataTransfer.types.contains('text/plain'))
   {
    let text = event.dataTransfer.getData('text/plain');
-   let lines = text.split('\n').filter(function(line){return line.length>0;});
+   let lines = text.split('\n').filter(function(line){return line.length > 0;});
    for (let i in lines)
    {
     if (opener.geoflag_Options.containsTemplateText(lines[i]))
     {
      templateToDrop = lines[i];
-     if (lines[i - 1] !== undefined && !opener.geoflag_Options.containsTemplateText(lines[i-1]))
-      nameToDrop = lines[i - 1];
+     if (typeof lines[i-1] !== 'undefined' && lines[i-1] !== null && !opener.geoflag_Options.containsTemplateText(lines[i-1]))
+      nameToDrop = lines[i-1];
      break;
     }
    }
