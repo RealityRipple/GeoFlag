@@ -169,6 +169,9 @@ var geoflag_IPDB =
   if (typeof bData === 'undefined' || bData === null)
    return;
   let uData = new Uint8Array(bData);
+  let uLines = uData.length / geoflag_IPDB._dbInfo4.bytesPerLine;
+  if (uLines !== Math.trunc(uLines))
+   return;
   if (geoflag_IPDB._dbInfo4.sig.r !== null && geoflag_IPDB._dbInfo4.sig.s !== null)
   {
    let verified = await geoflag_IPDB._verifySignature(uData, geoflag_IPDB._dbInfo4.sig.r, geoflag_IPDB._dbInfo4.sig.s);
@@ -457,6 +460,9 @@ var geoflag_IPDB =
   if (typeof bData === 'undefined' || bData === null)
    return;
   let uData = new Uint8Array(bData);
+  let uLines = uData.length / geoflag_IPDB._dbInfo6.bytesPerLine;
+  if (uLines !== Math.trunc(uLines))
+   return;
   if (geoflag_IPDB._dbInfo6.sig.r !== null && geoflag_IPDB._dbInfo6.sig.s !== null)
   {
    let verified = await geoflag_IPDB._verifySignature(uData, geoflag_IPDB._dbInfo6.sig.r, geoflag_IPDB._dbInfo6.sig.s);
@@ -648,22 +654,31 @@ var geoflag_IPDB =
  },
  _verifySignature: async function(file, r, s)
  {
-  let sigCurve = geoflag_IPDB._Prefs.getCharPref('ecdsa.curve');
-  if (sigCurve !== 'P-256' && sigCurve !== 'P-384' && sigCurve !== 'P-521')
-   return true;
-  let hashAlg = geoflag_IPDB._Prefs.getCharPref('ecdsa.hash');
-  if (hashAlg !== 'SHA-256' && hashAlg !== 'SHA-384' && hashAlg !== 'SHA-512')
-   return true;
-  let pubHex = geoflag_IPDB._Prefs.getCharPref('ecdsa.key');
-  if (pubHex === '')
-   return true;
-  let sigRaw = geoflag_IPDB._hexStringToArrayBuffer(r + s);
-  let pubRaw = geoflag_IPDB._hexStringToArrayBuffer(pubHex);
-  let pubKey = await crypto.subtle.importKey('raw', pubRaw, {name: 'ECDSA', namedCurve: sigCurve}, false, ['verify']).catch((e) => {console.log(e);});
-  let isGood = await crypto.subtle.verify({name: 'ECDSA', hash: {name: hashAlg}}, pubKey, sigRaw, file).catch((e) => {console.log(e);});
-  if (isGood === true)
-   return true;
-  return false;
+  try
+  {
+   let sigCurve = geoflag_IPDB._Prefs.getCharPref('ecdsa.curve');
+   if (sigCurve !== 'P-256' && sigCurve !== 'P-384' && sigCurve !== 'P-521')
+    return true;
+   let hashAlg = geoflag_IPDB._Prefs.getCharPref('ecdsa.hash');
+   if (hashAlg !== 'SHA-256' && hashAlg !== 'SHA-384' && hashAlg !== 'SHA-512')
+    return true;
+   let pubHex = geoflag_IPDB._Prefs.getCharPref('ecdsa.key');
+   if (pubHex === '')
+    return true;
+   let sigRaw = geoflag_IPDB._hexStringToArrayBuffer(r + s);
+   let pubRaw = geoflag_IPDB._hexStringToArrayBuffer(pubHex);
+   let pubKey = await crypto.subtle.importKey('raw', pubRaw, {name: 'ECDSA', namedCurve: sigCurve}, false, ['verify']).catch((e) => {console.log(e);});
+   if (pubKey === undefined)
+    return true;
+   let isGood = await crypto.subtle.verify({name: 'ECDSA', hash: {name: hashAlg}}, pubKey, sigRaw, file).catch((e) => {console.log(e);});
+   if (isGood === true)
+    return true;
+   return false;
+  }
+  catch(e)
+  {
+   return false;
+  }
  },
  _hexStringToArrayBuffer: function(hexString)
  {
