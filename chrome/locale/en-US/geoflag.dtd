@@ -1,9 +1,10 @@
 <!-- ## options dialog ## -->
 <!ENTITY prefs.title "GeoFlag Options">
 
-<!ENTITY prefs.flagicons "Flag icons:">
+<!ENTITY prefs.flagicons "Flag size:">
 
 <!ENTITY prefs.showfaviconslabel "Show favicons for actions">
+<!ENTITY prefs.ipdb "IP Database">
 
 <!ENTITY prefs.openinlabel "Actions open pages in:">
 <!ENTITY prefs.tabBGlabel "New tab in background">
@@ -20,6 +21,34 @@
 <!ENTITY prefs.moveselectedlabel "Move selected:">
 
 <!ENTITY prefs.resetmessageslabel "Reset messages">
+
+<!-- ## geoip database url dialog ## -->
+<!ENTITY ipdb.title "GeoIP Database URL Options">
+
+<!ENTITY ipdb.description "GeoFlag downloads databases once a month. To use your own download source, change the URLs below. If the source you choose supports EC Signing, enter the server's Public Key below.">
+
+<!ENTITY ipdb.v4url "IPv4 URL:">
+<!ENTITY ipdb.v6url "IPv6 URL:">
+
+<!ENTITY ipdb.ecdsa "Verify Download with ECDSA">
+<!ENTITY ipdb.pubkey "Server Public Key:">
+<!ENTITY ipdb.curve "Curve Name:">
+<!ENTITY ipdb.curve256 "NIST P-256 (secp256r1)">
+<!ENTITY ipdb.curve384 "NIST P-384 (secp384r1)">
+<!ENTITY ipdb.curve521 "NIST P-521 (secp521r1)">
+<!ENTITY ipdb.hash "Signature Hash:">
+<!ENTITY ipdb.hash256 "SHA-256 (32-byte)">
+<!ENTITY ipdb.hash384 "SHA-384 (48-byte)">
+<!ENTITY ipdb.hash512 "SHA-512 (64-byte)">
+
+<!ENTITY ipdb.test "Test your selected server settings:">
+<!ENTITY ipdb.runtest "Begin Test">
+<!ENTITY ipdb.test_inactive_s "&#x1f50f;&#xfe0f;">
+<!ENTITY ipdb.test_inactive_n "&#x1f513;&#xfe0f;">
+<!ENTITY ipdb.test_pending "&#x1f4e5;&#xfe0f;">
+<!ENTITY ipdb.test_success_s "&#x2705;&#xfe0f;">
+<!ENTITY ipdb.test_success_n "&#x2611;&#xfe0f;">
+<!ENTITY ipdb.test_error "&#x274c;&#xfe0f;">
 
 <!-- ## add/edit action dialog ## -->
 <!ENTITY action.namelabel "Name:">
@@ -52,5 +81,5 @@
 <!-- used in all dialogs: -->
 <!ENTITY close "Close">
 
-<!-- Please don't forget to test your localizations in both the Options and Add/Edit Action dialogs -->
+<!-- Please don't forget to test your localizations in all threed dialogs: Options, Add/Edit Action, and GeoIP Database URL -->
 <!-- If you are localizing this file manually instead of using the WTS please cut out the notes and blank lines before uploading. -->

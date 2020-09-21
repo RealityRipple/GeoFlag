@@ -48,7 +48,7 @@
    <spacer flex="1"/>
    <hbox id="customDBLink" class="icon text-link" onclick="if(event.button === 0) geoflag_Options.openIPDB();">
     <image src="chrome://geoflag/skin/icons/special/about.png"/>
-    <label value="IP Database"/>
+    <label value="&prefs.ipdb;"/>
    </hbox>
   </hbox>
   <separator class="thin"/>

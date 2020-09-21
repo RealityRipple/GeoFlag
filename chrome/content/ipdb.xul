@@ -7,8 +7,8 @@
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
             orient="vertical"
             autostretch="always"
-            onload="hasEC();"
-            title="GeoIP Database URL"
+            onload="geoflag_IPDBoptions.hasEC();"
+            title="&ipdb.title;"
             buttons="accept,cancel">
  <prefpane id="dbPrefs">
   <preferences>
@@ -18,80 +18,67 @@
    <preference id="prefECCurve" name="extensions.geoflag.db.ecdsa.curve" type="string" instantApply="false" />
    <preference id="prefECHash" name="extensions.geoflag.db.ecdsa.hash" type="string" instantApply="false" />
   </preferences>
+  <script src="chrome://geoflag/content/ipdb_options.js" />
   <vbox>
+   <hbox width="100%">
+    <description flex="1">&ipdb.description;</description>
+   </hbox>
+   <separator/>
    <hbox>
-    <label value="IPv4 URL:" control="v4URL"/>
+    <label value="&ipdb.v4url;" control="v4URL"/>
     <spacer flex="1"/>
-    <textbox id="v4URL" preference="prefv4URL"/>
+    <textbox id="v4URL" preference="prefv4URL" onchange="geoflag_IPDBoptions.changeEntry();"/>
    </hbox>
    <hbox>
-    <label value="IPv6 URL:" control="v6URL"/>
+    <label value="&ipdb.v6url;" control="v6URL"/>
     <spacer flex="1"/>
-    <textbox id="v6URL" preference="prefv6URL"/>
+    <textbox id="v6URL" preference="prefv6URL" onchange="geoflag_IPDBoptions.changeEntry();"/>
    </hbox>
   </vbox>
+  <separator class="thin"/>
   <groupbox>
-   <caption><checkbox id="chkECDSA" label="ECDSA" checked="true" oncommand="toggleEC();"/></caption>
+   <caption><checkbox id="chkECDSA" label="&ipdb.ecdsa;" checked="true" oncommand="geoflag_IPDBoptions.toggleEC();"/></caption>
    <hbox>
-    <label value="Public Key:" control="ecdsaKey"/>
+    <label value="&ipdb.pubkey;" control="ecdsaKey"/>
     <spacer flex="1"/>
-    <textbox id="ecdsaKey" preference="prefECKey"/>
+    <textbox id="ecdsaKey" preference="prefECKey" onchange="geoflag_IPDBoptions.changeEntry();"/>
    </hbox>
    <hbox>
-    <label value="Curve:" control="ecdsaCurve"/>
+    <label value="&ipdb.curve;" control="ecdsaCurve"/>
     <spacer flex="1"/>
-    <menulist id="ecdsaCurve" sizetopopup="always" preference="prefECCurve">
+    <menulist id="ecdsaCurve" sizetopopup="always" preference="prefECCurve" oncommand="geoflag_IPDBoptions.changeEntry();">
      <menupopup>
-      <menuitem id="ec256" label="P-256" value="P-256"/>
-      <menuitem id="ec384" label="P-384" value="P-384"/>
-      <menuitem id="ec521" label="P-521" value="P-521"/>
+      <menuitem id="ec256" label="&ipdb.curve256;" value="P-256"/>
+      <menuitem id="ec384" label="&ipdb.curve384;" value="P-384"/>
+      <menuitem id="ec521" label="&ipdb.curve521;" value="P-521"/>
      </menupopup>
     </menulist>
    </hbox>
    <hbox>
-    <label value="Hash:" control="ecdsaHash"/>
+    <label value="&ipdb.hash;" control="ecdsaHash"/>
     <spacer flex="1"/>
-    <menulist id="ecdsaHash" sizetopopup="always" preference="prefECHash">
+    <menulist id="ecdsaHash" sizetopopup="always" preference="prefECHash" oncommand="geoflag_IPDBoptions.changeEntry();">
      <menupopup>
-      <menuitem id="sha256" label="SHA-256" value="SHA-256"/>
-      <menuitem id="sha384" label="SHA-384" value="SHA-384"/>
-      <menuitem id="sha512" label="SHA-512" value="SHA-512"/>
+      <menuitem id="sha256" label="&ipdb.hash256;" value="SHA-256"/>
+      <menuitem id="sha384" label="&ipdb.hash384;" value="SHA-384"/>
+      <menuitem id="sha512" label="&ipdb.hash512;" value="SHA-512"/>
      </menupopup>
     </menulist>
    </hbox>
   </groupbox>
+  <separator/>
+  <hbox id="dbTest">
+   <label value="&ipdb.test;"/>
+   <spacer flex="1"/>
+   <label id="testResult_in" class="testResult" value="&ipdb.test_inactive_n;"/>
+   <label id="testResult_is" class="testResult" value="&ipdb.test_inactive_s;" hidden="true"/>
+   <label id="testResult_p" class="testResult" value="&ipdb.test_pending;" hidden="true"/>
+   <label id="testResult_sn" class="testResult" value="&ipdb.test_success_n;" hidden="true"/>
+   <label id="testResult_ss" class="testResult" value="&ipdb.test_success_s;" hidden="true"/>
+   <label id="testResult_e" class="testResult" value="&ipdb.test_error;" hidden="true"/>
+   <separator orient="vertical"/>
+   <button id="runTest" label="&ipdb.runtest;" oncommand="geoflag_IPDBoptions.runTest();"/>
+  </hbox>
+  <separator/>
  </prefpane>
- <script><![CDATA[
-  let oldKey = null;
-  function hasEC()
-  {
-   let setKey = document.getElementById('prefECKey').value;
-   if (setKey.length < 130 || setKey.substring(0, 2) !== '04')
-   {
-    document.getElementById('chkECDSA').checked = false;
-    toggleEC();
-   }
-  }
-  function toggleEC()
-  {
-   if (document.getElementById('chkECDSA').checked)
-   {
-    if (oldKey !== null)
-     document.getElementById('prefECKey').value = oldKey;
-    document.getElementById('ecdsaKey').removeAttribute('disabled');
-    document.getElementById('ecdsaCurve').removeAttribute('disabled');
-    document.getElementById('ecdsaHash').removeAttribute('disabled');
-   }
-   else
-   {
-    let setKey = document.getElementById('prefECKey').value;
-    if (setKey.length >= 130 || setKey.substring(0, 2) === '04')
-     oldKey = setKey;
-    document.getElementById('prefECKey').value = '';
-    document.getElementById('ecdsaKey').disabled = true;
-    document.getElementById('ecdsaCurve').disabled = true;
-    document.getElementById('ecdsaHash').disabled = true;
-   }
-  }
- ]]></script>
 </prefwindow>

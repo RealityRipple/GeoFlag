@@ -64,3 +64,9 @@ button[type="menu-button"] > button
 {
  font-family: monospace;
 }
+.testResult
+{
+ font-size: 200%;
+ margin-top: 0;
+ margin-bottom: 0;
+}
