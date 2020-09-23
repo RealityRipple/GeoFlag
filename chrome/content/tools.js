@@ -11,6 +11,7 @@ var geoflag_Tools =
 {
  blankAddressPages: new Set(['about:blank', 'about:newtab', 'about:privatebrowsing', 'about:home', 'about:sessionrestore']),
  locationErrors: new Set(['unknownsite', 'lookuperror', 'nodnserror', 'offlinemode']),
+ deferUpdate: false,
  getFaviconForTemplate: function(template)
  {
   try
@@ -105,11 +106,31 @@ var geoflag_Tools =
   {
    geoflag.Prefs.setCharPref(messagePrefName, evt.target.checked ? 'disabled' : 'enabled');
   }
+  let firstUpdate = false;
+  geoflag_Tools.deferUpdate = false;
+  function onButtonClicked(evt)
+  {
+   if (notificationBox.currentNotification === notification)
+    notificationBox.removeNotification(notification);
+   geoflag_Tools.deferUpdate = false;
+   wnd.openDialog('chrome://geoflag/content/ipdb.xul', 'GeoFlagDB', 'chrome,dialog,centerscreen,modal').focus();
+   wnd.setTimeout(function(){wnd.geoflag_IPDB._update4();}, 400);
+   wnd.setTimeout(function(){wnd.geoflag_IPDB._update6();}, 600);
+  }
   chkbox.addEventListener('command', onCheckboxToggled);
   chkbox.setAttribute('label', geoflag.localeGeneral.GetStringFromName('warnchecklabel'));
   notification.appendChild(chkbox);
+  if (message === geoflag.localeGeneral.GetStringFromName('firstupdatewarnmessage'))
+  {
+   firstUpdate = true;
+   geoflag_Tools.deferUpdate = true;
+   let cfg = wnd.document.createElementNS(XULNS, 'button');
+   cfg.addEventListener('command', onButtonClicked);
+   cfg.setAttribute('label', geoflag.localeGeneral.GetStringFromName('firstupdatebutton'));
+   notification.appendChild(cfg);
+  }
   notification.setAttribute('persistence', 100);
-  wnd.setTimeout(function() {notification.removeAttribute('persistence');}, 1000);
+  wnd.setTimeout(function() {notification.removeAttribute('persistence');}, 5000);
   notificationBox.appendChild(notification);
   if (notificationBox._showNotification)
    notificationBox._showNotification(notification, true);
@@ -117,7 +138,20 @@ var geoflag_Tools =
   evt.initEvent('AlertActive', true, true);
   notification.dispatchEvent(evt);
   if (type === 'update')
-   wnd.setTimeout(function() {notificationBox.removeNotification(notification);}, 10000);
+  {
+   if (firstUpdate)
+    wnd.setTimeout(function() {if (notificationBox.currentNotification === notification) notificationBox.removeNotification(notification); geoflag_Tools.doDeference(wnd);}, 10000);
+   else
+    wnd.setTimeout(function() {if (notificationBox.currentNotification === notification) notificationBox.removeNotification(notification);}, 10000);
+  }
+ },
+ doDeference: function(wnd)
+ {
+  if (geoflag_Tools.deferUpdate)
+  {
+   wnd.setTimeout(function(){wnd.geoflag_IPDB._update4();}, 400);
+   wnd.setTimeout(function(){wnd.geoflag_IPDB._update6();}, 600);
+  }
  },
  addTabInCurrentBrowser: function(url)
  {

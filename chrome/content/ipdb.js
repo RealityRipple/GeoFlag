@@ -43,6 +43,8 @@ var geoflag_IPDB =
   geoflag_IPDB._dbInfo4.meta = JSON.parse(geoflag_IPDB._Prefs.getCharPref('v4.meta'));
   geoflag_IPDB._dbURL6 = geoflag_IPDB._Prefs.getCharPref('v6.url');
   geoflag_IPDB._dbInfo6.meta = JSON.parse(geoflag_IPDB._Prefs.getCharPref('v6.meta'));
+  if (!geoflag.Prefs.prefHasUserValue('warn.update'))
+   return;
   let today = new Date();
   if (geoflag_IPDB._Prefs.prefHasUserValue('v4.meta') || geoflag_IPDB._Prefs.prefHasUserValue('v6.meta'))
   {
