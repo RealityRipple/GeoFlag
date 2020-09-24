@@ -4,7 +4,7 @@
  * Copyright 2007-2017, David Garrett
  * All rights reserved
  *
- * Modified Nov 18, 2020 for GeoFlag
+ * Modified Sept 24, 2020 for GeoFlag
  * See LICENSE for details.
  */
 var geoflag_Tools =
@@ -112,18 +112,38 @@ var geoflag_Tools =
   {
    if (notificationBox.currentNotification === notification)
     notificationBox.removeNotification(notification);
+   let deferring = geoflag_Tools.deferUpdate;
    geoflag_Tools.deferUpdate = false;
-   wnd.openDialog('chrome://geoflag/content/ipdb.xul', 'GeoFlagDB', 'chrome,dialog,centerscreen,modal').focus();
-   wnd.setTimeout(function(){wnd.geoflag_IPDB._update4();}, 400);
-   wnd.setTimeout(function(){wnd.geoflag_IPDB._update6();}, 600);
+   let old4 = geoflag_IPDB._Prefs.getCharPref('v4.url');
+   let old6 = geoflag_IPDB._Prefs.getCharPref('v6.url');
+   wnd.openDialog('chrome://geoflag/content/ipdb.xul', 'GeoFlagDB', 'chrome,dialog,centerscreen,modal');
+   let new4 = geoflag_IPDB._Prefs.getCharPref('v4.url');
+   let new6 = geoflag_IPDB._Prefs.getCharPref('v6.url');
+   if (deferring || old4 !== new4)
+   {
+    geoflag_IPDB.reset4(new4);
+    if (geoflag.shownWarnings.has(msgID))
+     geoflag.shownWarnings.delete(msgID);
+    wnd.setTimeout(function(){wnd.geoflag_IPDB.update4(wnd);}, 400);
+   }
+   if (deferring || old6 !== new6)
+   {
+    geoflag_IPDB.reset6(new6);
+    if (geoflag.shownWarnings.has(msgID))
+     geoflag.shownWarnings.delete(msgID);
+    wnd.setTimeout(function(){wnd.geoflag_IPDB.update6(wnd);}, 600);
+   }
   }
   chkbox.addEventListener('command', onCheckboxToggled);
   chkbox.setAttribute('label', geoflag.localeGeneral.GetStringFromName('warnchecklabel'));
   notification.appendChild(chkbox);
-  if (message === geoflag.localeGeneral.GetStringFromName('firstupdatewarnmessage'))
+  if (message === geoflag.localeGeneral.GetStringFromName('firstupdatewarnmessage') || type.substring(0, 12) === 'update_error')
   {
-   firstUpdate = true;
-   geoflag_Tools.deferUpdate = true;
+   if (message === geoflag.localeGeneral.GetStringFromName('firstupdatewarnmessage'))
+   {
+    firstUpdate = true;
+    geoflag_Tools.deferUpdate = true;
+   }
    let cfg = wnd.document.createElementNS(XULNS, 'button');
    cfg.addEventListener('command', onButtonClicked);
    cfg.setAttribute('label', geoflag.localeGeneral.GetStringFromName('firstupdatebutton'));
@@ -149,8 +169,8 @@ var geoflag_Tools =
  {
   if (geoflag_Tools.deferUpdate)
   {
-   wnd.setTimeout(function(){wnd.geoflag_IPDB._update4();}, 400);
-   wnd.setTimeout(function(){wnd.geoflag_IPDB._update6();}, 600);
+   wnd.setTimeout(function(){wnd.geoflag_IPDB.update4(wnd);}, 400);
+   wnd.setTimeout(function(){wnd.geoflag_IPDB.update6(wnd);}, 600);
   }
  },
  addTabInCurrentBrowser: function(url)

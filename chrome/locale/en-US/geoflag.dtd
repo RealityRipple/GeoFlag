@@ -50,6 +50,8 @@
 <!ENTITY ipdb.test_success_n "&#x2611;&#xfe0f;">
 <!ENTITY ipdb.test_error "&#x274c;&#xfe0f;">
 
+<!ENTITY ipdb.reset "Reset to Defaults">
+
 <!-- ## add/edit action dialog ## -->
 <!ENTITY action.namelabel "Name:">
 <!ENTITY action.clicklabel "Icon Click:">

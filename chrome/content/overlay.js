@@ -4,7 +4,7 @@ var geoFlagOverlay = {
  cleanup: false,
  init: function()
  {
-  geoflag_IPDB.load();
+  geoflag_IPDB.load(window);
   geoflag.init();
   geoflag.load(window);
   let nob = Components.classes['@mozilla.org/observer-service;1'].getService(Components.interfaces.nsIObserverService)

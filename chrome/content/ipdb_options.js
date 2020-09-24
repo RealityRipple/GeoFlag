@@ -18,8 +18,8 @@ var geoflag_IPDBoptions =
  {
   if (document.getElementById('chkECDSA').checked)
   {
-   if (oldKey !== null)
-    document.getElementById('prefECKey').value = oldKey;
+   if (geoflag_IPDBoptions.oldKey !== null)
+    document.getElementById('prefECKey').value = geoflag_IPDBoptions.oldKey;
    document.getElementById('ecdsaKey').removeAttribute('disabled');
    document.getElementById('ecdsaCurve').removeAttribute('disabled');
    document.getElementById('ecdsaHash').removeAttribute('disabled');
@@ -29,7 +29,7 @@ var geoflag_IPDBoptions =
   {
    let setKey = document.getElementById('prefECKey').value;
    if (setKey.length >= 130 || setKey.substring(0, 2) === '04')
-    oldKey = setKey;
+    geoflag_IPDBoptions.oldKey = setKey;
    document.getElementById('prefECKey').value = '';
    document.getElementById('ecdsaKey').disabled = true;
    document.getElementById('ecdsaCurve').disabled = true;
@@ -258,5 +258,15 @@ var geoflag_IPDBoptions =
    default:
     document.getElementById('testResult_in').hidden = false;
   }
+ },
+ reset: function()
+ {
+  document.getElementById('prefv4URL').value = 'https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/ipv4.db';
+  document.getElementById('prefv6URL').value = 'https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/ipv6.db';
+  document.getElementById('chkECDSA').checked = true;
+  geoflag_IPDBoptions.toggleEC();
+  document.getElementById('prefECKey').value = '04ccbe48b77e1be728414a7f76e1a0490f6a491bdafcf3e4f9eb8e44331220c81b1205989d5799a43fbad3c3f049076d92f6f69d53404ee38915dc9d35589d121f';
+  document.getElementById('prefECCurve').value = 'P-256';
+  document.getElementById('prefECHash').value = 'SHA-256';
  }
 };

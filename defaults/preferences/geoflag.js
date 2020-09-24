@@ -3,6 +3,7 @@ pref('extensions.geoflag.flagsize', 18);
 pref('extensions.geoflag.warn.update', 'once');
 pref('extensions.geoflag.warn.tld', 'enabled');
 pref('extensions.geoflag.warn.proxy', 'enabled');
+pref('extensions.geoflag.warn.update_error', 'enabled');
 pref('extensions.geoflag.openlinksin', 'tabFG');
 pref('extensions.geoflag.showfavicons', true);
 pref('extensions.geoflag.useractions', '[["Whois",1,"middleclick"],["IP Whois",1,"doubleclick"],["Location",1,"click"],"WolframAlpha","Alexa","WOT Scorecard",["Virus Scan",1],["Check Server Status",1],"Google",["Google Translate",1],"Google Cache",["Internet Archive",1],"W3C Validator","W3C CSS Validator","SSL Server Test","SSL Checker","Header Check",["Ping",1],"Traceroute","Netcraft","IntoDNS","Bit.ly URL",["Tiny URL",1],"is.gd URL",["Copy IP",1],"Copy Server Info","Wikipedia: Country","Wikipedia: Domain","Wikipedia: TLD","Page Metadata"]');

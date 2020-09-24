@@ -9,7 +9,9 @@
             autostretch="always"
             onload="geoflag_IPDBoptions.hasEC();"
             title="&ipdb.title;"
-            buttons="accept,cancel">
+            buttons="extra2,accept,cancel"
+            buttonlabelextra2="&ipdb.reset;"
+            ondialogextra2="geoflag_IPDBoptions.reset();">
  <prefpane id="dbPrefs">
   <preferences>
    <preference id="prefv4URL" name="extensions.geoflag.db.v4.url" type="string" instantApply="false" />

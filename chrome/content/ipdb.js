@@ -8,8 +8,8 @@ var geoflag_IPDB =
  _dbURL6: null,
  _fPerm: 0644,
  _dPerm: 0755,
- _dbInfo4: {type: 'IPv4', filename: 'geo_ipv4.db', bytesPerIP: 4, bytesPerLine: 10, meta: null, sig: {r: null, s: null}},
- _dbInfo6: {type: 'IPv6', filename: 'geo_ipv6.db', bytesPerIP: 16, bytesPerLine: 34, meta: null, sig: {r: null, s: null}},
+ _dbInfo4: {type: 'IPv4', filename: 'geo_ipv4.db', bytesPerIP: 4, bytesPerLine: 10, meta: {}, sig: {r: null, s: null}},
+ _dbInfo6: {type: 'IPv6', filename: 'geo_ipv6.db', bytesPerIP: 16, bytesPerLine: 34, meta: {}, sig: {r: null, s: null}},
  _from6to4: [
   {
    prefix : '00000000000000000000',
@@ -36,7 +36,7 @@ var geoflag_IPDB =
    }
   }
  ],
- load: function()
+ load: function(wnd)
  {
   geoflag_IPDB.profPath = Components.classes['@mozilla.org/file/directory_service;1'].getService(Components.interfaces.nsIProperties).get('ProfD', Components.interfaces.nsIFile).path;
   geoflag_IPDB._dbURL4 = geoflag_IPDB._Prefs.getCharPref('v4.url');
@@ -73,11 +73,11 @@ var geoflag_IPDB =
    catch(e) {console.log(e);}
   }
   if (getv4)
-   window.setTimeout(function(){geoflag_IPDB._update4();}, 400);
+   window.setTimeout(function(){geoflag_IPDB.update4(wnd);}, 400);
   if (getv6)
-   window.setTimeout(function(){geoflag_IPDB._update6();}, 600);
+   window.setTimeout(function(){geoflag_IPDB.update6(wnd);}, 600);
  },
- _update4: async function()
+ update4: async function(wnd)
  {
   if(geoflag_IPDB.profPath === null)
    return;
@@ -164,8 +164,13 @@ var geoflag_IPDB =
    function(err)
    {
     if (err === 'HTTP Error 304')
+    {
      geoflag_IPDB._Prefs.setCharPref('v4.meta', JSON.stringify(geoflag_IPDB._dbInfo4.meta));
-    console.log(err);
+     return;
+    }
+    let gBundle = Components.classes['@mozilla.org/intl/stringbundle;1'].getService(Components.interfaces.nsIStringBundleService);
+    let locale = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
+    geoflag_Tools.warning(wnd, 'update_error', locale.formatStringFromName('downloadwarnmessage.v4', [(new URL(geoflag_IPDB._dbURL4)).hostname, err], 2));
    }
   );
   if (typeof bData === 'undefined' || bData === null)
@@ -368,7 +373,7 @@ var geoflag_IPDB =
   }
   return null;
  },
- _update6: async function()
+ update6: async function(wnd)
  {
   if(geoflag_IPDB.profPath === null)
    return;
@@ -455,8 +460,13 @@ var geoflag_IPDB =
    function(err)
    {
     if (err === 'HTTP Error 304')
+    {
      geoflag_IPDB._Prefs.setCharPref('v6.meta', JSON.stringify(geoflag_IPDB._dbInfo6.meta));
-    console.log(err);
+     return;
+    }
+    let gBundle = Components.classes['@mozilla.org/intl/stringbundle;1'].getService(Components.interfaces.nsIStringBundleService);
+    let locale = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
+    geoflag_Tools.warning(wnd, 'update_error', locale.formatStringFromName('downloadwarnmessage.v6', [(new URL(geoflag_IPDB._dbURL6)).hostname, err], 2));
    }
   );
   if (typeof bData === 'undefined' || bData === null)
@@ -692,6 +702,22 @@ var geoflag_IPDB =
    byteArray[i / 2] = parseInt(hexString.substring(i, i + 2), 16);
   }
   return byteArray.buffer;
+ },
+ reset4: function(newURL)
+ {
+  geoflag_IPDB._dbURL4 = newURL;
+  geoflag_IPData.db4 = null;
+  geoflag_IPData.range4 = null;
+  geoflag_IPDB._Prefs.clearUserPref('v4.meta');
+  geoflag_IPDB._dbInfo4.meta = {};
+ },
+ reset6: function(newURL)
+ {
+  geoflag_IPDB._dbURL6 = newURL;
+  geoflag_IPData.db6 = null;
+  geoflag_IPData.range6 = null;
+  geoflag_IPDB._Prefs.clearUserPref('v6.meta');
+  geoflag_IPDB._dbInfo6.meta = {};
  },
  close: function()
  {

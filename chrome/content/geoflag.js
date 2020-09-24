@@ -4,7 +4,7 @@
  * Copyright 2007-2017, David Garrett
  * All rights reserved
  *
- * Modified Nov 18, 2020 for GeoFlag
+ * Modified Sept 24, 2020 for GeoFlag
  * See LICENSE for details.
  */
 var geoflag = {
@@ -63,7 +63,6 @@ var geoflag = {
   geoflag.localeGeneral = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
   geoflag._localeHelp = gBundle.createBundle('chrome://geoflag/locale/help.properties');
   geoflag.localeCtrys = gBundle.createBundle('chrome://geoflag/locale/countrynames.properties');
-  geoflag_IPDB.load();
   geoflag_Actions.load();
  },
  close: function()
