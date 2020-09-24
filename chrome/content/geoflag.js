@@ -230,14 +230,13 @@ function newGeoFlagInstance(wnd)
   let spaceHeight = urlBarIconsBox.clientHeight;
   let newIcon = wnd.document.createElement('box');
   newIcon.setAttribute('id', 'geoflag-button');
-  newIcon.setAttribute('style', 'height: 100%; max-height: ' + spaceHeight + 'px; overflow: hidden;');
-  newIcon.setAttribute('align', 'center');
-  newIcon.setAttribute('pack', 'center');
+  newIcon.setAttribute('class', 'urlbar-icon');
+  newIcon.setAttribute('style', 'height: ' + spaceHeight + 'px; overflow: hidden;');
   let newIcon_image = wnd.document.createElement('label');
   newIcon_image.setAttribute('id', 'geoflag-icon');
   newIcon_image.setAttribute('context', 'geoflag-menu');
   newIcon_image.setAttribute('tooltip', 'geoflag-tooltip');
-  newIcon_image.setAttribute('style', 'margin: 0 3px; display: table;');
+  newIcon_image.setAttribute('style', 'margin: 0;');
   let newIcon_menupopup = wnd.document.createElement('menupopup');
   newIcon_menupopup.setAttribute('id', 'geoflag-menu');
   let newIcon_tooltip = wnd.document.createElement('tooltip');
