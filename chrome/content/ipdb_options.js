@@ -12,7 +12,10 @@ var geoflag_IPDBoptions =
    geoflag_IPDBoptions.toggleEC();
   }
   else
+  {
    geoflag_IPDBoptions._showTestResult('signed');
+   geoflag_IPDBoptions._changeReset();
+  }
  },
  toggleEC: function()
  {
@@ -36,6 +39,7 @@ var geoflag_IPDBoptions =
    document.getElementById('ecdsaHash').disabled = true;
    geoflag_IPDBoptions._showTestResult('unsigned');
   }
+  geoflag_IPDBoptions._changeReset();
  },
  changeEntry: function()
  {
@@ -43,6 +47,7 @@ var geoflag_IPDBoptions =
   if (document.getElementById('chkECDSA').checked)
    ico = 'signed';
   geoflag_IPDBoptions._showTestResult(ico);
+  geoflag_IPDBoptions._changeReset();
  },
  runTest: async function()
  {
@@ -268,5 +273,26 @@ var geoflag_IPDBoptions =
   document.getElementById('prefECKey').value = '04ccbe48b77e1be728414a7f76e1a0490f6a491bdafcf3e4f9eb8e44331220c81b1205989d5799a43fbad3c3f049076d92f6f69d53404ee38915dc9d35589d121f';
   document.getElementById('prefECCurve').value = 'P-256';
   document.getElementById('prefECHash').value = 'SHA-256';
+  geoflag_IPDBoptions._changeReset();
+ },
+ _changeReset: function()
+ {
+  document.documentElement._buttons.extra2.disabled = geoflag_IPDBoptions._isDefault();
+ },
+ _isDefault: function()
+ {
+  if (document.getElementById('v4URL').value.toLowerCase() !== 'https://realityripple.com/software/mozilla-extensions/geoflag/ipv4.db')
+   return false;
+  if (document.getElementById('v6URL').value.toLowerCase() !== 'https://realityripple.com/software/mozilla-extensions/geoflag/ipv6.db')
+   return false;
+  if (document.getElementById('chkECDSA').checked !== true)
+   return false;
+  if (document.getElementById('ecdsaKey').value.toLowerCase() !== '04ccbe48b77e1be728414a7f76e1a0490f6a491bdafcf3e4f9eb8e44331220c81b1205989d5799a43fbad3c3f049076d92f6f69d53404ee38915dc9d35589d121f')
+   return false;
+  if (document.getElementById('ecdsaCurve').value !== 'P-256')
+   return false;
+  if (document.getElementById('ecdsaHash').value !== 'SHA-256')
+   return false;
+  return true;
  }
 };
