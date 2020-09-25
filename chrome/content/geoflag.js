@@ -585,7 +585,8 @@ function newGeoFlagInstance(wnd)
    {
     newElement.setAttribute('class', 'menuitem-iconic');
     newElement.setAttribute('validate', 'never');
-    newElement.setAttribute('image', geoflag_Tools.getFaviconForTemplate(action.template));
+    newElement.setAttribute('image', 'chrome://geoflag/skin/icons/default.png');
+    wnd.setTimeout(async function(){newElement.setAttribute('image', await geoflag_Tools.getCachedFaviconForTemplate(action.template));}, 10);
     newElement.onerror = function()
     {
      newElement.setAttribute('image', 'chrome://geoflag/skin/icons/default.png');

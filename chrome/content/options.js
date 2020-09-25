@@ -170,7 +170,8 @@ var geoflag_Options = {
    let cbox = newItem.getElementsByTagName('checkbox')[0];
    cbox.setAttribute('checked', !!action.show);
    let icon = newItem.getElementsByTagName('image')[0];
-   icon.setAttribute('src', geoflag_Tools.getFaviconForTemplate(action.template));
+   icon.setAttribute('src', 'chrome://geoflag/skin/icons/default.png');
+   window.setTimeout(async function(){icon.setAttribute('src', await geoflag_Tools.getCachedFaviconForTemplate(action.template));}, 10);
    icon.onerror = function()
    {
     icon.setAttribute('src', 'chrome://geoflag/skin/icons/default.png');
@@ -614,6 +615,8 @@ var geoflag_Options = {
  {
   geoflag_Options._Prefs.setBoolPref('showfavicons', document.getElementById('showFaviconsCheckbox').checked);
   geoflag_Actions.actionsListAge = Date.now();
+  if (document.getElementById('showFaviconsCheckbox').checked === false)
+   geoflag_IconDB.drop();
  },
  setOpenLinksIn: function()
  {

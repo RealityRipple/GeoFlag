@@ -69,6 +69,70 @@ var geoflag_Tools =
    return 'chrome://geoflag/skin/icons/default.png';
   }
  },
+ getCachedFaviconForTemplate: async function(template)
+ {
+  try
+  {
+   switch (geoflag_TextTools.truncateBeforeFirstChar(template, ':'))
+   {
+    case 'formfield':
+     template = template.slice(10).split('|')[0];
+     break;
+    case 'copystring':
+     return 'chrome://geoflag/skin/icons/copy.png';
+    case 'javascript':
+    case 'data':
+     return 'chrome://geoflag/skin/icons/special/script.png';
+    case 'about':
+     return 'chrome://geoflag/skin/icons/special/about.png';
+    case 'chrome':
+    case 'resource':
+    case 'moz-icon':
+    case 'moz-extension':
+     return 'chrome://geoflag/skin/icons/special/resource.png';
+    case 'file':
+     return 'chrome://geoflag/skin/icons/special/localfile.png';
+   }
+   if (!geoflag.Prefs.getBoolPref('showfavicons'))
+    return 'chrome://geoflag/skin/icons/default.png';
+   if (!template.includes('://'))
+    template = 'http://' + template;
+   let uri = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService).newURI(template, null, null);
+   uri.host = uri.host.replace(/\{[^{}\s]+\}\.?/gi, '');
+   if (uri.host === 'realityripple.com')
+    uri.path = uri.path.substring(0, uri.path.lastIndexOf('/') + 1) + 'favicon.ico';
+   else if (uri.host === 'archive.org' || uri.host.indexOf('.archive.org') > -1)
+   {
+    uri.host = 'archive.org';
+    uri.path = 'favicon.ico';
+   }
+   else if (uri.host === 'validator.w3.org' || uri.host === 'securityheaders.com')
+    uri.path = 'images/favicon.ico';
+   else if (uri.host === 'www.wormly.com')
+    uri.path = 'favico2.ico';
+   else if (uri.host === 'intodns.com')
+    uri.path = 'static/images/favicon.ico';
+   else if (uri.host === 'sitereport.netcraft.com')
+   {
+    uri.host = 'static.netcraft.com';
+    uri.path = 'images/favicon.ico'
+   }
+   else
+    uri.path = 'favicon.ico';
+   let showIcon = await geoflag_IconDB.read(uri.spec);
+   if (showIcon !== false)
+    return showIcon;
+   showIcon = await geoflag_IconDB.loadIcon(uri.spec);
+   if (showIcon === false)
+    return 'chrome://geoflag/skin/icons/default.png';
+   await geoflag_IconDB.write(uri.spec, showIcon);
+   return showIcon;
+  }
+  catch (e)
+  {
+   return 'chrome://geoflag/skin/icons/default.png';
+  }
+ },
  warning: function(wnd, type, message, msgID = type)
  {
   const messagePrefName = 'warn.' + type;

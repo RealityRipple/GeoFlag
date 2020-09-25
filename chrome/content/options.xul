@@ -33,6 +33,7 @@
  <script src="chrome://geoflag/content/texttools.js" />
  <script src="chrome://geoflag/content/geoflag.js" />
  <script src="chrome://geoflag/content/actions.js" />
+ <script src="chrome://geoflag/content/icondb.js" />
  <script src="chrome://geoflag/content/tools.js" />
  <script src="chrome://geoflag/content/options.js" />
  <groupbox id="generalOptions">
