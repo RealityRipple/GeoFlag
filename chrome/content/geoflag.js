@@ -254,9 +254,9 @@ function newGeoFlagInstance(wnd)
   tooltip = null;
   menu = null;
   icon = null;
-  let button = wnd.document.getElementById('geoflag-button');
-  if (button)
-   button.parentNode.removeChild(button);
+  let btn = wnd.document.getElementById('geoflag-button');
+  if (btn)
+   btn.parentNode.removeChild(btn);
  }
  function setIcon(name)
  {
