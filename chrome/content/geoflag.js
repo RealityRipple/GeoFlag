@@ -260,11 +260,14 @@ function newGeoFlagInstance(wnd)
  }
  function setIcon(name)
  {
+  let btn = wnd.document.getElementById('geoflag-button');
   if (!name)
   {
    icon.value = '';
+   btn.style.display = 'none';
    return;
   }
+  btn.style.display = null;
   dLoc.icon = name;
   let sIcon = '';
   if (name.startsWith('flags/'))
