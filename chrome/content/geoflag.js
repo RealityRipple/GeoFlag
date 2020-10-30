@@ -4,7 +4,9 @@
  * Copyright 2007-2017, David Garrett
  * All rights reserved
  *
- * Modified Sept 24, 2020 for GeoFlag
+ * Modified Sept 24, 2020
+ *          Oct  30, 2020
+ *                        for GeoFlag
  * See LICENSE for details.
  */
 var geoflag = {
