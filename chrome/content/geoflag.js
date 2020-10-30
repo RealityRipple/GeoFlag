@@ -238,7 +238,7 @@ function newGeoFlagInstance(wnd)
   newIcon_image.setAttribute('id', 'geoflag-icon');
   newIcon_image.setAttribute('context', 'geoflag-menu');
   newIcon_image.setAttribute('tooltip', 'geoflag-tooltip');
-  newIcon_image.setAttribute('style', 'margin: 0;');
+  newIcon_image.setAttribute('style', 'margin: 0; text-align: center;');
   let newIcon_menupopup = wnd.document.createElement('menupopup');
   newIcon_menupopup.setAttribute('id', 'geoflag-menu');
   let newIcon_tooltip = wnd.document.createElement('tooltip');
