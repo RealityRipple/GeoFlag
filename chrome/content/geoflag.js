@@ -269,7 +269,7 @@ function newGeoFlagInstance(wnd)
    btn.style.display = 'none';
    return;
   }
-  btn.style.display = null;
+  btn.style.display = 'inline-block';
   dLoc.icon = name;
   let sIcon = '';
   if (name.startsWith('flags/'))
