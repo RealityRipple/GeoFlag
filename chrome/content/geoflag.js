@@ -108,7 +108,6 @@ var geoflag = {
    geoflag.Prefs.setIntPref('flagsize', flagsize);
   }
   icon.style.fontSize = flagsize + 'px';
-  icon.style.width = flagsize + 'px';
   let boxH = icon.clientHeight;
   if (boxH < flagsize)
    return;
