@@ -108,11 +108,11 @@ var geoflag = {
    geoflag.Prefs.setIntPref('flagsize', flagsize);
   }
   icon.style.fontSize = flagsize + 'px';
+  icon.style.width = flagsize + 'px';
   let boxH = icon.clientHeight;
   if (boxH < flagsize)
    return;
   let offset = (Math.ceil(flagsize / 6) + 1) * -1;
-  icon.style.width = boxH + 'px';
   let diffH = Math.floor((spaceHeight - (boxH + (offset * 2))) / 2);
   icon.style.marginTop = (offset + diffH) + 'px';
  },
@@ -235,7 +235,7 @@ function newGeoFlagInstance(wnd)
   let newIcon = wnd.document.createElement('box');
   newIcon.setAttribute('id', 'geoflag-button');
   newIcon.setAttribute('class', 'urlbar-icon');
-  newIcon.setAttribute('style', 'height: ' + spaceHeight + 'px; overflow: hidden; display: inline-block;');
+  newIcon.setAttribute('style', 'height: ' + spaceHeight + 'px; overflow: hidden; display: inline-block; padding: 0; margin-left: 3px; margin-right: 3px;');
   let newIcon_image = wnd.document.createElement('label');
   newIcon_image.setAttribute('id', 'geoflag-icon');
   newIcon_image.setAttribute('context', 'geoflag-menu');
