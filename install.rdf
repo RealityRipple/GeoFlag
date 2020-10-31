@@ -3,7 +3,7 @@
  <Description about="urn:mozilla:install-manifest">
   <em:name>GeoFlag</em:name>
   <em:id>{76843B06-C8C5-5088-90C5-679EA2F00123}</em:id>
-  <em:version>5.3b2</em:version>
+  <em:version>5.3b3</em:version>
   <em:type>2</em:type>
   <em:targetApplication>
    <Description>
