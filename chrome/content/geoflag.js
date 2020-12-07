@@ -105,7 +105,8 @@ var geoflag = {
   if (flagsize > spaceHeight + 2)
   {
    flagsize = spaceHeight + 2;
-   geoflag.Prefs.setIntPref('flagsize', flagsize);
+   if (spaceHeight > 0)
+    geoflag.Prefs.setIntPref('flagsize', flagsize);
   }
   icon.style.fontSize = flagsize + 'px';
   let boxH = icon.clientHeight;
