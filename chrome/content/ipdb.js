@@ -46,10 +46,23 @@ var geoflag_IPDB =
   if (!geoflag.Prefs.prefHasUserValue('warn.update'))
    return;
   let today = new Date();
-  if (geoflag_IPDB._Prefs.prefHasUserValue('v4.meta') || geoflag_IPDB._Prefs.prefHasUserValue('v6.meta'))
+  let updateEvery = 28;
+  if (geoflag_IPDB._Prefs.prefHasUserValue('update'))
   {
-   if (today.getDate() < 8)
-    return;
+   updateEvery = geoflag_IPDB._Prefs.getIntPref('update');
+   let trueUE = Math.ceil(updateEvery / 7) * 7;
+   if (trueUE < 7)
+    trueUE = 7;
+   if (trueUE > 28)
+    trueUE = 28;
+   if (updateEvery != trueUE)
+   {
+    if (trueUE === 28)
+     geoflag_IPDB._Prefs.clearUserPref('update');
+    else
+     geoflag_IPDB._Prefs.setIntPref('update', trueUE);
+    updateEvery = trueUE;
+   }
   }
   let uTime = Math.floor(today.getTime() / 1000);
   let getv4 = true;
@@ -58,7 +71,7 @@ var geoflag_IPDB =
   {
    try
    {
-    if (((uTime - geoflag_IPDB._dbInfo4.meta.date) / 86400) < 28)
+    if (((uTime - geoflag_IPDB._dbInfo4.meta.date) / 86400) < updateEvery)
      getv4 = false;
    }
    catch(e) {console.log(e);}
@@ -67,7 +80,7 @@ var geoflag_IPDB =
   {
    try
    {
-    if (((uTime - geoflag_IPDB._dbInfo6.meta.date) / 86400) < 28)
+    if (((uTime - geoflag_IPDB._dbInfo6.meta.date) / 86400) < updateEvery)
      getv6 = false;
    }
    catch(e) {console.log(e);}

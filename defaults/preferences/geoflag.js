@@ -7,6 +7,7 @@ pref('extensions.geoflag.warn.update_error', 'enabled');
 pref('extensions.geoflag.openlinksin', 'tabFG');
 pref('extensions.geoflag.showfavicons', true);
 pref('extensions.geoflag.useractions', '[["Whois",1,"middleclick"],["IP Whois",1,"doubleclick"],["Location",1,"click"],"WolframAlpha","Alexa","WOT Scorecard",["Virus Scan",1],["Check Server Status",1],"Google",["Google Translate",1],"Google Cache",["Internet Archive",1],"W3C Validator","W3C CSS Validator","SSL Server Test","SSL Checker","Header Check",["Ping",1],"Traceroute","Netcraft","IntoDNS","Bit.ly URL",["Tiny URL",1],"is.gd URL",["Copy IP",1],"Copy Server Info","Wikipedia: Country","Wikipedia: Domain","Wikipedia: TLD","Page Metadata"]');
+pref('extensions.geoflag.db.update', 28);
 pref('extensions.geoflag.db.ecdsa.key', '04ccbe48b77e1be728414a7f76e1a0490f6a491bdafcf3e4f9eb8e44331220c81b1205989d5799a43fbad3c3f049076d92f6f69d53404ee38915dc9d35589d121f');
 pref('extensions.geoflag.db.ecdsa.curve', 'P-256');
 pref('extensions.geoflag.db.ecdsa.hash', 'SHA-256');

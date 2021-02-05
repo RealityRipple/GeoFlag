@@ -124,8 +124,24 @@ var geoflag = {
   if (geoflag.Prefs.prefHasUserValue('db.v4.meta') || geoflag.Prefs.prefHasUserValue('db.v6.meta'))
   {
    let today = new Date();
-   if (today.getDate() < 8)
-    dbNote = false;
+   let updateEvery = 28;
+   if (geoflag_IPDB._Prefs.prefHasUserValue('update'))
+   {
+    updateEvery = geoflag_IPDB._Prefs.getIntPref('update');
+    let trueUE = Math.ceil(updateEvery / 7) * 7;
+    if (trueUE < 7)
+     trueUE = 7;
+    if (trueUE > 28)
+     trueUE = 28;
+    if (updateEvery != trueUE)
+    {
+     if (trueUE === 28)
+      geoflag_IPDB._Prefs.clearUserPref('update');
+     else
+      geoflag_IPDB._Prefs.setIntPref('update', trueUE);
+     updateEvery = trueUE;
+    }
+   }
    let uTime = Math.floor(today.getTime() / 1000);
    let meta4 = JSON.parse(geoflag.Prefs.getCharPref('db.v4.meta'));
    let meta6 = JSON.parse(geoflag.Prefs.getCharPref('db.v6.meta'));
@@ -133,7 +149,7 @@ var geoflag = {
    {
     try
     {
-     if (((uTime - meta4.date) / 86400) < 28)
+     if (((uTime - meta4.date) / 86400) < updateEvery)
       dbNote = false;
     }
     catch(e) {}
@@ -142,7 +158,7 @@ var geoflag = {
    {
     try
     {
-     if (((uTime - meta6.date) / 86400) < 28)
+     if (((uTime - meta6.date) / 86400) < updateEvery)
       dbNote = false;
     }
     catch(e) {}
