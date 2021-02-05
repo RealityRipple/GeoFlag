@@ -1,5 +1,5 @@
 Geo IP databases are loaded from the RealityRipple Software website by default, with GZ compression and ECDSA signing.
-Databases are updated once a month, no sooner than the second week of the month, 28 or more days since the previous update.
+Databases are updated once a week to once a month by config preference. The server updates weekly on Tuesday nights.
 
 The server sends two additional headers with each database, 'X-Signature-R' and 'X-Signature-S', which contain the hexidecimal R and S ECDSA signature values.
 

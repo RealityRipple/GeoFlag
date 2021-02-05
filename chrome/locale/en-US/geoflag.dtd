@@ -25,7 +25,7 @@
 <!-- ## geoip database url dialog ## -->
 <!ENTITY ipdb.title "GeoIP Database URL Options">
 
-<!ENTITY ipdb.description "GeoFlag downloads databases once a month. To use your own download source, change the URLs below. If the source you choose supports EC Signing, enter the server's Public Key below.">
+<!ENTITY ipdb.description "GeoFlag downloads databases regularly. To use your own download source, change the URLs below. If the source you choose supports EC Signing, enter the server's Public Key below.">
 
 <!ENTITY ipdb.v4url "IPv4 URL:">
 <!ENTITY ipdb.v6url "IPv6 URL:">
