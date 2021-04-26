@@ -9,4 +9,10 @@
  <script src="chrome://geoflag/content/dns.js" />
  <script src="chrome://geoflag/content/geoflag.js" />
  <script src="chrome://geoflag/content/overlay.js" />
+ <toolbarpalette id="BrowserToolbarPalette">
+  <toolbaritem id="geoflag-tb"/>
+ </toolbarpalette>
+ <toolbaritem id="geoflag-tb" removable="true">
+  <label id="geoflag-tb-icon" type="chrome" value="&#x1f3f3;&#xfe0f;&#x200d;&#x1f308;" />
+ </toolbaritem>
 </overlay>

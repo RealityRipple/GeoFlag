@@ -6,6 +6,7 @@
  *
  * Modified Sept 24, 2020
  *          Oct  30, 2020
+ *          Apr  26, 2021
  *                        for GeoFlag
  * See LICENSE for details.
  */
@@ -116,6 +117,31 @@ var geoflag = {
   let diffH = Math.floor((spaceHeight - (boxH + (offset * 2))) / 2);
   icon.style.marginTop = (offset + diffH) + 'px';
  },
+ setTbIconSize: function(wnd)
+ {
+  let tb = wnd.document.getElementById('geoflag-tb');
+  if (!tb)
+   return;
+  tb.style.display = 'inline-block';
+  let tbp = tb.parentElement;
+  while (tbp.tagName !== 'toolbar')
+   tbp = tbp.parentElement;
+  let icon = wnd.document.getElementById('geoflag-tb-icon');
+  if (icon === null)
+   return;
+  icon.style.display = 'inline-block';
+  let flagsize = 18;
+  if (tbp.getAttribute('iconsize') === 'large')
+   flagsize = 34;
+  if (tbp.id === 'addon-bar')
+   flagsize = 16;
+  let offset = (Math.ceil(flagsize / 6) + 1) * -1;
+  icon.style.marginTop = offset + 'px';
+  icon.style.marginBottom = offset + 'px';
+  icon.style.fontSize = flagsize + 'px';
+  if (tbp.clientHeight > icon.clientHeight)
+   icon.style.marginTop = Math.ceil((tbp.clientHeight - icon.clientHeight) / 2) + 'px';
+ },
  _showDBNote: function(wnd)
  {
   let dbNote = true;
@@ -179,6 +205,27 @@ function newGeoFlagInstance(wnd)
  if (!wnd || !wnd.document || !wnd.getBrowser || !wnd.getBrowser())
   return;
  createIcon();
+ let toolbarItem = wnd.document.getElementById('geoflag-tb');
+ let tbicon = null;
+ let tbmenu = null;
+ let tbtooltip = null;
+ if (toolbarItem)
+ {
+  tbicon = wnd.document.getElementById('geoflag-tb-icon');
+  tbmenu = wnd.document.getElementById('geoflag-tb-menu');
+  tbtooltip = wnd.document.getElementById('geoflag-tb-tooltip');
+  if (!(!tbicon || !tbmenu || !tbtooltip))
+  {
+   tbicon.addEventListener('click',onTbIconClick);
+   tbicon.addEventListener('mousedown',onTbIconMouseDown);
+   tbicon.addEventListener('mouseenter',onTbIconHover);
+   tbmenu.addEventListener('command',onTbMenuCommand);
+   tbmenu.addEventListener('mouseup',onTbMenuMouseUp);
+   tbmenu.addEventListener('popupshowing',onTbMenuShowing);
+   tbtooltip.addEventListener('popupshowing',updateTbTooltipContent);
+  }
+  geoflag.setTbIconSize(wnd);
+ }
  let icon = wnd.document.getElementById('geoflag-icon');
  let menu = wnd.document.getElementById('geoflag-menu');
  let tooltip = wnd.document.getElementById('geoflag-tooltip');
@@ -214,6 +261,8 @@ function newGeoFlagInstance(wnd)
  wnd.addEventListener('keypress',onKeyPressed);
  wnd.addEventListener('online',onChangedOnlineStatus);
  wnd.addEventListener('offline',onChangedOnlineStatus);
+ wnd.addEventListener('customizationchange', onCustomize);
+ wnd.addEventListener('aftercustomization', onCustomized);
  wnd.addEventListener('unload',unload);
  wnd.addEventListener('geoflag-unload',unload);
  function unload()
@@ -223,10 +272,24 @@ function newGeoFlagInstance(wnd)
   wnd.removeEventListener('offline',onChangedOnlineStatus);
   wnd.removeEventListener('online',onChangedOnlineStatus);
   wnd.removeEventListener('keypress',onKeyPressed);
+  if (tbtooltip)
+   tbtooltip.removeEventListener('popupshowing',updateTbTooltipContent);
   tooltip.removeEventListener('popupshowing',updateTooltipContent);
+  if (tbmenu)
+  {
+   tbmenu.removeEventListener('popupshowing',onTbMenuShowing);
+   tbmenu.removeEventListener('mouseup',onTbMenuMouseUp);
+   tbmenu.removeEventListener('command',onTbMenuCommand);
+  }
   menu.removeEventListener('popupshowing',onMenuShowing);
   menu.removeEventListener('mouseup',onMenuMouseUp);
   menu.removeEventListener('command',onMenuCommand);
+  if (tbicon)
+  {
+   tbicon.removeEventListener('mouseenter',onTbIconHover);
+   tbicon.removeEventListener('mousedown',onTbIconMouseDown);
+   tbicon.removeEventListener('click',onTbIconClick);
+  }
   icon.removeEventListener('mouseenter',onIconHover);
   icon.removeEventListener('mousedown',onIconMouseDown);
   icon.removeEventListener('click',onIconClick);
@@ -238,6 +301,15 @@ function newGeoFlagInstance(wnd)
   locationCache = null;
   dLoc = null;
   destroyIcon();
+ }
+ function onCustomize(e)
+ {
+  geoflag.setTbIconSize(wnd);
+ }
+ function onCustomized()
+ {
+  geoflag.setTbIconSize(wnd);
+  toggleTbIcon();
  }
  function createIcon()
  {
@@ -267,25 +339,110 @@ function newGeoFlagInstance(wnd)
   let starButton = urlBarIconsBox.querySelector('#star-button');
   urlBarIconsBox.insertBefore(newIcon,starButton);
  }
+ function toggleTbIcon()
+ {
+  let toolbarItem = wnd.document.getElementById('geoflag-tb');
+  if (!toolbarItem)
+  {
+   if (tbtooltip)
+   {
+    tbtooltip.removeEventListener('popupshowing',updateTbTooltipContent);
+    tbtooltip = null;
+   }
+   if (tbmenu)
+   {
+    tbmenu.removeEventListener('popupshowing',onTbMenuShowing);
+    tbmenu.removeEventListener('mouseup',onTbMenuMouseUp);
+    tbmenu.removeEventListener('command',onTbMenuCommand);
+    tbmenu = null;
+   }
+   if (tbicon)
+   {
+    icon.setAttribute('value', tbicon.getAttribute('value'));
+    icon.parentNode.style.display = 'inline-block';
+    icon.parentNode.style.marginLeft = '3px';
+    icon.parentNode.style.marginRight = '3px';
+    tbicon.removeEventListener('mouseenter',onTbIconHover);
+    tbicon.removeEventListener('mousedown',onTbIconMouseDown);
+    tbicon.removeEventListener('click',onTbIconClick);
+    tbicon = null;
+   }
+  }
+  else
+  {
+   tbicon = wnd.document.getElementById('geoflag-tb-icon');
+   tbmenu = wnd.document.getElementById('geoflag-tb-menu');
+   tbtooltip = wnd.document.getElementById('geoflag-tb-tooltip');
+   if (!tbicon || !tbmenu || !tbtooltip)
+   {
+    let toolbarLabel = wnd.document.getElementById('geoflag-tb-icon');
+    let newTbIcon_menupopup = wnd.document.createElement('menupopup');
+    newTbIcon_menupopup.setAttribute('id', 'geoflag-tb-menu');
+    let newTbIcon_tooltip = wnd.document.createElement('tooltip');
+    newTbIcon_tooltip.setAttribute('id', 'geoflag-tb-tooltip');
+    toolbarItem.appendChild(newTbIcon_menupopup);
+    toolbarItem.appendChild(newTbIcon_tooltip);
+    toolbarLabel.setAttribute('context', 'geoflag-tb-menu');
+    toolbarLabel.setAttribute('tooltip', 'geoflag-tb-tooltip');
+    tbicon = wnd.document.getElementById('geoflag-tb-icon');
+    tbmenu = wnd.document.getElementById('geoflag-tb-menu');
+    tbtooltip = wnd.document.getElementById('geoflag-tb-tooltip');
+    tbicon.addEventListener('click',onTbIconClick);
+    tbicon.addEventListener('mousedown',onTbIconMouseDown);
+    tbicon.addEventListener('mouseenter',onTbIconHover);
+    tbmenu.addEventListener('command',onTbMenuCommand);
+    tbmenu.addEventListener('mouseup',onTbMenuMouseUp);
+    tbmenu.addEventListener('popupshowing',onTbMenuShowing);
+    tbtooltip.addEventListener('popupshowing',updateTbTooltipContent);
+   }
+   if (icon.parentNode.style.display !== 'none')
+   {
+    icon.parentNode.style.display = 'none';
+    icon.parentNode.style.marginLeft = '0';
+    icon.parentNode.style.marginRight = '0';
+    if (tbicon)
+     tbicon.setAttribute('value', icon.getAttribute('value'));
+   }
+  }
+ }
  function destroyIcon()
  {
   tooltip = null;
   menu = null;
   icon = null;
+  tbtooltip = null;
+  tbmenu = null;
+  tbicon = null;
   let btn = wnd.document.getElementById('geoflag-button');
   if (btn)
    btn.parentNode.removeChild(btn);
  }
  function setIcon(name)
  {
+  toggleTbIcon();
   let btn = wnd.document.getElementById('geoflag-button');
   if (!name)
   {
-   icon.value = '';
+   icon.setAttribute('value', '');
+   if (tbicon)
+    tbicon.setAttribute('value', '');
    btn.style.display = 'none';
+   btn.style.marginLeft = '0';
+   btn.style.marginRight = '0';
    return;
   }
-  btn.style.display = 'inline-block';
+  if (tbicon)
+  {
+   btn.style.display = 'none';
+   btn.style.marginLeft = '0';
+   btn.style.marginRight = '0';
+  }
+  else
+  {
+   btn.style.display = 'inline-block';
+   btn.style.marginLeft = '3px';
+   btn.style.marginRight = '3px';
+  }
   dLoc.icon = name;
   let sIcon = '';
   if (name.startsWith('flags/'))
@@ -296,10 +453,12 @@ function newGeoFlagInstance(wnd)
   }
   else
    sIcon = String.fromCodePoint(geoflag.codePoints.special[name], 0xfe0f);
-  if (icon.value === sIcon)
-   return;
+  geoflag.setTbIconSize(wnd);
+  if (tbicon && tbicon.getAttribute('value') !== sIcon)
+   tbicon.setAttribute('value', sIcon);
   geoflag.setIconSize(wnd);
-  icon.value = sIcon;
+  if (icon.getAttribute('value') !== sIcon)
+   icon.setAttribute('value', sIcon);
  }
  function onLocationChange()
  {
@@ -581,6 +740,63 @@ function newGeoFlagInstance(wnd)
   grid.appendChild(rows);
   tooltip.appendChild(grid);
  }
+ function updateTbTooltipContent()
+ {
+  if (!tbtooltip)
+   return;
+  while (tbtooltip.firstChild)
+  {
+   tbtooltip.removeChild(tbtooltip.firstChild);
+  }
+  let grid = wnd.document.createElement('grid');
+  let rows = wnd.document.createElement('rows');
+  function addLabeledLine(labelID,lineValue)
+  {
+   let row = wnd.document.createElement('row');
+   let label = wnd.document.createElement('label');
+   label.setAttribute('value', geoflag.localeGeneral.GetStringFromName(labelID));
+   label.setAttribute('style', 'font-weight: bold;');
+   let value = wnd.document.createElement('label');
+   value.setAttribute('value', lineValue);
+   row.appendChild(label);
+   row.appendChild(value);
+   rows.appendChild(row);
+  }
+  function safeGetCountryName(code)
+  {
+   try
+   {
+    return geoflag.localeCtrys.GetStringFromName(code);
+   }
+   catch(e)
+   {
+    console.log(e);
+    return code + ' (?)';
+   }
+  }
+  let isUnknownLocation = (dLoc.special && dLoc.special[0] === 'unknownsite');
+  if (dLoc.host && dLoc.host !== dLoc.ip)
+   addLabeledLine('domainname', dLoc.host);
+  if (dLoc.ip)
+   addLabeledLine('ipaddress', dLoc.ip);
+  if (dLoc.country || isUnknownLocation)
+   addLabeledLine('serverlocation', isUnknownLocation ? geoflag.localeGeneral.GetStringFromName('unknownsite') : safeGetCountryName(dLoc.country));
+  if (dLoc.tldcountry && dLoc.tldcountry !== dLoc.country)
+   addLabeledLine('domainnationality', safeGetCountryName(dLoc.tldcountry));
+  if (dLoc.special && !isUnknownLocation)
+  {
+   let extraString = geoflag.localeGeneral.GetStringFromName(dLoc.special[0]);
+   if (dLoc.special[1])
+    extraString += ' (' + dLoc.special[1] + ')';
+   let extraLine = wnd.document.createElement('label');
+   extraLine.setAttribute('value', extraString);
+   if (geoflag_Tools.locationErrors.has(dLoc.special[0]))
+    extraLine.setAttribute('style', 'font-style: italic;');
+   rows.appendChild(extraLine);
+  }
+  grid.appendChild(rows);
+  tbtooltip.appendChild(grid);
+ }
  function updateMenuContent()
  {
   if (menuContentAge === geoflag_Actions.actionsListAge)
@@ -622,6 +838,53 @@ function newGeoFlagInstance(wnd)
    newMenuItemForAction(geoflag_Actions.actionsList[i], i);
   }
   menu.appendChild(wnd.document.createElement('menuseparator'));
+  newMenuItem('options', geoflag.localeGeneral.GetStringFromName('options'));
+  if (showAllItems)
+   menuContentAge = 0;
+  else
+   menuContentAge = geoflag_Actions.actionsListAge;
+ }
+ function updateTbMenuContent()
+ {
+  if (menuContentAge === geoflag_Actions.actionsListAge)
+   return;
+  geoflag_Actions.assertLoaded();
+  const showAllItems = (menuContentAge === -1);
+  const showFavicons = geoflag.Prefs.getBoolPref('showfavicons');
+  while (tbmenu.firstChild)
+  {
+   tbmenu.removeChild(tbmenu.firstChild);
+  }
+  function newMenuItem(value,label)
+  {
+   let newElement = wnd.document.createElement('menuitem');
+   newElement.setAttribute('value', value);
+   newElement.setAttribute('label', label);
+   tbmenu.appendChild(newElement);
+   return newElement;
+  }
+  function newMenuItemForAction(action,id)
+  {
+   if (!(action.show || showAllItems))
+    return;
+   let newElement = newMenuItem(id, geoflag_Actions.getLocalizedName(action));
+   if (showFavicons)
+   {
+    newElement.setAttribute('class', 'menuitem-iconic');
+    newElement.setAttribute('validate', 'never');
+    newElement.setAttribute('image', 'chrome://geoflag/skin/icons/default.png');
+    wnd.setTimeout(async function(){newElement.setAttribute('image', await geoflag_Tools.getCachedFaviconForTemplate(action.template));}, 10);
+    newElement.onerror = function()
+    {
+     newElement.setAttribute('image', 'chrome://geoflag/skin/icons/default.png');
+    };
+   }
+  }
+  for (let i in geoflag_Actions.actionsList)
+  {
+   newMenuItemForAction(geoflag_Actions.actionsList[i], i);
+  }
+  tbmenu.appendChild(wnd.document.createElement('menuseparator'));
   newMenuItem('options', geoflag.localeGeneral.GetStringFromName('options'));
   if (showAllItems)
    menuContentAge = 0;
@@ -975,6 +1238,71 @@ function newGeoFlagInstance(wnd)
     doAction(boundKey[geoflag_Actions.getModsCode(event.ctrlKey,event.altKey,event.metaKey)]);
   }
  }
+
+ function onTbIconClick(event)
+ {
+  function doClickAction()
+  {
+   let binding = null;
+   if (event.button === 1 || (event.button === 0 && event.ctrlKey))
+    binding = 'middleclick';
+   else if (event.button === 0)
+    binding = 'click';
+   else
+    return;
+   if (event.detail === 2)
+    binding = 'double' + binding;
+   else if (event.detail === 3)
+    binding = 'triple' + binding;
+   doAction(geoflag_Actions.hotClicks[binding]);
+  }
+  wnd.clearTimeout(this.clickTimer);
+  this.clickTimer = wnd.setTimeout(doClickAction, 250);
+ }
+ function onTbIconMouseDown(event)
+ {
+  if (event.button === 2 && event.ctrlKey)
+   menuContentAge = -1;
+ }
+ function onTbIconHover(event)
+ {
+  tbicon.style.cursor = isActionAllowed(geoflag_Actions.hotClicks['click']) ? 'pointer' : 'default' ;
+ }
+ function onTbMenuCommand(event)
+ {
+  let actionID = event.target.value;
+  if (event.button === 1)
+   doAction(actionID, 'tabBG');
+  else if (event.ctrlKey || event.shiftKey)
+   doAction(actionID, (event.shiftKey ? 'win' : 'tab') + (event.ctrlKey ? 'BG' : 'FG'));
+  else
+   doAction(actionID);
+ }
+ function onTbMenuMouseUp(event)
+ {
+  if (event.button > 2)
+   return;
+  if (event.shiftKey)
+   return;
+  if (event.target.value === 'options')
+   return;
+  if (event.button === 1 || event.ctrlKey)
+  {
+   event.preventDefault();
+   event.stopPropagation();
+   onTbMenuCommand(event);
+  }
+ }
+ function onTbMenuShowing(event)
+ {
+  updateTbMenuContent();
+  let menuItems = tbmenu.getElementsByTagName('menuitem');
+  for (let i = 0; i < menuItems.length; i++)
+  {
+   menuItems[i].setAttribute('disabled', !isActionAllowed(menuItems[i].getAttribute('value')));
+  }
+ }
+
  function onChangedOnlineStatus(event)
  {
   wnd.clearTimeout(this.pendingOnlineStatusUpdate);
