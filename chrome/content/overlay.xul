@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://geoflag/locale/geoflag.dtd">
 <overlay id="geoflagOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  <script src="chrome://geoflag/content/texttools.js" />
  <script src="chrome://geoflag/content/icondb.js" />
@@ -10,7 +11,7 @@
  <script src="chrome://geoflag/content/geoflag.js" />
  <script src="chrome://geoflag/content/overlay.js" />
  <toolbarpalette id="BrowserToolbarPalette">
-  <toolbaritem id="geoflag-tb"/>
+  <toolbaritem id="geoflag-tb" title="&toolbar.title;"/>
  </toolbarpalette>
  <toolbaritem id="geoflag-tb" removable="true">
   <label id="geoflag-tb-icon" type="chrome" value="&#x1f3f3;&#xfe0f;&#x200d;&#x1f308;" />
