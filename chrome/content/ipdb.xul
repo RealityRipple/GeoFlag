@@ -36,6 +36,11 @@
     <spacer flex="1"/>
     <textbox id="v6URL" preference="prefv6URL" onchange="geoflag_IPDBoptions.changeEntry();"/>
    </hbox>
+   <hbox>
+    <label value="&ipdb.lastUpdate;"/>
+    <spacer flex="1"/>
+    <label id="lastUpdate"/>
+   </hbox>
   </vbox>
   <separator class="thin"/>
   <groupbox>

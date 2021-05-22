@@ -60,6 +60,10 @@ button[type="menu-button"] > button
 {
  min-width: 33em;
 }
+#lastUpdate
+{
+ min-width: 33em;
+}
 #ecdsaKey
 {
  font-family: monospace;

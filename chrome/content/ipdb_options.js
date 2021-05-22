@@ -1,8 +1,46 @@
 var geoflag_IPDBoptions =
 {
+ Prefs: Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefService).getBranch('extensions.geoflag.'),
+ localeGeneral: null,
  oldKey: null,
  bytesPerLine4: 10,
  bytesPerLine6: 34,
+ init: function()
+ {
+  let gBundle = Components.classes['@mozilla.org/intl/stringbundle;1'].getService(Components.interfaces.nsIStringBundleService);
+  geoflag_IPDBoptions.localeGeneral = gBundle.createBundle('chrome://geoflag/locale/geoflag.properties');
+  geoflag_IPDBoptions.updateLastUpdated();
+ },
+ updateLastUpdated: function()
+ {
+  let sUpdated4 = geoflag_IPDBoptions.localeGeneral.GetStringFromName('ipdb.never');
+  let sUpdated6 = geoflag_IPDBoptions.localeGeneral.GetStringFromName('ipdb.never');
+  let dOpt = {
+   year: 'numeric',
+   month: 'short',
+   day: 'numeric'
+  };
+  if (geoflag_IPDBoptions.Prefs.prefHasUserValue('db.v4.meta'))
+  {
+   let meta4 = JSON.parse(geoflag_IPDBoptions.Prefs.getCharPref('db.v4.meta'));
+   if (meta4.hasOwnProperty('date'))
+   {
+    sUpdated4 = (new Date(meta4.date * 1000)).toLocaleDateString(undefined, dOpt);
+   }
+  }
+  if (geoflag_IPDBoptions.Prefs.prefHasUserValue('db.v6.meta'))
+  {
+   let meta6 = JSON.parse(geoflag_IPDBoptions.Prefs.getCharPref('db.v6.meta'));
+   if (meta6.hasOwnProperty('date'))
+   {
+    sUpdated6 = (new Date(meta6.date * 1000)).toLocaleDateString(undefined, dOpt);
+   }
+  }
+  if (sUpdated4 === sUpdated6)
+   document.getElementById('lastUpdate').value = sUpdated4;
+  else
+   document.getElementById('lastUpdate').value = geoflag_IPDBoptions.localeGeneral.formatStringFromName('ipdb.lastLayout', [sUpdated4, sUpdated6], 2);
+ },
  hasEC: function()
  {
   let setKey = document.getElementById('prefECKey').value;
@@ -296,3 +334,4 @@ var geoflag_IPDBoptions =
   return true;
  }
 };
+window.addEventListener('load', geoflag_IPDBoptions.init, false);

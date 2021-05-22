@@ -32,6 +32,8 @@
 <!ENTITY ipdb.v4url "IPv4 URL:">
 <!ENTITY ipdb.v6url "IPv6 URL:">
 
+<!ENTITY ipdb.lastUpdate "Last Updated:">
+
 <!ENTITY ipdb.ecdsa "Verify Download with ECDSA">
 <!ENTITY ipdb.pubkey "Server Public Key:">
 <!ENTITY ipdb.curve "Curve Name:">
