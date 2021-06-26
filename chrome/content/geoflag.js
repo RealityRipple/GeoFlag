@@ -624,6 +624,8 @@ function newGeoFlagInstance(wnd)
  {
   if (!dLoc.host || !dLoc.country)
    return null;
+  if (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(dLoc.host))
+   return null;
   let tld = geoflag_TextTools.truncateAfterLastChar(dLoc.host, '.').toLowerCase();
   let tldCountryCode;
   switch (tld)
