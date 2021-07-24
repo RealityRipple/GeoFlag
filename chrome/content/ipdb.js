@@ -221,7 +221,7 @@ var geoflag_IPDB =
   fOut.close();
   geoflag_IPDB._Prefs.setCharPref('v4.meta', JSON.stringify(geoflag_IPDB._dbInfo4.meta));
  },
- _read4: async function()
+ _read4: function()
  {
   let fFrom = Components.classes['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
   fFrom.initWithPath(geoflag_IPDB.profPath);
@@ -256,9 +256,9 @@ var geoflag_IPDB =
    return null;
   let uData = new Uint8Array(bData);
   geoflag_IPData.db4 = uData;
-  await geoflag_IPDB._range4();
+  geoflag_IPDB._range4();
  },
- _range4: async function()
+ _range4: function()
  {
   let bData = geoflag_IPData.db4;
   let lastStart = -1;
@@ -313,7 +313,7 @@ var geoflag_IPDB =
    return false;
   }
  },
- _lookup4: async function(ip)
+ _lookup4: function(ip)
  {
   let bData = geoflag_IPData.db4;
   if (bData === null)
@@ -517,7 +517,7 @@ var geoflag_IPDB =
   fOut.close();
   geoflag_IPDB._Prefs.setCharPref('v6.meta', JSON.stringify(geoflag_IPDB._dbInfo6.meta));
  },
- _read6: async function()
+ _read6: function()
  {
   let fFrom = Components.classes['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
   fFrom.initWithPath(geoflag_IPDB.profPath);
@@ -552,9 +552,9 @@ var geoflag_IPDB =
    return null;
   let uData = new Uint8Array(bData);
   geoflag_IPData.db6 = uData;
-  await geoflag_IPDB._range6();
+  geoflag_IPDB._range6();
  },
- _range6: async function()
+ _range6: function()
  {
   let bData = geoflag_IPData.db6;
   let lastStart = -1;
@@ -617,7 +617,7 @@ var geoflag_IPDB =
    return false;
   return expanded;
  },
- _lookup6: async function(ip)
+ _lookup6: function(ip)
  {
   let bData = geoflag_IPData.db6;
   if (bData === null)
@@ -739,33 +739,33 @@ var geoflag_IPDB =
   geoflag_IPData.range4 = null;
   geoflag_IPData.range6 = null;
  },
- lookupIP: async function(ipString)
+ lookupIP: function(ipString)
  {
   if (!ipString)
    return null;
   if (!ipString.includes(':'))
   {
    if (geoflag_IPData.db4 === null)
-    await geoflag_IPDB._read4();
+    geoflag_IPDB._read4();
    if (geoflag_IPData.db4 === null)
     return null
    let rawIP = geoflag_IPDB._parse4(ipString);
    if (rawIP === false)
     return null;
-   return await geoflag_IPDB._lookup4(rawIP);
+   return geoflag_IPDB._lookup4(rawIP);
   }
   if (ipString === '::1')
    return '-L';
   if (ipString.includes('.'))
   {
    if (geoflag_IPData.db4 === null)
-    await geoflag_IPDB._read4();
+    geoflag_IPDB._read4();
    if (geoflag_IPData.db4 === null)
     return null
    let rawIP = geoflag_IPDB._parse4(ipString.substr(ipString.lastIndexOf(':')+1));
    if (rawIP === false)
     return null;
-   return await geoflag_IPDB._lookup4(rawIP);
+   return geoflag_IPDB._lookup4(rawIP);
   }
   var ex6 = geoflag_IPDB._expand6(ipString);
   if (ex6 === false)
@@ -775,21 +775,21 @@ var geoflag_IPDB =
    if (!ex6.startsWith(rule.prefix))
     continue;
    if (geoflag_IPData.db4 === null)
-    await geoflag_IPDB._read4();
+    geoflag_IPDB._read4();
    if (geoflag_IPData.db4 === null)
     return null
    let rawIP = rule.extract4(ex6);
    if(rawIP === false)
     return null;
-   return await geoflag_IPDB._lookup4(rawIP);
+   return geoflag_IPDB._lookup4(rawIP);
   }
   if (geoflag_IPData.db6 === null)
-   await geoflag_IPDB._read6();
+   geoflag_IPDB._read6();
    if (geoflag_IPData.db6 === null)
     return null
   let rawIP = geoflag_IPDB._parse6(ex6);
   if (rawIP === false)
    return null;
-  return await geoflag_IPDB._lookup6(rawIP);
+  return geoflag_IPDB._lookup6(rawIP);
  }
 };
