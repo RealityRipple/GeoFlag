@@ -3,28 +3,19 @@
  <Description about="urn:mozilla:install-manifest">
   <em:name>GeoFlag</em:name>
   <em:id>{76843B06-C8C5-5088-90C5-679EA2F00123}</em:id>
-  <em:version>5.7</em:version>
+  <em:version>30.0</em:version>
   <em:type>2</em:type>
-  <!-- Firefox -->
   <em:targetApplication>
    <Description>
     <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-    <em:minVersion>51.0</em:minVersion>
-    <em:maxVersion>52.*</em:maxVersion>
-   </Description>
-  </em:targetApplication>
-  <!-- Pale Moon -->
-  <em:targetApplication>
-   <Description>
-    <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
-    <em:minVersion>28.7.0</em:minVersion>
-    <em:maxVersion>29.*</em:maxVersion>
+    <em:minVersion>30.0</em:minVersion>
+    <em:maxVersion>30.*</em:maxVersion>
    </Description>
   </em:targetApplication>
   <em:description>Displays a flag depicting the location of the current server</em:description>
   <em:optionsURL>chrome://geoflag/content/options.xul</em:optionsURL>
-  <em:homepageURL>https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/</em:homepageURL>
-  <em:updateURL>https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/update.rdf</em:updateURL>
+  <em:homepageURL>https://realityripple.com/Software/XUL/GeoFlag/</em:homepageURL>
+  <em:updateURL>https://realityripple.com/Software/XUL/GeoFlag/update.rdf</em:updateURL>
   <em:iconURL>chrome://geoflag/skin/logo.png</em:iconURL>
   <em:icon64URL>chrome://geoflag/skin/logo64.png</em:icon64URL>
   <em:creator>RealityRipple</em:creator>

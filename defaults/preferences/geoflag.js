@@ -12,6 +12,6 @@ pref('extensions.geoflag.db.ecdsa.key', '04ccbe48b77e1be728414a7f76e1a0490f6a491
 pref('extensions.geoflag.db.ecdsa.curve', 'P-256');
 pref('extensions.geoflag.db.ecdsa.hash', 'SHA-256');
 pref('extensions.geoflag.db.v4.meta', '{}');
-pref('extensions.geoflag.db.v4.url', 'https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/ipv4.db');
+pref('extensions.geoflag.db.v4.url', 'https://realityripple.com/Software/XUL/GeoFlag/ipv4.db');
 pref('extensions.geoflag.db.v6.meta', '{}');
-pref('extensions.geoflag.db.v6.url', 'https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/ipv6.db');
+pref('extensions.geoflag.db.v6.url', 'https://realityripple.com/Software/XUL/GeoFlag/ipv6.db');

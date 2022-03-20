@@ -304,8 +304,8 @@ var geoflag_IPDBoptions =
  },
  reset: function()
  {
-  document.getElementById('prefv4URL').value = 'https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/ipv4.db';
-  document.getElementById('prefv6URL').value = 'https://realityripple.com/Software/Mozilla-Extensions/GeoFlag/ipv6.db';
+  document.getElementById('prefv4URL').value = 'https://realityripple.com/Software/XUL/GeoFlag/ipv4.db';
+  document.getElementById('prefv6URL').value = 'https://realityripple.com/Software/XUL/GeoFlag/ipv6.db';
   document.getElementById('chkECDSA').checked = true;
   geoflag_IPDBoptions.toggleEC();
   document.getElementById('prefECKey').value = '04ccbe48b77e1be728414a7f76e1a0490f6a491bdafcf3e4f9eb8e44331220c81b1205989d5799a43fbad3c3f049076d92f6f69d53404ee38915dc9d35589d121f';
@@ -319,9 +319,9 @@ var geoflag_IPDBoptions =
  },
  _isDefault: function()
  {
-  if (document.getElementById('v4URL').value.toLowerCase() !== 'https://realityripple.com/software/mozilla-extensions/geoflag/ipv4.db')
+  if (document.getElementById('v4URL').value.toLowerCase() !== 'https://realityripple.com/software/xul/geoflag/ipv4.db')
    return false;
-  if (document.getElementById('v6URL').value.toLowerCase() !== 'https://realityripple.com/software/mozilla-extensions/geoflag/ipv6.db')
+  if (document.getElementById('v6URL').value.toLowerCase() !== 'https://realityripple.com/software/xul/geoflag/ipv6.db')
    return false;
   if (document.getElementById('chkECDSA').checked !== true)
    return false;
