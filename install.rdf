@@ -12,6 +12,13 @@
     <em:maxVersion>30.*</em:maxVersion>
    </Description>
   </em:targetApplication>
+  <em:targetApplication>
+   <Description>
+    <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+    <em:minVersion>30.0</em:minVersion>
+    <em:maxVersion>30.*</em:maxVersion>
+   </Description>
+  </em:targetApplication>
   <em:description>Displays a flag depicting the location of the current server</em:description>
   <em:optionsURL>chrome://geoflag/content/options.xul</em:optionsURL>
   <em:homepageURL>https://realityripple.com/Software/XUL/GeoFlag/</em:homepageURL>
