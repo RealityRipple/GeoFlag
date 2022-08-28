@@ -227,7 +227,7 @@ var geoflag_IPDBoptions =
    };
    xmlhttp.open('GET', url);
    xmlhttp.responseType = 'arraybuffer';
-   xmlhttp.setRequestHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
+   xmlhttp.setRequestHeader('Accept', 'application/octet-stream;q=0.9,*/*;q=0.8');
    xmlhttp.setRequestHeader('Accept-Encoding', 'gzip, deflate, br');
    xmlhttp.setRequestHeader('Cache-Control', 'no-store');
    xmlhttp.send();

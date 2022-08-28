@@ -166,7 +166,7 @@ var geoflag_IPDB =
    };
    xmlhttp.open('GET', geoflag_IPDB._dbURL4);
    xmlhttp.responseType = 'arraybuffer';
-   xmlhttp.setRequestHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
+   xmlhttp.setRequestHeader('Accept', 'application/octet-stream;q=0.9,*/*;q=0.8');
    xmlhttp.setRequestHeader('Accept-Encoding', 'gzip, deflate, br');
    //xmlhttp.setRequestHeader('If-Modified-Since', lastUpdate.toGMTString());
    if(lastETag !== null)
@@ -462,7 +462,7 @@ var geoflag_IPDB =
    };
    xmlhttp.open('GET', geoflag_IPDB._dbURL6);
    xmlhttp.responseType = 'arraybuffer';
-   xmlhttp.setRequestHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
+   xmlhttp.setRequestHeader('Accept', 'application/octet-stream;q=0.9,*/*;q=0.8');
    xmlhttp.setRequestHeader('Accept-Encoding', 'gzip, deflate, br');
    //xmlhttp.setRequestHeader('If-Modified-Since', lastUpdate.toGMTString());
    if(lastETag !== null)
