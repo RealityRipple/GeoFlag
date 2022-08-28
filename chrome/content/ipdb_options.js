@@ -229,6 +229,7 @@ var geoflag_IPDBoptions =
    xmlhttp.responseType = 'arraybuffer';
    xmlhttp.setRequestHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
    xmlhttp.setRequestHeader('Accept-Encoding', 'gzip, deflate, br');
+   xmlhttp.setRequestHeader('Cache-Control', 'no-store');
    xmlhttp.send();
   });
   let bData = await p;
