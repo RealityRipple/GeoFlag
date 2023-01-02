@@ -43,7 +43,12 @@ var geoflag_Tools =
    let uri = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService).newURI(template, null, null);
    uri.host = uri.host.replace(/\{[^{}\s]+\}\.?/gi, '');
    if (uri.host === 'realityripple.com')
-    uri.path = uri.path.substring(0, uri.path.lastIndexOf('/') + 1) + 'favicon.ico';
+   {
+    if (uri.filePath === '/test.php')
+     uri.path = 'test.ico';
+    else
+     uri.path = uri.path.substring(0, uri.path.lastIndexOf('/') + 1) + 'favicon.ico';
+   }
    else if (uri.host === 'archive.org' || uri.host.indexOf('.archive.org') > -1)
    {
     uri.host = 'archive.org';
@@ -100,7 +105,12 @@ var geoflag_Tools =
    let uri = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService).newURI(template, null, null);
    uri.host = uri.host.replace(/\{[^{}\s]+\}\.?/gi, '');
    if (uri.host === 'realityripple.com')
-    uri.path = uri.path.substring(0, uri.path.lastIndexOf('/') + 1) + 'favicon.ico';
+   {
+    if (uri.filePath === '/test.php')
+     uri.path = '/test.ico';
+    else
+     uri.path = uri.path.substring(0, uri.path.lastIndexOf('/') + 1) + 'favicon.ico';
+   }
    else if (uri.host === 'archive.org' || uri.host.indexOf('.archive.org') > -1)
    {
     uri.host = 'archive.org';

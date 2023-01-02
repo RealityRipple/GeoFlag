@@ -32,7 +32,7 @@
 "show":true
 },{
 "name":"Check Server Status",
-"template":"https://isitup.org/{domainName}",
+"template":"https://realityripple.com/test.php?u={domainName}&ui",
 "show":true
 },{
 "name":"Google",
