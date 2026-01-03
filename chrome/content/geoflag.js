@@ -1330,7 +1330,7 @@ function GeoLocation(fromuri)
  }
  catch(e)
  {
-  if (this.uri.prePath !== 'about:')
+  if (this.uri.prePath !== 'about:' && this.uri.prePath !== 'data:')
    console.log(this.uri, e);
   this.host = '';
  }
