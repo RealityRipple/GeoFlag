@@ -51,6 +51,7 @@ menulist hbox
 button[type="menu-button"]
 {
  -moz-appearance: dualbutton;
+ appearance: dualbutton;
 }
 button[type="menu-button"] > button
 {
