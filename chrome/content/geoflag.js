@@ -1325,7 +1325,7 @@ function GeoLocation(fromuri)
  this.uri = fromuri.clone();
  try
  {
-  let myHost = this.uri.host;
+  let myHost = this.uri.asciiHost;
   this.host = geoflag_TextTools.cropTrailingChar(myHost, '.');
  }
  catch(e)
